@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\bin\Debug\netcoreapp2.2\Final Exam - Deciphering.deps.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\bin\Debug\netcoreapp2.2\Final Exam - Deciphering.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\bin\Debug\netcoreapp2.2\Final Exam - Deciphering.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\bin\Debug\netcoreapp2.2\Final Exam - Deciphering.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\bin\Debug\netcoreapp2.2\Final Exam - Deciphering.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\obj\Debug\netcoreapp2.2\Final Exam - Deciphering.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\obj\Debug\netcoreapp2.2\Final Exam - Deciphering.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\obj\Debug\netcoreapp2.2\Final Exam - Deciphering.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\obj\Debug\netcoreapp2.2\Final Exam - Deciphering.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\obj\Debug\netcoreapp2.2\Final Exam - Deciphering.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Deciphering\Final Exam - Deciphering\obj\Debug\netcoreapp2.2\Final Exam - Deciphering.pdb

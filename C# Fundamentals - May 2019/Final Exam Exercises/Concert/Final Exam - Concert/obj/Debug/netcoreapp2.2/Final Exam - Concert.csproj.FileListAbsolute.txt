@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\bin\Debug\netcoreapp2.2\Final Exam - Concert.deps.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\bin\Debug\netcoreapp2.2\Final Exam - Concert.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\bin\Debug\netcoreapp2.2\Final Exam - Concert.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\bin\Debug\netcoreapp2.2\Final Exam - Concert.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\bin\Debug\netcoreapp2.2\Final Exam - Concert.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\obj\Debug\netcoreapp2.2\Final Exam - Concert.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\obj\Debug\netcoreapp2.2\Final Exam - Concert.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\obj\Debug\netcoreapp2.2\Final Exam - Concert.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\obj\Debug\netcoreapp2.2\Final Exam - Concert.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\obj\Debug\netcoreapp2.2\Final Exam - Concert.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Concert\Final Exam - Concert\obj\Debug\netcoreapp2.2\Final Exam - Concert.pdb

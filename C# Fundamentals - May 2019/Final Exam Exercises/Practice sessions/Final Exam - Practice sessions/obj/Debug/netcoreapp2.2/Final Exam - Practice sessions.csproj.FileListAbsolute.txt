@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\bin\Debug\netcoreapp2.2\Final Exam - Practice sessions.deps.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\bin\Debug\netcoreapp2.2\Final Exam - Practice sessions.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\bin\Debug\netcoreapp2.2\Final Exam - Practice sessions.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\bin\Debug\netcoreapp2.2\Final Exam - Practice sessions.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\bin\Debug\netcoreapp2.2\Final Exam - Practice sessions.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\obj\Debug\netcoreapp2.2\Final Exam - Practice sessions.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\obj\Debug\netcoreapp2.2\Final Exam - Practice sessions.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\obj\Debug\netcoreapp2.2\Final Exam - Practice sessions.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\obj\Debug\netcoreapp2.2\Final Exam - Practice sessions.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\obj\Debug\netcoreapp2.2\Final Exam - Practice sessions.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - Practice sessions\Final Exam - Practice sessions\obj\Debug\netcoreapp2.2\Final Exam - Practice sessions.csprojAssemblyReference.cache

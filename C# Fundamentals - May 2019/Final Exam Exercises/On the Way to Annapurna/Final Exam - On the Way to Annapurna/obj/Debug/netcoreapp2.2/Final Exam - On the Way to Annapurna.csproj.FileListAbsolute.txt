@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\bin\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.deps.json
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\bin\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\bin\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\bin\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\bin\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\obj\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\obj\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\obj\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\obj\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\obj\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - On the Way to Annapurna\Final Exam - On the Way to Annapurna\obj\Debug\netcoreapp2.2\Final Exam - On the Way to Annapurna.pdb

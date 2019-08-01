@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Final_Exam___The_Isle_of_Man_TT_Race</RootNamespace>
+  </PropertyGroup>
+
+</Project>

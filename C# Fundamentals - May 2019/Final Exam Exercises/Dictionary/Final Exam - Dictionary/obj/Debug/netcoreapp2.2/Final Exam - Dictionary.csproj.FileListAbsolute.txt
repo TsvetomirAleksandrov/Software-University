@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\bin\Debug\netcoreapp2.2\Final Exam - Dictionary.deps.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\bin\Debug\netcoreapp2.2\Final Exam - Dictionary.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\bin\Debug\netcoreapp2.2\Final Exam - Dictionary.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\bin\Debug\netcoreapp2.2\Final Exam - Dictionary.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\bin\Debug\netcoreapp2.2\Final Exam - Dictionary.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\obj\Debug\netcoreapp2.2\Final Exam - Dictionary.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\obj\Debug\netcoreapp2.2\Final Exam - Dictionary.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\obj\Debug\netcoreapp2.2\Final Exam - Dictionary.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\obj\Debug\netcoreapp2.2\Final Exam - Dictionary.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\obj\Debug\netcoreapp2.2\Final Exam - Dictionary.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Dictionary\Final Exam - Dictionary\obj\Debug\netcoreapp2.2\Final Exam - Dictionary.pdb

@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\bin\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.deps.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\bin\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\bin\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\bin\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\bin\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.pdb
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\obj\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\obj\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\obj\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\obj\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\obj\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.dll
+C:\Users\Tsvetomir\source\repos\Final Exam - Vapor Winter Sale\Final Exam - Vapor Winter Sale\obj\Debug\netcoreapp2.2\Final Exam - Vapor Winter Sale.pdb
