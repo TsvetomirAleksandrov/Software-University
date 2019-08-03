@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\froggy\froggy\bin\Debug\netcoreapp2.2\froggy.deps.json
+C:\Users\Tsvetomir\source\repos\froggy\froggy\bin\Debug\netcoreapp2.2\froggy.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\froggy\froggy\bin\Debug\netcoreapp2.2\froggy.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\froggy\froggy\bin\Debug\netcoreapp2.2\froggy.dll
+C:\Users\Tsvetomir\source\repos\froggy\froggy\bin\Debug\netcoreapp2.2\froggy.pdb
+C:\Users\Tsvetomir\source\repos\froggy\froggy\obj\Debug\netcoreapp2.2\froggy.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\froggy\froggy\obj\Debug\netcoreapp2.2\froggy.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\froggy\froggy\obj\Debug\netcoreapp2.2\froggy.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\froggy\froggy\obj\Debug\netcoreapp2.2\froggy.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\froggy\froggy\obj\Debug\netcoreapp2.2\froggy.dll
+C:\Users\Tsvetomir\source\repos\froggy\froggy\obj\Debug\netcoreapp2.2\froggy.pdb

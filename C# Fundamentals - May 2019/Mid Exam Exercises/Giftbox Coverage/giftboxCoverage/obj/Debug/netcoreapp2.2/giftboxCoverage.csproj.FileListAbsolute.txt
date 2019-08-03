@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\bin\Debug\netcoreapp2.2\giftboxCoverage.deps.json
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\bin\Debug\netcoreapp2.2\giftboxCoverage.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\bin\Debug\netcoreapp2.2\giftboxCoverage.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\bin\Debug\netcoreapp2.2\giftboxCoverage.dll
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\bin\Debug\netcoreapp2.2\giftboxCoverage.pdb
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\obj\Debug\netcoreapp2.2\giftboxCoverage.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\obj\Debug\netcoreapp2.2\giftboxCoverage.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\obj\Debug\netcoreapp2.2\giftboxCoverage.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\obj\Debug\netcoreapp2.2\giftboxCoverage.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\obj\Debug\netcoreapp2.2\giftboxCoverage.dll
+C:\Users\Tsvetomir\source\repos\giftboxCoverage\giftboxCoverage\obj\Debug\netcoreapp2.2\giftboxCoverage.pdb
