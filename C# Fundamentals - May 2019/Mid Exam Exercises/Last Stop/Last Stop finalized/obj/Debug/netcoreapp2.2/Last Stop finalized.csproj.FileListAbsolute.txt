@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\bin\Debug\netcoreapp2.2\Last Stop finalized.deps.json
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\bin\Debug\netcoreapp2.2\Last Stop finalized.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\bin\Debug\netcoreapp2.2\Last Stop finalized.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\bin\Debug\netcoreapp2.2\Last Stop finalized.dll
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\bin\Debug\netcoreapp2.2\Last Stop finalized.pdb
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\obj\Debug\netcoreapp2.2\Last Stop finalized.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\obj\Debug\netcoreapp2.2\Last Stop finalized.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\obj\Debug\netcoreapp2.2\Last Stop finalized.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\obj\Debug\netcoreapp2.2\Last Stop finalized.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\obj\Debug\netcoreapp2.2\Last Stop finalized.dll
+C:\Users\Tsvetomir\source\repos\Last Stop finalized\Last Stop finalized\obj\Debug\netcoreapp2.2\Last Stop finalized.pdb

@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\bin\Debug\netcoreapp2.2\seize the fire.deps.json
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\bin\Debug\netcoreapp2.2\seize the fire.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\bin\Debug\netcoreapp2.2\seize the fire.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\bin\Debug\netcoreapp2.2\seize the fire.dll
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\bin\Debug\netcoreapp2.2\seize the fire.pdb
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\obj\Debug\netcoreapp2.2\seize the fire.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\obj\Debug\netcoreapp2.2\seize the fire.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\obj\Debug\netcoreapp2.2\seize the fire.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\obj\Debug\netcoreapp2.2\seize the fire.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\obj\Debug\netcoreapp2.2\seize the fire.dll
+C:\Users\Tsvetomir\source\repos\seize the fire\seize the fire\obj\Debug\netcoreapp2.2\seize the fire.pdb

@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\bin\Debug\netcoreapp2.2\the final quest.deps.json
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\bin\Debug\netcoreapp2.2\the final quest.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\bin\Debug\netcoreapp2.2\the final quest.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\bin\Debug\netcoreapp2.2\the final quest.dll
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\bin\Debug\netcoreapp2.2\the final quest.pdb
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\obj\Debug\netcoreapp2.2\the final quest.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\obj\Debug\netcoreapp2.2\the final quest.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\obj\Debug\netcoreapp2.2\the final quest.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\obj\Debug\netcoreapp2.2\the final quest.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\obj\Debug\netcoreapp2.2\the final quest.dll
+C:\Users\Tsvetomir\source\repos\the final quest\the final quest\obj\Debug\netcoreapp2.2\the final quest.pdb

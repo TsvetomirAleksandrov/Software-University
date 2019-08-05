@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\bin\Debug\netcoreapp2.2\Problem 1. Party Profit.deps.json
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\bin\Debug\netcoreapp2.2\Problem 1. Party Profit.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\bin\Debug\netcoreapp2.2\Problem 1. Party Profit.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\bin\Debug\netcoreapp2.2\Problem 1. Party Profit.dll
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\bin\Debug\netcoreapp2.2\Problem 1. Party Profit.pdb
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\obj\Debug\netcoreapp2.2\Problem 1. Party Profit.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\obj\Debug\netcoreapp2.2\Problem 1. Party Profit.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\obj\Debug\netcoreapp2.2\Problem 1. Party Profit.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\obj\Debug\netcoreapp2.2\Problem 1. Party Profit.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\obj\Debug\netcoreapp2.2\Problem 1. Party Profit.dll
+C:\Users\Tsvetomir\source\repos\Problem 1. Party Profit\Problem 1. Party Profit\obj\Debug\netcoreapp2.2\Problem 1. Party Profit.pdb
