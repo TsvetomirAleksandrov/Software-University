@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bread Factory", "Bread Factory\Bread Factory.csproj", "{0A960C8B-D6D1-489F-B93F-7CD77D347664}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A960C8B-D6D1-489F-B93F-7CD77D347664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A960C8B-D6D1-489F-B93F-7CD77D347664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A960C8B-D6D1-489F-B93F-7CD77D347664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A960C8B-D6D1-489F-B93F-7CD77D347664}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D8210F4-C681-462B-A45A-B58DF5805C92}
+	EndGlobalSection
+EndGlobal
