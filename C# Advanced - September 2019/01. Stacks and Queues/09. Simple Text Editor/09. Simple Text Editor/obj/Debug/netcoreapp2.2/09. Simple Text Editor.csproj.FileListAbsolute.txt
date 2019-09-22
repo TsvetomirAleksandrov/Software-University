@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\bin\Debug\netcoreapp2.2\09. Simple Text Editor.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\bin\Debug\netcoreapp2.2\09. Simple Text Editor.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\bin\Debug\netcoreapp2.2\09. Simple Text Editor.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\bin\Debug\netcoreapp2.2\09. Simple Text Editor.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\bin\Debug\netcoreapp2.2\09. Simple Text Editor.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\obj\Debug\netcoreapp2.2\09. Simple Text Editor.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\obj\Debug\netcoreapp2.2\09. Simple Text Editor.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\obj\Debug\netcoreapp2.2\09. Simple Text Editor.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\obj\Debug\netcoreapp2.2\09. Simple Text Editor.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\09. Simple Text Editor\09. Simple Text Editor\obj\Debug\netcoreapp2.2\09. Simple Text Editor.pdb

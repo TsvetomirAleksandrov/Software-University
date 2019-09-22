@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\bin\Debug\netcoreapp2.2\07. Truck Tour.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\bin\Debug\netcoreapp2.2\07. Truck Tour.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\bin\Debug\netcoreapp2.2\07. Truck Tour.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\bin\Debug\netcoreapp2.2\07. Truck Tour.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\bin\Debug\netcoreapp2.2\07. Truck Tour.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\obj\Debug\netcoreapp2.2\07. Truck Tour.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\obj\Debug\netcoreapp2.2\07. Truck Tour.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\obj\Debug\netcoreapp2.2\07. Truck Tour.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\obj\Debug\netcoreapp2.2\07. Truck Tour.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\07. Truck Tour\07. Truck Tour\obj\Debug\netcoreapp2.2\07. Truck Tour.pdb

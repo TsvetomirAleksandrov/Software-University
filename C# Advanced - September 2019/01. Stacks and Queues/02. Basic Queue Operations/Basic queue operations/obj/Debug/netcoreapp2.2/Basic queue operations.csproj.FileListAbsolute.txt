@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\bin\Debug\netcoreapp2.2\Basic queue operations.deps.json
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\bin\Debug\netcoreapp2.2\Basic queue operations.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\bin\Debug\netcoreapp2.2\Basic queue operations.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\bin\Debug\netcoreapp2.2\Basic queue operations.dll
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\bin\Debug\netcoreapp2.2\Basic queue operations.pdb
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\obj\Debug\netcoreapp2.2\Basic queue operations.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\obj\Debug\netcoreapp2.2\Basic queue operations.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\obj\Debug\netcoreapp2.2\Basic queue operations.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\obj\Debug\netcoreapp2.2\Basic queue operations.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\obj\Debug\netcoreapp2.2\Basic queue operations.dll
+C:\Users\Tsvetomir\source\repos\Basic queue operations\Basic queue operations\obj\Debug\netcoreapp2.2\Basic queue operations.pdb

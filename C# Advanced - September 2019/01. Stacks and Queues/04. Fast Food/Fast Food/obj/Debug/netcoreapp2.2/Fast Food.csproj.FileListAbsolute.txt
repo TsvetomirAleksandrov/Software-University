@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\bin\Debug\netcoreapp2.2\Fast Food.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\bin\Debug\netcoreapp2.2\Fast Food.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\bin\Debug\netcoreapp2.2\Fast Food.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\bin\Debug\netcoreapp2.2\Fast Food.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\bin\Debug\netcoreapp2.2\Fast Food.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\obj\Debug\netcoreapp2.2\Fast Food.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\obj\Debug\netcoreapp2.2\Fast Food.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\obj\Debug\netcoreapp2.2\Fast Food.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\obj\Debug\netcoreapp2.2\Fast Food.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\01. Stacks and Queues\Fast Food\Fast Food\obj\Debug\netcoreapp2.2\Fast Food.pdb

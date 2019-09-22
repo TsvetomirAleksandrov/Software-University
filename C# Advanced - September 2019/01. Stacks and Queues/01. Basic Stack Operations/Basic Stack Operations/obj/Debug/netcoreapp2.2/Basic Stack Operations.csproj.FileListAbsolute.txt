@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\bin\Debug\netcoreapp2.2\Basic Stack Operations.deps.json
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\bin\Debug\netcoreapp2.2\Basic Stack Operations.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\bin\Debug\netcoreapp2.2\Basic Stack Operations.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\bin\Debug\netcoreapp2.2\Basic Stack Operations.dll
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\bin\Debug\netcoreapp2.2\Basic Stack Operations.pdb
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\obj\Debug\netcoreapp2.2\Basic Stack Operations.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\obj\Debug\netcoreapp2.2\Basic Stack Operations.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\obj\Debug\netcoreapp2.2\Basic Stack Operations.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\obj\Debug\netcoreapp2.2\Basic Stack Operations.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\obj\Debug\netcoreapp2.2\Basic Stack Operations.dll
+C:\Users\Tsvetomir\source\repos\Basic Stack Operations\Basic Stack Operations\obj\Debug\netcoreapp2.2\Basic Stack Operations.pdb
