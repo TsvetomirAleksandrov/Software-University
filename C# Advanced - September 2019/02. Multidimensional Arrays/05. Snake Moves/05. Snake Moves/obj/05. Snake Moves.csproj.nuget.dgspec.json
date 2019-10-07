@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tsvetomir\\source\\repos\\05. Snake Moves\\05. Snake Moves\\05. Snake Moves.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tsvetomir\\source\\repos\\05. Snake Moves\\05. Snake Moves\\05. Snake Moves.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tsvetomir\\source\\repos\\05. Snake Moves\\05. Snake Moves\\05. Snake Moves.csproj",
+        "projectName": "05. Snake Moves",
+        "projectPath": "C:\\Users\\Tsvetomir\\source\\repos\\05. Snake Moves\\05. Snake Moves\\05. Snake Moves.csproj",
+        "packagesPath": "C:\\Users\\Tsvetomir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tsvetomir\\source\\repos\\05. Snake Moves\\05. Snake Moves\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tsvetomir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

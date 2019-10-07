@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\bin\Debug\netcoreapp2.2\02. Squares in Matrix.deps.json
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\bin\Debug\netcoreapp2.2\02. Squares in Matrix.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\bin\Debug\netcoreapp2.2\02. Squares in Matrix.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\bin\Debug\netcoreapp2.2\02. Squares in Matrix.dll
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\bin\Debug\netcoreapp2.2\02. Squares in Matrix.pdb
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\obj\Debug\netcoreapp2.2\02. Squares in Matrix.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\obj\Debug\netcoreapp2.2\02. Squares in Matrix.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\obj\Debug\netcoreapp2.2\02. Squares in Matrix.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\obj\Debug\netcoreapp2.2\02. Squares in Matrix.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\obj\Debug\netcoreapp2.2\02. Squares in Matrix.dll
+C:\Users\Tsvetomir\source\repos\02. Squares in Matrix\02. Squares in Matrix\obj\Debug\netcoreapp2.2\02. Squares in Matrix.pdb

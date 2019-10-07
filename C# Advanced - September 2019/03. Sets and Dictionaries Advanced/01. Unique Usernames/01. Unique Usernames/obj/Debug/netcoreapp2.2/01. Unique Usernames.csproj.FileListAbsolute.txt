@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\bin\Debug\netcoreapp2.2\01. Unique Usernames.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\bin\Debug\netcoreapp2.2\01. Unique Usernames.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\bin\Debug\netcoreapp2.2\01. Unique Usernames.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\bin\Debug\netcoreapp2.2\01. Unique Usernames.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\bin\Debug\netcoreapp2.2\01. Unique Usernames.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\obj\Debug\netcoreapp2.2\01. Unique Usernames.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\obj\Debug\netcoreapp2.2\01. Unique Usernames.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\obj\Debug\netcoreapp2.2\01. Unique Usernames.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\obj\Debug\netcoreapp2.2\01. Unique Usernames.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\obj\Debug\netcoreapp2.2\01. Unique Usernames.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\01. Unique Usernames\01. Unique Usernames\obj\Debug\netcoreapp2.2\01. Unique Usernames.pdb

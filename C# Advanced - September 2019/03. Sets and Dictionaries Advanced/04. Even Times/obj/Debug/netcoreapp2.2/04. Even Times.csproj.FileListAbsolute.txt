@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\bin\Debug\netcoreapp2.2\04. Even Times.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\bin\Debug\netcoreapp2.2\04. Even Times.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\bin\Debug\netcoreapp2.2\04. Even Times.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\bin\Debug\netcoreapp2.2\04. Even Times.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\bin\Debug\netcoreapp2.2\04. Even Times.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\obj\Debug\netcoreapp2.2\04. Even Times.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\obj\Debug\netcoreapp2.2\04. Even Times.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\obj\Debug\netcoreapp2.2\04. Even Times.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\obj\Debug\netcoreapp2.2\04. Even Times.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\04. Even Times\obj\Debug\netcoreapp2.2\04. Even Times.pdb

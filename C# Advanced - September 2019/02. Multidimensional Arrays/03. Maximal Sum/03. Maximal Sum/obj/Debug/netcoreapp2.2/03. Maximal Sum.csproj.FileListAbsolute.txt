@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\bin\Debug\netcoreapp2.2\03. Maximal Sum.deps.json
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\bin\Debug\netcoreapp2.2\03. Maximal Sum.runtimeconfig.json
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\bin\Debug\netcoreapp2.2\03. Maximal Sum.runtimeconfig.dev.json
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\bin\Debug\netcoreapp2.2\03. Maximal Sum.dll
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\bin\Debug\netcoreapp2.2\03. Maximal Sum.pdb
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\obj\Debug\netcoreapp2.2\03. Maximal Sum.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\obj\Debug\netcoreapp2.2\03. Maximal Sum.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\obj\Debug\netcoreapp2.2\03. Maximal Sum.AssemblyInfo.cs
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\obj\Debug\netcoreapp2.2\03. Maximal Sum.dll
+C:\Users\Tsvetomir\source\repos\03. Maximal Sum\03. Maximal Sum\obj\Debug\netcoreapp2.2\03. Maximal Sum.pdb

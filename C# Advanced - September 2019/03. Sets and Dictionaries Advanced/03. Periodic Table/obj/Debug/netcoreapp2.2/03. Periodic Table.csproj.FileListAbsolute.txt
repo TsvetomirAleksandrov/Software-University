@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\bin\Debug\netcoreapp2.2\03. Periodic Table.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\bin\Debug\netcoreapp2.2\03. Periodic Table.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\bin\Debug\netcoreapp2.2\03. Periodic Table.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\bin\Debug\netcoreapp2.2\03. Periodic Table.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\bin\Debug\netcoreapp2.2\03. Periodic Table.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\obj\Debug\netcoreapp2.2\03. Periodic Table.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\obj\Debug\netcoreapp2.2\03. Periodic Table.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\obj\Debug\netcoreapp2.2\03. Periodic Table.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\obj\Debug\netcoreapp2.2\03. Periodic Table.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\03. Sets and Dictionaries Advanced\03. Periodic Table\obj\Debug\netcoreapp2.2\03. Periodic Table.pdb
