@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\bin\Debug\netcoreapp2.2\06. Zip and Extract.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\bin\Debug\netcoreapp2.2\06. Zip and Extract.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\bin\Debug\netcoreapp2.2\06. Zip and Extract.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\bin\Debug\netcoreapp2.2\06. Zip and Extract.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\bin\Debug\netcoreapp2.2\06. Zip and Extract.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\obj\Debug\netcoreapp2.2\06. Zip and Extract.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\obj\Debug\netcoreapp2.2\06. Zip and Extract.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\obj\Debug\netcoreapp2.2\06. Zip and Extract.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\obj\Debug\netcoreapp2.2\06. Zip and Extract.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\obj\Debug\netcoreapp2.2\06. Zip and Extract.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\06. Zip and Extract\obj\Debug\netcoreapp2.2\06. Zip and Extract.pdb

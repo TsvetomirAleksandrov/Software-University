@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Directory Traversal", "05. Directory Traversal.csproj", "{DC09B2BD-14FC-4E51-8A9E-87DCC5BAE031}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC09B2BD-14FC-4E51-8A9E-87DCC5BAE031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC09B2BD-14FC-4E51-8A9E-87DCC5BAE031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC09B2BD-14FC-4E51-8A9E-87DCC5BAE031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC09B2BD-14FC-4E51-8A9E-87DCC5BAE031}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BBD8A7F-A5AC-41D3-A374-9D903C15B50B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\bin\Debug\netcoreapp2.2\05. Directory Traversal.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\bin\Debug\netcoreapp2.2\05. Directory Traversal.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\bin\Debug\netcoreapp2.2\05. Directory Traversal.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\bin\Debug\netcoreapp2.2\05. Directory Traversal.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\bin\Debug\netcoreapp2.2\05. Directory Traversal.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\obj\Debug\netcoreapp2.2\05. Directory Traversal.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\obj\Debug\netcoreapp2.2\05. Directory Traversal.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\obj\Debug\netcoreapp2.2\05. Directory Traversal.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\obj\Debug\netcoreapp2.2\05. Directory Traversal.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\05. Directory Traversal\obj\Debug\netcoreapp2.2\05. Directory Traversal.pdb

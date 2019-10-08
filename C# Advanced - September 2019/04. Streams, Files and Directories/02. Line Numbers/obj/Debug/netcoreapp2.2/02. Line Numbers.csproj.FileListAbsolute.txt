@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\bin\Debug\netcoreapp2.2\02. Line Numbers.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\bin\Debug\netcoreapp2.2\02. Line Numbers.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\bin\Debug\netcoreapp2.2\02. Line Numbers.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\bin\Debug\netcoreapp2.2\02. Line Numbers.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\bin\Debug\netcoreapp2.2\02. Line Numbers.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\obj\Debug\netcoreapp2.2\02. Line Numbers.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\obj\Debug\netcoreapp2.2\02. Line Numbers.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\obj\Debug\netcoreapp2.2\02. Line Numbers.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\obj\Debug\netcoreapp2.2\02. Line Numbers.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\obj\Debug\netcoreapp2.2\02. Line Numbers.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\04. Streams, Files and Directories\02. Line Numbers\obj\Debug\netcoreapp2.2\02. Line Numbers.pdb
