@@ -1,0 +1,3 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\05-Date-Modifier\obj\Debug\netcoreapp2.1\05-Date-Modifier.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\05-Date-Modifier\obj\Debug\netcoreapp2.1\05-Date-Modifier.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\05-Date-Modifier\obj\Debug\netcoreapp2.1\05-Date-Modifier.AssemblyInfo.cs

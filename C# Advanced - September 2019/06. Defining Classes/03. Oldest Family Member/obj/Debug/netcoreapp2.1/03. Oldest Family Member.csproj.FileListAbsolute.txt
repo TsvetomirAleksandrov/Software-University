@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\bin\Debug\netcoreapp2.1\03. Oldest Family Member.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\bin\Debug\netcoreapp2.1\03. Oldest Family Member.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\bin\Debug\netcoreapp2.1\03. Oldest Family Member.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\bin\Debug\netcoreapp2.1\03. Oldest Family Member.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\bin\Debug\netcoreapp2.1\03. Oldest Family Member.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\obj\Debug\netcoreapp2.1\03. Oldest Family Member.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\obj\Debug\netcoreapp2.1\03. Oldest Family Member.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\obj\Debug\netcoreapp2.1\03. Oldest Family Member.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\obj\Debug\netcoreapp2.1\03. Oldest Family Member.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\obj\Debug\netcoreapp2.1\03. Oldest Family Member.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\03. Oldest Family Member\obj\Debug\netcoreapp2.1\03. Oldest Family Member.pdb

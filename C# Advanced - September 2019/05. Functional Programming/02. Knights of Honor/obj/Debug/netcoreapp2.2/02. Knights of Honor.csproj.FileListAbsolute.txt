@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\bin\Debug\netcoreapp2.2\02. Knights of Honor.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\bin\Debug\netcoreapp2.2\02. Knights of Honor.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\bin\Debug\netcoreapp2.2\02. Knights of Honor.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\bin\Debug\netcoreapp2.2\02. Knights of Honor.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\bin\Debug\netcoreapp2.2\02. Knights of Honor.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\obj\Debug\netcoreapp2.2\02. Knights of Honor.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\obj\Debug\netcoreapp2.2\02. Knights of Honor.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\obj\Debug\netcoreapp2.2\02. Knights of Honor.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\obj\Debug\netcoreapp2.2\02. Knights of Honor.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\02. Knights of Honor\obj\Debug\netcoreapp2.2\02. Knights of Honor.pdb

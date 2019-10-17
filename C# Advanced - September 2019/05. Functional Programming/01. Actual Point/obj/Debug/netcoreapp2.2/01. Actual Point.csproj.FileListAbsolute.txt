@@ -1,0 +1,3 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\01. Actual Point\obj\Debug\netcoreapp2.2\01. Actual Point.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\01. Actual Point\obj\Debug\netcoreapp2.2\01. Actual Point.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\01. Actual Point\obj\Debug\netcoreapp2.2\01. Actual Point.AssemblyInfo.cs

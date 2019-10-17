@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# Advanced - September 2019\\06. Defining Classes\\07-Raw-Data\\07-Raw-Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# Advanced - September 2019\\06. Defining Classes\\07-Raw-Data\\07-Raw-Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# Advanced - September 2019\\06. Defining Classes\\07-Raw-Data\\07-Raw-Data.csproj",
+        "projectName": "07-Raw-Data",
+        "projectPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# Advanced - September 2019\\06. Defining Classes\\07-Raw-Data\\07-Raw-Data.csproj",
+        "packagesPath": "C:\\Users\\Tsvetomir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# Advanced - September 2019\\06. Defining Classes\\07-Raw-Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tsvetomir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\bin\Debug\netcoreapp2.2\04. Find Evens or Odds.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\bin\Debug\netcoreapp2.2\04. Find Evens or Odds.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\bin\Debug\netcoreapp2.2\04. Find Evens or Odds.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\bin\Debug\netcoreapp2.2\04. Find Evens or Odds.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\bin\Debug\netcoreapp2.2\04. Find Evens or Odds.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\obj\Debug\netcoreapp2.2\04. Find Evens or Odds.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\obj\Debug\netcoreapp2.2\04. Find Evens or Odds.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\obj\Debug\netcoreapp2.2\04. Find Evens or Odds.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\obj\Debug\netcoreapp2.2\04. Find Evens or Odds.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\04. Find Evens or Odds\obj\Debug\netcoreapp2.2\04. Find Evens or Odds.pdb

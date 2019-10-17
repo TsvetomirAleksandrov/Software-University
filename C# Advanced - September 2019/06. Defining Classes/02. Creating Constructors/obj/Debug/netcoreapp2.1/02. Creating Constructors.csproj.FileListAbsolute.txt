@@ -1,0 +1,4 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\02. Creating Constructors\obj\Debug\netcoreapp2.1\02. Creating Constructors.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\02. Creating Constructors\obj\Debug\netcoreapp2.1\02. Creating Constructors.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\02. Creating Constructors\obj\Debug\netcoreapp2.1\02. Creating Constructors.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\06. Defining Classes\02. Creating Constructors\obj\Debug\netcoreapp2.1\02. Creating Constructors.AssemblyInfo.cs

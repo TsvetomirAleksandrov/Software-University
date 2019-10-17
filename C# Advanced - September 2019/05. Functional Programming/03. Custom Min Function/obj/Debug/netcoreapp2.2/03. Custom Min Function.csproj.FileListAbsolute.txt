@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\bin\Debug\netcoreapp2.2\03. Custom Min Function.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\bin\Debug\netcoreapp2.2\03. Custom Min Function.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\bin\Debug\netcoreapp2.2\03. Custom Min Function.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\bin\Debug\netcoreapp2.2\03. Custom Min Function.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\bin\Debug\netcoreapp2.2\03. Custom Min Function.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\obj\Debug\netcoreapp2.2\03. Custom Min Function.csproj.CoreCompileInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\obj\Debug\netcoreapp2.2\03. Custom Min Function.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\obj\Debug\netcoreapp2.2\03. Custom Min Function.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\obj\Debug\netcoreapp2.2\03. Custom Min Function.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\05. Functional Programming\03. Custom Min Function\obj\Debug\netcoreapp2.2\03. Custom Min Function.pdb
