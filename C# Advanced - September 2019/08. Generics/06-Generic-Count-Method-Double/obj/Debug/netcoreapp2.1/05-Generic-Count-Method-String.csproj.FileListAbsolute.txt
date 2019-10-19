@@ -1,0 +1,9 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\bin\Debug\netcoreapp2.1\05-Generic-Count-Method-String.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\bin\Debug\netcoreapp2.1\05-Generic-Count-Method-String.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\bin\Debug\netcoreapp2.1\05-Generic-Count-Method-String.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\bin\Debug\netcoreapp2.1\05-Generic-Count-Method-String.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\bin\Debug\netcoreapp2.1\05-Generic-Count-Method-String.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\obj\Debug\netcoreapp2.1\05-Generic-Count-Method-String.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\obj\Debug\netcoreapp2.1\05-Generic-Count-Method-String.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\obj\Debug\netcoreapp2.1\05-Generic-Count-Method-String.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\05-Generic-Count-Method-String\obj\Debug\netcoreapp2.1\05-Generic-Count-Method-String.pdb

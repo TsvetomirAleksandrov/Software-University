@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\bin\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\bin\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\bin\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\bin\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\bin\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\bin\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\obj\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\obj\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\obj\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\obj\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# Advanced - September 2019\08. Generics\04-Gen-Swap-Method-Int\obj\Debug\netcoreapp3.0\04-Gen-Swap-Method-Int.pdb
