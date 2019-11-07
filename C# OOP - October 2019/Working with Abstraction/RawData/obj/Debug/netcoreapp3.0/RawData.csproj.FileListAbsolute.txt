@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\bin\Debug\netcoreapp3.0\RawData.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\bin\Debug\netcoreapp3.0\RawData.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\bin\Debug\netcoreapp3.0\RawData.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\bin\Debug\netcoreapp3.0\RawData.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\bin\Debug\netcoreapp3.0\RawData.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\bin\Debug\netcoreapp3.0\RawData.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\obj\Debug\netcoreapp3.0\RawData.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\obj\Debug\netcoreapp3.0\RawData.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\obj\Debug\netcoreapp3.0\RawData.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\obj\Debug\netcoreapp3.0\RawData.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\RawData\obj\Debug\netcoreapp3.0\RawData.pdb

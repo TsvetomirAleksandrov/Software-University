@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\bin\Debug\netcoreapp3.0\Rhombus of Stars.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\bin\Debug\netcoreapp3.0\Rhombus of Stars.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\bin\Debug\netcoreapp3.0\Rhombus of Stars.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\bin\Debug\netcoreapp3.0\Rhombus of Stars.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\bin\Debug\netcoreapp3.0\Rhombus of Stars.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\bin\Debug\netcoreapp3.0\Rhombus of Stars.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\obj\Debug\netcoreapp3.0\Rhombus of Stars.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\obj\Debug\netcoreapp3.0\Rhombus of Stars.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\obj\Debug\netcoreapp3.0\Rhombus of Stars.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\obj\Debug\netcoreapp3.0\Rhombus of Stars.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Working with Abstraction\Lab\Rhombus of Stars\obj\Debug\netcoreapp3.0\Rhombus of Stars.pdb
