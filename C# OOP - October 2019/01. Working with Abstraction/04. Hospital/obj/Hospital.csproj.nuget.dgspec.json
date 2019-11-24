@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\Working with Abstraction\\Hospital\\Hospital.csproj": {}
+    "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\04. Hospital\\Hospital.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\Working with Abstraction\\Hospital\\Hospital.csproj": {
+    "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\04. Hospital\\Hospital.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\Working with Abstraction\\Hospital\\Hospital.csproj",
+        "projectUniqueName": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\04. Hospital\\Hospital.csproj",
         "projectName": "Hospital",
-        "projectPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\Working with Abstraction\\Hospital\\Hospital.csproj",
+        "projectPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\04. Hospital\\Hospital.csproj",
         "packagesPath": "C:\\Users\\Tsvetomir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\Working with Abstraction\\Hospital\\obj\\",
+        "outputPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\04. Hospital\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

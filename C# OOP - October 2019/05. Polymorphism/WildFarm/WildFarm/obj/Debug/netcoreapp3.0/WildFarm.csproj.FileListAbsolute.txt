@@ -1,0 +1,4 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\WildFarm\WildFarm\bin\Debug\netcoreapp3.0\WildFarm.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\WildFarm\WildFarm\obj\Debug\netcoreapp3.0\WildFarm.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\WildFarm\WildFarm\obj\Debug\netcoreapp3.0\WildFarm.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\WildFarm\WildFarm\obj\Debug\netcoreapp3.0\WildFarm.AssemblyInfo.cs

@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\bin\Debug\netcoreapp3.0\Person.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\bin\Debug\netcoreapp3.0\Person.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\bin\Debug\netcoreapp3.0\Person.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\bin\Debug\netcoreapp3.0\Person.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\bin\Debug\netcoreapp3.0\Person.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\bin\Debug\netcoreapp3.0\Person.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\obj\Debug\netcoreapp3.0\Person.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\obj\Debug\netcoreapp3.0\Person.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\obj\Debug\netcoreapp3.0\Person.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\obj\Debug\netcoreapp3.0\Person.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\02. Inheritance\Person\Person\obj\Debug\netcoreapp3.0\Person.pdb

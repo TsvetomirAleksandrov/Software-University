@@ -1,0 +1,10 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\bin\Debug\netcoreapp3.0\MathOperation.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\bin\Debug\netcoreapp3.0\MathOperation.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\bin\Debug\netcoreapp3.0\MathOperation.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\bin\Debug\netcoreapp3.0\MathOperation.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\bin\Debug\netcoreapp3.0\MathOperation.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\bin\Debug\netcoreapp3.0\MathOperation.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\obj\Debug\netcoreapp3.0\MathOperation.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\obj\Debug\netcoreapp3.0\MathOperation.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\obj\Debug\netcoreapp3.0\MathOperation.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\05. Polymorphism\Lab\MathOperation\MathOperation\obj\Debug\netcoreapp3.0\MathOperation.pdb

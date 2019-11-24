@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\bin\Debug\netcoreapp3.0\AnimalCentre.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\bin\Debug\netcoreapp3.0\AnimalCentre.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\bin\Debug\netcoreapp3.0\AnimalCentre.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\bin\Debug\netcoreapp3.0\AnimalCentre.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\bin\Debug\netcoreapp3.0\AnimalCentre.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\bin\Debug\netcoreapp3.0\AnimalCentre.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\obj\Debug\netcoreapp3.0\AnimalCentre.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\obj\Debug\netcoreapp3.0\AnimalCentre.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\obj\Debug\netcoreapp3.0\AnimalCentre.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\obj\Debug\netcoreapp3.0\AnimalCentre.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\Exam Preparation\AnimalCentre\AnimalCentre\AnimalCentre\obj\Debug\netcoreapp3.0\AnimalCentre.pdb

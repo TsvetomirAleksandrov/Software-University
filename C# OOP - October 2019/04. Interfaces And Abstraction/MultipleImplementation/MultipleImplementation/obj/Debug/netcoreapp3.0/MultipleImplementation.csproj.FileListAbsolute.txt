@@ -1,0 +1,11 @@
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\bin\Debug\netcoreapp3.0\MultipleImplementation.exe
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\bin\Debug\netcoreapp3.0\MultipleImplementation.deps.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\bin\Debug\netcoreapp3.0\MultipleImplementation.runtimeconfig.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\bin\Debug\netcoreapp3.0\MultipleImplementation.runtimeconfig.dev.json
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\bin\Debug\netcoreapp3.0\MultipleImplementation.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\bin\Debug\netcoreapp3.0\MultipleImplementation.pdb
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\obj\Debug\netcoreapp3.0\MultipleImplementation.csprojAssemblyReference.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\obj\Debug\netcoreapp3.0\MultipleImplementation.AssemblyInfoInputs.cache
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\obj\Debug\netcoreapp3.0\MultipleImplementation.AssemblyInfo.cs
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\obj\Debug\netcoreapp3.0\MultipleImplementation.dll
+C:\Users\Tsvetomir\Documents\Software-University\C# OOP - October 2019\04. Interfaces And Abstraction\MultipleImplementation\MultipleImplementation\obj\Debug\netcoreapp3.0\MultipleImplementation.pdb

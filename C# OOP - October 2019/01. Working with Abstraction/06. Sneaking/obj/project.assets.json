@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\Sneaking\\Sneaking.csproj",
+      "projectUniqueName": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\06. Sneaking\\Sneaking.csproj",
       "projectName": "Sneaking",
-      "projectPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\Sneaking\\Sneaking.csproj",
+      "projectPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\06. Sneaking\\Sneaking.csproj",
       "packagesPath": "C:\\Users\\Tsvetomir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\Sneaking\\obj\\",
+      "outputPath": "C:\\Users\\Tsvetomir\\Documents\\Software-University\\C# OOP - October 2019\\01. Working with Abstraction\\06. Sneaking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
