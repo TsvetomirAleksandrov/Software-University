@@ -9,4 +9,5 @@
     public string Name { get; }
 
     public int Level { get; }
+
 }

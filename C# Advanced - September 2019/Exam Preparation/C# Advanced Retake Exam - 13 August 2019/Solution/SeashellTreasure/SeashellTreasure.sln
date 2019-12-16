@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeashellTreasure", "SeashellTreasure\SeashellTreasure.csproj", "{D06F1A74-1636-45E5-A1D2-C6FC4065F17E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D06F1A74-1636-45E5-A1D2-C6FC4065F17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06F1A74-1636-45E5-A1D2-C6FC4065F17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06F1A74-1636-45E5-A1D2-C6FC4065F17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06F1A74-1636-45E5-A1D2-C6FC4065F17E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03299753-BC12-4118-825B-A96F6D12CE85}
+	EndGlobalSection
+EndGlobal
