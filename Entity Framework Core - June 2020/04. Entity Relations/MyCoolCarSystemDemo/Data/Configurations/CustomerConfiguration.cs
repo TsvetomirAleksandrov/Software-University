@@ -8,7 +8,7 @@ using MyCoolCarSystem.Data.Migrations;
 
 namespace MyCoolCarSystem.Data.Configurations
 {
-    class CustomerConfiguration
+   public class CustomerConfiguration
     {
 
         public void Configure(EntityTypeBuilder<Customer> customer)
