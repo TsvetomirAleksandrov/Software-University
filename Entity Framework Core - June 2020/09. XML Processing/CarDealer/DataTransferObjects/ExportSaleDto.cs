@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace CarDealer.DataTransferObjects
 {
-    [XmlType("Sale")]
+    [XmlType("sale")]
     public class ExportSaleDto
     {
         [XmlElement("car")]
@@ -30,7 +30,7 @@ namespace CarDealer.DataTransferObjects
         [XmlAttribute("make")]
         public string Make { get; set; }
 
-        [XmlAttribute("car")]
+        [XmlAttribute("model")]
         public string Model { get; set; }
 
         [XmlAttribute("travelled-distance")]
