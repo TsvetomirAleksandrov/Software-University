@@ -24,10 +24,12 @@ namespace PetStore.Models
 
         public Gender Gender { get; set; }
 
+        [Range(0, 200)]
         public byte Age { get; set; }
 
         public bool IsSold { get; set; }
 
+        [Range(GlobalConstants.PetMinPrice, Double.MaxValue)]
         public decimal Price { get; set; }
 
         [Required]

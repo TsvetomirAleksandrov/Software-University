@@ -21,6 +21,7 @@ namespace PetStore.Models
         [MinLength(GlobalConstants.ProductNameMinLength)]
         public string Name { get; set; }
 
+        [Range(0, Double.MaxValue)]
         public decimal Price { get; set; }
 
         public ProductType ProductType { get; set; }
