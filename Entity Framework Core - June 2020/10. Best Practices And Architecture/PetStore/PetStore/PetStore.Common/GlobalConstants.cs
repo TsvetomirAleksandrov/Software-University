@@ -31,6 +31,8 @@ namespace PetStore.Common
         public const int PetNameMinLength = 3;
         public const int PetNameMaxLength = 50;
         public const int PetMinPrice = 0;
+        public const int PetMinAge = 0;
+        public const int PetMaxAge = 200;
 
         //Product
         public const int ProductNameMinLength = 3;

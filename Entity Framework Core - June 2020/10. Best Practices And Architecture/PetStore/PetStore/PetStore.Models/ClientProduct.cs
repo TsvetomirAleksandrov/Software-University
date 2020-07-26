@@ -23,5 +23,10 @@ namespace PetStore.Models
 
         [Range(GlobalConstants.ClientProductMinQuantity, Int32.MaxValue)]
         public int Quantity { get; set; }
+
+        [Required]
+        [ForeignKey(nameof(Order))]
+        public string OrderId { get; set; }
+        public Order Order { get; set; }
     }
 }

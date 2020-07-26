@@ -24,7 +24,7 @@ namespace PetStore.Models
 
         public Gender Gender { get; set; }
 
-        [Range(0, 200)]
+        [Range(GlobalConstants.PetMinAge, GlobalConstants.PetMaxAge)]
         public byte Age { get; set; }
 
         public bool IsSold { get; set; }

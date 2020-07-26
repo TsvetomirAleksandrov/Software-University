@@ -5,20 +5,13 @@ using System.Text;
 using PetStore.Common;
 using PetStore.Models.Enumerations;
 
-namespace PetStore.Models
+namespace PetStore.ServiceModels.Products.InputModels
 {
-    public class Product
+    public class AddProductInputServiceModel
     {
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
-
-        [Key]
-        public string Id { get; set; }
-
         [Required]
         [MinLength(GlobalConstants.ProductNameMinLength)]
+        [MaxLength(GlobalConstants.ProductNameMaxLength)]
         public string Name { get; set; }
 
         [Range(GlobalConstants.PetMinPrice, Double.MaxValue)]
