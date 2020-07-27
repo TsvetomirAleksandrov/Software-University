@@ -129,21 +129,62 @@ namespace Cinema.DataProcessor
             return sb.ToString().Trim();
         }
 
-        private static bool IsValidHallId(CinemaContext context, int hallId)
-        {
-            return context
-                .Halls.Any(h => h.Id == hallId);
-        }
-
-        private static bool IsValidMovieId(CinemaContext context, int movieId)
-        {
-            return context
-                .Movies.Any(m => m.Id == movieId);
-        }
-
         public static string ImportCustomerTickets(CinemaContext context, string xmlString)
         {
-            throw new NotImplementedException();
+            var serializer = new XmlSerializer(typeof(CustomerImportDto[]), new XmlRootAttribute("Customers"));
+            var objects = (CustomerImportDto[])serializer.Deserialize(new StringReader(xmlString));
+            var sb = new StringBuilder();
+
+            foreach (var dto in objects)
+            {
+                if (IsValid(dto))
+                {
+                    var customer = new Customer
+                    {
+                        FirstName = dto.FirstName,
+                        LastName = dto.LastName,
+                        Age = dto.Age,
+                        Balance = dto.Balance
+                    };
+
+                    context.Customers.Add(customer);
+                    AddCustomerTickets(context, customer.Id, dto.Tickets);
+                    sb.AppendLine(string.Format(SuccessfulImportCustomerTicket,
+                        dto.FirstName,
+                        dto.LastName,
+                        dto.Tickets.Length));
+                }
+                else
+                {
+                    sb.AppendLine(ErrorMessage);
+                }
+            }
+
+            context.SaveChanges();
+            return sb.ToString().Trim();
+        }
+
+        private static void AddCustomerTickets(CinemaContext context, int customerId, TicketCustomerImportDto[] dtoTickets)
+        {
+            var tickets = new List<Ticket>();
+
+            foreach (var dto in dtoTickets)
+            {
+                if (IsValid(dto))
+                {
+                    var ticket = new Ticket
+                    {
+                        ProjectionId = dto.ProjectionId,
+                        CustomerId = customerId,
+                        Price = dto.Price
+                    };
+
+                    tickets.Add(ticket);
+                }
+            }
+
+            context.Tickets.AddRange(tickets);
+            context.SaveChanges();
         }
 
         private static bool IsValid(object obj)
@@ -186,6 +227,18 @@ namespace Cinema.DataProcessor
 
             context.AddRange(seats);
             context.SaveChanges();
+        }
+
+        private static bool IsValidHallId(CinemaContext context, int hallId)
+        {
+            return context
+                .Halls.Any(h => h.Id == hallId);
+        }
+
+        private static bool IsValidMovieId(CinemaContext context, int movieId)
+        {
+            return context
+                .Movies.Any(m => m.Id == movieId);
         }
     }
 }
