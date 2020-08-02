@@ -23,7 +23,6 @@
                 {
                     AuthorName = a.FirstName + ' ' + a.LastName,
                     Books = a.AuthorsBooks
-                    .AsEnumerable()
                     .OrderByDescending(ab => ab.Book.Price)
                     .Select(ab => new
                     {
