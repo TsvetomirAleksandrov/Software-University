@@ -27,7 +27,7 @@
             }
         }
 
-        private static void ImportEntities(TeisterMaskContext context,string baseDir, string exportDir)
+        private static void ImportEntities(TeisterMaskContext context, string baseDir, string exportDir)
         {
             var projects =
                 DataProcessor.Deserializer.ImportProjects(context,

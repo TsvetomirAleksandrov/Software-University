@@ -1,26 +1,31 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TeisterMask.Data.Models
 {
     public class Employee
     {
+        public Employee()
+        {
+            this.EmployeesTasks = new HashSet<EmployeeTask>();
+        }
+
         [Key]
         public int Id { get; set; }
 
-        [Required, RegularExpression("^[A-Za-z0-9]+")]
-        [StringLength(40, MinimumLength = 3)]
+        [Required]
+        [MaxLength(40)]
         public string Username { get; set; }
 
-        [Required, RegularExpression("^(.+)@(.+)$")] //?
+        [Required]
         public string Email { get; set; }
 
-        [Required, RegularExpression(@"\d{3}-\d{3}-\d{4}")]
+        [Required]
         public string Phone { get; set; }
 
-        public ICollection<EmployeeTask> EmployeesTasks { get; set; } = new HashSet<EmployeeTask>();
+        public virtual ICollection<EmployeeTask> EmployeesTasks { get; set; }
+
+
     }
 }

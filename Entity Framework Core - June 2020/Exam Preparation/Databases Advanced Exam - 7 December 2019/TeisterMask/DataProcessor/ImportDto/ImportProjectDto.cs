@@ -7,20 +7,22 @@ using System.Xml.Serialization;
 namespace TeisterMask.DataProcessor.ImportDto
 {
     [XmlType("Project")]
-    public class ProjectTaskImportDto
+    public class ImportProjectDto
     {
-        [XmlElement("Name")]
         [Required]
-        [MinLength(2), MaxLength(40)]
+        [MinLength(2)]
+        [MaxLength(40)]
+        [XmlElement("Name")]
         public string Name { get; set; }
 
-        [XmlElement("OpenDate")]
         [Required]
+        [XmlElement("OpenDate")]
         public string OpenDate { get; set; }
 
         [XmlElement("DueDate")]
         public string DueDate { get; set; }
 
-        public TaskImportDto[] Tasks { get; set; }
+        [XmlArray("Tasks")]
+        public ImportProjectTaskDto[] Tasks { get; set; }
     }
 }

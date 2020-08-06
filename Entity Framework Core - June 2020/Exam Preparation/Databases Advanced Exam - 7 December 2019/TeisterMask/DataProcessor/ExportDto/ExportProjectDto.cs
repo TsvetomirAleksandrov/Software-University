@@ -1,9 +1,12 @@
-﻿using System.Xml.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Xml.Serialization;
 
 namespace TeisterMask.DataProcessor.ExportDto
 {
     [XmlType("Project")]
-    public class ProjectExportDto
+    public class ExportProjectDto
     {
         [XmlElement("ProjectName")]
         public string Name { get; set; }
@@ -15,6 +18,6 @@ namespace TeisterMask.DataProcessor.ExportDto
         public string HasEndDate { get; set; }
 
         [XmlArray("Tasks")]
-        public TaskExportDto[] Tasks { get; set; }
+        public ExportProjectTaskDto[] Tasks { get; set; }
     }
 }

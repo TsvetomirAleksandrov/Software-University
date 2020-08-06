@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 using TeisterMask.Data.Models.Enums;
 
 namespace TeisterMask.Data.Models
 {
     public class Task
     {
+        public Task()
+        {
+            this.EmployeesTasks = new HashSet<EmployeeTask>();
+        }
+
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(40, MinimumLength = 2)]
+        [MaxLength(40)]
         public string Name { get; set; }
 
         public DateTime OpenDate { get; set; }
@@ -24,11 +28,11 @@ namespace TeisterMask.Data.Models
 
         public LabelType LabelType { get; set; }
 
-        [ForeignKey("Project")]
+        [ForeignKey(nameof(Project))]
         public int ProjectId { get; set; }
 
-        public Project Project { get; set; }
+        public virtual Project Project { get; set; }
 
-        public ICollection<EmployeeTask> EmployeesTasks { get; set; } = new HashSet<EmployeeTask>();
+        public virtual ICollection<EmployeeTask> EmployeesTasks { get; set; }
     }
 }
