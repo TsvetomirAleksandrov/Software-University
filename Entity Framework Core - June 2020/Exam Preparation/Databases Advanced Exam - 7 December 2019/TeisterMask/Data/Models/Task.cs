@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -28,6 +29,7 @@ namespace TeisterMask.Data.Models
 
         public LabelType LabelType { get; set; }
 
+        [Required]
         [ForeignKey(nameof(Project))]
         public int ProjectId { get; set; }
 

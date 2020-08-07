@@ -8,8 +8,8 @@ namespace TeisterMask.Data.Models.Enums
     {
         Priority,
         CSharpAdvanced,
-        JavaAdvanced,
-        EntityFramework,
+        JavaAdvanced, 
+        EntityFramework, 
         Hibernate
     }
 }

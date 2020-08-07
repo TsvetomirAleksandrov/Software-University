@@ -7,15 +7,15 @@
     using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
 
     using Data;
+    using System.Text;
     using System.Xml.Serialization;
     using TeisterMask.DataProcessor.ImportDto;
-    using System.IO;
-    using System.Text;
     using TeisterMask.Data.Models;
+    using System.IO;
     using System.Globalization;
     using TeisterMask.Data.Models.Enums;
     using Newtonsoft.Json;
-    using System.Runtime.InteropServices;
+    using System.Linq.Expressions;
     using System.Linq;
 
     public class Deserializer
@@ -36,12 +36,12 @@
 
             List<Project> projects = new List<Project>();
 
-
             using (StringReader stringReader = new StringReader(xmlString))
             {
                 ImportProjectDto[] projectDtos = (ImportProjectDto[])xmlSerializer.Deserialize(stringReader);
 
                 //Validate Projects
+
                 foreach (ImportProjectDto projectDto in projectDtos)
                 {
                     if (!IsValid(projectDto))
@@ -60,10 +60,11 @@
                         continue;
                     }
 
+                    //Validate DueDate (not marked in the Doc)
                     DateTime? projectDueDate;
                     if (!String.IsNullOrEmpty(projectDto.DueDate))
                     {
-                        //If I do receive DueDate in XML!
+                        //If I do receive DueDate in XML:
                         DateTime projectDueDateValue;
                         bool isProjectDueDateValid = DateTime.TryParseExact(projectDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out projectDueDateValue);
 
@@ -89,17 +90,18 @@
                         DueDate = projectDueDate
                     };
 
+
                     //Validate Tasks
                     foreach (ImportProjectTaskDto taskDto in projectDto.Tasks)
                     {
                         if (!IsValid(taskDto))
                         {
-                            //Invalid name, missing open or due date
+                            //Invalid name, missing OpenDate or DueDate
                             sb.AppendLine(ErrorMessage);
                             continue;
                         }
 
-                        //Validate correct DateTime Format!
+                        //Validate OpenDate
                         DateTime taskOpenDate;
                         bool isTaskOpenDateValid = DateTime.TryParseExact(taskDto.OpenDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out taskOpenDate);
 
@@ -109,6 +111,7 @@
                             continue;
                         }
 
+                        //Validate DueDate
                         DateTime taskDueDate;
                         bool isTaskDueDateValid = DateTime.TryParseExact(taskDto.DueDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out taskDueDate);
 
@@ -118,12 +121,14 @@
                             continue;
                         }
 
+                        //Validate if Task OpeDate is before Project OpenDate
                         if (taskOpenDate < projectOpenDate)
                         {
                             sb.AppendLine(ErrorMessage);
                             continue;
                         }
 
+                        //Validate if Task DueDate is after Project DueDate
                         if (projectDueDate.HasValue)
                         {
                             if (taskDueDate > projectDueDate.Value)
@@ -133,7 +138,7 @@
                             }
                         }
 
-                        pr.Tasks.Add(new Task()
+                        pr.Tasks.Add(new Task
                         {
                             Name = taskDto.Name,
                             OpenDate = taskOpenDate,
@@ -162,20 +167,24 @@
 
             List<Employee> employees = new List<Employee>();
 
+
             foreach (ImportEmployeeDto employeeDto in employeeDtos)
             {
+                //Validation
                 if (!IsValid(employeeDto))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
 
+                //Create a new method and validate if username is valid
                 if (!IsUsernameValid(employeeDto.Username))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
 
+                //Create a new Employee if above is valid
                 Employee em = new Employee()
                 {
                     Username = employeeDto.Username,
@@ -183,12 +192,14 @@
                     Phone = employeeDto.Phone
                 };
 
-                foreach (int taskId in employeeDto.Tasks.Distinct())
+                //Take only the unique tasks
+                foreach (var taskId in employeeDto.Tasks.Distinct())
                 {
                     Task task = context
-                         .Tasks
-                         .FirstOrDefault(t => t.Id == taskId);
+                        .Tasks
+                        .FirstOrDefault(t => t.Id == taskId);
 
+                    //Check if task is null
                     if (task == null)
                     {
                         sb.AppendLine(ErrorMessage);

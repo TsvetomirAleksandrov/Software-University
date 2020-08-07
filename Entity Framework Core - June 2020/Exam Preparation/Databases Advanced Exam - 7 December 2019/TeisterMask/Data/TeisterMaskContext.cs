@@ -31,7 +31,7 @@
         {
             modelBuilder.Entity<EmployeeTask>(entity =>
             {
-                //Composite Primary Key
+                //Composite primary key
                 entity.HasKey(et => new { et.EmployeeId, et.TaskId });
             });
         }

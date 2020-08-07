@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -25,7 +25,5 @@ namespace TeisterMask.Data.Models
         public string Phone { get; set; }
 
         public virtual ICollection<EmployeeTask> EmployeesTasks { get; set; }
-
-
     }
 }

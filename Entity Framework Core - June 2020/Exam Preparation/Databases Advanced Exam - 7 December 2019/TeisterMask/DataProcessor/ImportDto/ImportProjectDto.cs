@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 namespace TeisterMask.DataProcessor.ImportDto
 {
     [XmlType("Project")]
-    public class ImportProjectDto
+   public class ImportProjectDto
     {
         [Required]
         [MinLength(2)]
