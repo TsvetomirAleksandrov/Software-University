@@ -1,17 +1,18 @@
 ﻿namespace BookShop.DataProcessor
 {
     using System;
+    using System.ComponentModel;
     using System.Globalization;
     using System.IO;
     using System.Linq;
     using System.Text;
     using System.Xml;
     using System.Xml.Serialization;
+    using BookShop.Data.Models.Enums;
     using BookShop.DataProcessor.ExportDto;
     using Data;
     using Newtonsoft.Json;
     using Formatting = Newtonsoft.Json.Formatting;
-    using Data.Models.Enums;
 
     public class Serializer
     {
@@ -60,10 +61,10 @@
                 })
                 .ToArray();
 
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof
-                (ExportBookDto[]), new XmlRootAttribute("Books"));
-            XmlSerializerNamespaces namespaces = new
-                XmlSerializerNamespaces();
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(ExportBookDto[]), new XmlRootAttribute("Books"));
+
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(string.Empty, string.Empty);
 
             using (StringWriter stringWriter = new StringWriter(sb))

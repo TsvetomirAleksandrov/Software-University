@@ -8,13 +8,12 @@
     using System.Linq;
     using System.Text;
     using System.Xml.Serialization;
+    using BookShop.Data.Models;
+    using BookShop.Data.Models.Enums;
     using BookShop.DataProcessor.ImportDto;
     using Data;
     using Newtonsoft.Json;
     using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
-    using Data.Models;
-    using BookShop.Data.Models.Enums;
-    using System.Reflection.Metadata.Ecma335;
 
     public class Deserializer
     {
@@ -34,24 +33,22 @@
 
             using (StringReader stringReader = new StringReader(xmlString))
             {
-                ImportBookDto[] bookDtos = (ImportBookDto[])xmlSerializer
-                    .Deserialize(stringReader);
+                ImportBookDto[] bookDtos = (ImportBookDto[])xmlSerializer.Deserialize(stringReader);
 
                 List<Book> validBooks = new List<Book>();
 
                 foreach (ImportBookDto bookDto in bookDtos)
                 {
+                    //Check if the DTO is valid
                     if (!IsValid(bookDto))
                     {
                         sb.AppendLine(ErrorMessage);
                         continue;
                     }
 
+                    //Check if date is valid
                     DateTime publishedOn;
-                    bool isDateValid = DateTime.TryParseExact
-                        (bookDto.PublishedOn, "MM/dd/yyyy",
-                        CultureInfo.InvariantCulture,
-                        DateTimeStyles.None, out publishedOn);
+                    bool isDateValid = DateTime.TryParseExact(bookDto.PublishedOn, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out publishedOn);
 
                     if (!isDateValid)
                     {
@@ -59,6 +56,7 @@
                         continue;
                     }
 
+                    //Define a new book
                     Book validBook = new Book()
                     {
                         Name = bookDto.Name,
@@ -68,9 +66,9 @@
                         PublishedOn = publishedOn
                     };
 
+                    //Add the book to the List
                     validBooks.Add(validBook);
-                    sb.AppendLine(String.Format(SuccessfullyImportedBook,
-                        validBook.Name, validBook.Price));
+                    sb.AppendLine(String.Format(SuccessfullyImportedBook, validBook.Name, validBook.Price));
                 }
 
                 context.Books.AddRange(validBooks);
@@ -84,25 +82,27 @@
         {
             StringBuilder sb = new StringBuilder();
 
-            ImportAuthorDto[] authorDtos =
-                JsonConvert.DeserializeObject<ImportAuthorDto[]>(jsonString);
+            ImportAuthorDto[] authorDtos = JsonConvert.DeserializeObject<ImportAuthorDto[]>(jsonString);
 
             List<Author> authors = new List<Author>();
 
             foreach (ImportAuthorDto authorDto in authorDtos)
             {
+                //Validate the DTO
                 if (!IsValid(authorDto))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
 
+                //If an Email exists, do not import the author
                 if (authors.Any(a => a.Email == authorDto.Email))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
                 }
 
+                //Create new Author
                 Author author = new Author()
                 {
                     FirstName = authorDto.FirstName,
@@ -111,17 +111,19 @@
                     Phone = authorDto.Phone
                 };
 
+                //Validate Books
                 foreach (ImportAuthorBookDto bookDto in authorDto.Books)
                 {
+                    //If a book does not exist in the database, do not append an error message and continue with the next book
                     if (!bookDto.BookId.HasValue)
                     {
                         continue;
                     }
 
+                    //Create a new book
                     Book book = context
                         .Books
                         .FirstOrDefault(b => b.Id == bookDto.BookId);
-
 
                     if (book == null)
                     {
@@ -135,6 +137,7 @@
                     });
                 }
 
+                //If an author have zero books (all books are invalid) do not import the author 
                 if (author.AuthorsBooks.Count == 0)
                 {
                     sb.AppendLine(ErrorMessage);

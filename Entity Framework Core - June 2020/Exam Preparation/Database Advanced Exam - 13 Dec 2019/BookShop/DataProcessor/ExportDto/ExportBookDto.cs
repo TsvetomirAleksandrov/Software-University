@@ -1,7 +1,10 @@
-﻿namespace BookShop.DataProcessor.ExportDto
-{
-    using System.Xml.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Xml.Serialization;
 
+namespace BookShop.DataProcessor.ExportDto
+{
     [XmlType("Book")]
     public class ExportBookDto
     {
@@ -15,4 +18,3 @@
         public int Pages { get; set; }
     }
 }
- 

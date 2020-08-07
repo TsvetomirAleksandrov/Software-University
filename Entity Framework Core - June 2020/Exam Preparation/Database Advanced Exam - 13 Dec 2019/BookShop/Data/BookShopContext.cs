@@ -11,7 +11,9 @@
             : base(options) { }
 
         public DbSet<Author> Authors { get; set; }
+
         public DbSet<Book> Books { get; set; }
+
         public DbSet<AuthorBook> AuthorsBooks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -27,7 +29,7 @@
         {
             modelBuilder.Entity<AuthorBook>(entity =>
             {
-                entity.HasKey(ab => new { ab.AuthorId, ab.BookId });
+                entity.HasKey(a => new { a.BookId, a.AuthorId });
             });
         }
     }

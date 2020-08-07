@@ -1,10 +1,9 @@
-﻿using Castle.Components.DictionaryAdapter;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookShop.Data.Models
 {
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
     public class Author
     {
         public Author()
@@ -24,13 +23,11 @@ namespace BookShop.Data.Models
         public string LastName { get; set; }
 
         [Required]
-        [MaxLength(30)]
         public string Email { get; set; }
 
         [Required]
         public string Phone { get; set; }
 
         public virtual ICollection<AuthorBook> AuthorsBooks { get; set; }
-
     }
 }
