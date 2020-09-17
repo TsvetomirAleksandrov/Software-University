@@ -5,5 +5,6 @@ function calorieObject(arr){
     }
     console.log(obj);
     }
+    
     calorieObject(['Potato', '93', 'Skyr', '63',
     'Cucumber', '18', 'Milk', '42'])
