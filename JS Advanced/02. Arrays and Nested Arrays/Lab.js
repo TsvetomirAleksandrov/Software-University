@@ -112,8 +112,7 @@ arr.includes('a', -2); // false
 let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 let citrus = fruits.slice(1, 3);
 let fruitsCopy = fruits.slice();
-// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple',
-'Mango']
+// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple','Mango']
 // citrus contains ['Orange','Lemon']
 
 
