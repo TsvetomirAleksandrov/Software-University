@@ -1,8 +1,8 @@
 function biggestElement(arr){
-    let biggestEl = Number.NEGATIVE_INFINITY;
+    let biggestElement = Number.NEGATIVE_INFINITY;
     arr.forEach(row => row.forEach(
-        col => biggestEl = Math.max(biggestEl, col)));       
-        console.log(biggestEl);  
+        col => biggestElement = Math.max(biggestElement, col)));       
+        console.log(biggestElement);  
     }
 
     biggestElement([[20, 50, 10],
