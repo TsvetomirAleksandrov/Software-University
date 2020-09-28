@@ -1,26 +1,29 @@
 function cappyJuice(input) {
-    let result = {};
-    let juicesInOrder = {};
+    let data = {};
+    let output = {};
 
-    input.forEach(line => {
-        let [product, quantity] = line.split(' => ');
+    input.forEach(element => {
+        let [juices, quantity] = element.split(' => ');
 
-        if (!result[product]) {
-            result[product] = Number(quantity);
+        quantity = Number(quantity);
+
+        if (data.hasOwnProperty(juices)) {
+            data[juices] += quantity;
         } else {
-            result[product] += Number(quantity);
+            data[juices] = quantity;
         }
 
-        if(result[product] >= 1000){
-            juicesInOrder[product] = 0;
+
+        if (data[juices] >= 1000) {
+            if (output.hasOwnProperty(juices)) {
+                output[juices] += quantity;
+            } else {
+                output[juices] = data[juices];
+            }
         }
     });
 
-    Object.keys(result).forEach(j => {
-        if(juicesInOrder[j] !== undefined) {
-            juicesInOrder[j] += parseInt(result[j] / 1000);
-        }
-    })
-
-    Object.keys(juicesInOrder).forEach(j => console.log(`${j} => ${juicesInOrder[j]}`));
+    for (const key in output) {
+        console.log(`${key} => ${parseInt(output[key] / 1000)}`);
+    }
 }
