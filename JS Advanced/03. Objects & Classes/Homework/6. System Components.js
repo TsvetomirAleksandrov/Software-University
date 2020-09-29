@@ -1,5 +1,5 @@
 function x(input = []) {
-    let obj = new Map;
+    let obj = new Map();
  
     input.forEach(line => {
         let [systemName, componentName, subcomponentName] = line.split(' | ');

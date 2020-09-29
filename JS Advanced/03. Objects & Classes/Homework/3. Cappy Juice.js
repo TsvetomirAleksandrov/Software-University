@@ -27,3 +27,5 @@ function cappyJuice(input) {
         console.log(`${key} => ${parseInt(output[key] / 1000)}`);
     }
 }
+
+cappyJuice(['Orange =&gt; 2000', 'Peach =&gt; 1432', 'Banana =&gt; 450', 'Peach =&gt; 600', 'Strawberry =&gt; 549']);
