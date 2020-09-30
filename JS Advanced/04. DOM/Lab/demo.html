@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>My first page</title>
+</head>
+
+<body>
+    <h1 id="heading">Intro to DOM</h1>
+    <ul>
+        <li id="methods-list-item" class="list-item">DOM Methods</li>
+        <li class="list-item">DOM Properties</li>
+    </ul>
+
+    <script>
+        let parentElement = document.querySelector('ul');
+        let childElement = document.getElementById('methods-list-item');
+
+
+        parentElement.removeChild(childElement);
+    </script>
+</body>
+
+</html>
