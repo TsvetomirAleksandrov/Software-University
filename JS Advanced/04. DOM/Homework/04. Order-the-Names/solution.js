@@ -1,5 +1,6 @@
 function solve() {
     document.getElementsByTagName('button')[0].addEventListener('click', function () {
+       
         let studentName = document.getElementsByTagName('input')[0].value;
 
         if (studentName) {
