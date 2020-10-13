@@ -1,4 +1,3 @@
-
 function bmi(name, age, weight, height) {
     let obj = {
         name,
