@@ -13,9 +13,7 @@ function solve(input) {
     }))
     .sort((a, b) => a.compareTo(b));
 
-    // result.forEach(x => console.log(x.area()));
-
-    console.log(result);
+    return result;
 }
 
 solve([[10, 5], [5, 12]]);
