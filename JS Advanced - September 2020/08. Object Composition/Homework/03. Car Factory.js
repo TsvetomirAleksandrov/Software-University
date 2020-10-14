@@ -1,23 +1,35 @@
 function carFactory(order) {
-    let { model, power, color, carriage, wheelSize } = order;
-
-    const engines = [{ power: 90, volume: 1800 },
-                    { power: 120, volume: 2400 },
-                    { power: 200, volume: 3500 }];
-
-    const result = {
-        model,
-        engine: engines.find((e) => e.power >= power),
-        carriage: { type: carriage, color },
-        wheels: [0, 0, 0, 0].map((w) => (wheelSize % 2 === 0 ? --wheelSize : wheelSize)),
+    const car = {
+      model: order.model,
+      engine: { power: 90, volume: 1800 },
+      carriage: {
+        type: order.carriage,
+        color: order.color,
+      },
+      wheels: [],
     };
+    if (order.power > 90 && order.power <= 120) {
+      car.engine.power = 120;
+      car.engine.volume = 2400;
+    } else if (order.power >= 200) {
+      car.engine.power = 200;
+      car.engine.volume = 3500;
+    }
+   
+    let wheelsize = Math.floor(order.wheelsize);
+    if (wheelsize % 2 === 0) wheelsize--;
+   
+    for (let i = 0; i < 4; i++) car.wheels.push(wheelsize);
+    return car;
+  }
 
-    return result;
+
+
+console.log(carFactory({
+    model: 'VW Golf II',
+    power: 90,
+    color: 'blue',
+    carriage: 'hatchback',
+    wheelsize: 14
 }
-
-console.log(carFactory({ model: 'VW Golf II',
-power: 90,
-color: 'blue',
-carriage: 'hatchback',
-wheelsize: 14 }
 ));
