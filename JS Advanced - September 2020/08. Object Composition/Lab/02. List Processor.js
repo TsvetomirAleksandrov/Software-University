@@ -5,7 +5,7 @@ function solve(input) {
         return {
             add: text => list.push(text),
             remove: text => list.splice(list.indexOf(text), 1),
-            print: () => console.log(list.join(',')),
+            print: () => console.log(list.join(', ')),
         };
     }
 
@@ -16,4 +16,3 @@ function solve(input) {
 }
 
 
-solve()
