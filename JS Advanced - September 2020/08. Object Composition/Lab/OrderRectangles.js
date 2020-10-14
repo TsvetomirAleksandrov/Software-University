@@ -1,19 +1,21 @@
 function solve(input) {
-    let result = input.map(([width, height]) => ({
-        width,
-        height,
-        area: () => this.width * this.height,
-        compareTo(rect) {
-            let result = rect.area() - this.area();
-
-            return result == 0 
-                ? rect.width - this.width
-                : result
-        }
-    }))
-    .sort((a, b) => a.compareTo(b));
-
+    let result = input
+        .map(([width, height]) => ({
+            width,
+            height,
+            area: () => width * height,
+            compareTo(rect) {
+                return rect.area() - this.area() || rect.width - this.width
+            }
+        }))
+        .sort((a, b) => a.compareTo(b));
+ 
     return result;
 }
-
-solve([[10, 5], [5, 12]]);
+ 
+let sizes = [[10,5],[5,12]];
+ 
+let sortedRectangles = result(sizes);
+ 
+expect(sortedRectangles.length).to.exist;
+expect(sortedRectangles).to.have.lengthOf(2,'Returned array had incorrect Length!');
