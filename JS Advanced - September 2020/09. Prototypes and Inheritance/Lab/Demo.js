@@ -1,15 +1,28 @@
-let student2 = {
-    name: 'Petkanncho',
-    hasPen: true,
-    write: function() {
-        console.log(`My name is ${this.name}`);
-    }
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+
 }
 
-let student1 = {
-    name: 'Ivancho'
+
+Person.prototype.speak() = function () {
+    console.log(`Hello my name is ${this.firstName} ${this.lastName}`);
 }
 
-Object.setPrototypeOf(student1, student2);
 
-student1.write();
+function createNew(constructor, ...args) {
+    let newObject = {};
+
+    Object.setPrototypeOf(newObject, constructor.prototype);
+
+    constructor.apply()
+
+    return newObject;
+}
+
+// let person = new Person('Pesho', 'Georgiev');
+// let secondPerson = new Person('Shosho', 'Georgiev');
+
+let person = createNew(Person, 'Pesho', 'Georgiev');
+
+console.log(personObj);
