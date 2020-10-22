@@ -1,95 +1,116 @@
 function solve() {
-    let buttonElement = document.querySelector('#container button');
-    let inputElements = Array.from(document.querySelectorAll('#container input'));
-    let [nameElement, ageElement, kindElement, ownerElement] = inputElements;
-    let adoptionUlElement = document.querySelector('#adoption ul');
-    let adoptedUlElement = document.querySelector('#adopted ul');
- 
-    buttonElement.addEventListener('click', e => {
+    const inputs = Array.from(document.querySelectorAll('#container input'));
+
+    const addButonElement = document.querySelector('#container button');
+    const adoptionUlElement = document.querySelector('#adoption ul');
+    const adoptedUlElement = document.querySelector('#adopted ul');
+
+    addButonElement.addEventListener('click', addPetToAdoptionElement);
+
+    function addPetToAdoptionElement(e) {
         e.preventDefault();
- 
-        if (!inputElements.every(x => x.value)) {
+
+        const pet = {
+            name: inputs[0].value,
+            age: inputs[1].value,
+            kind: inputs[2].value,
+            currentOwner: inputs[3].value,
+        }
+
+        if (!inputs.every(x => x.value)) {
             return;
         }
- 
-        if (!Number(ageElement.value)) { // What if cat is 0 year old?
+
+        if (!Number(pet.age)) {
             return;
         }
- 
-        // Create list item 
-        let liElement = document.createElement('li');
-        let pElement = document.createElement('p');
-        let spanElement = document.createElement('span');
-        let petButtonElement = document.createElement('button');
- 
-        pElement.innerHTML = `<strong>${nameElement.value}</strong> is a <strong>${ageElement.value}</strong> year old <strong>${kindElement.value}</strong>`;
-        spanElement.textContent = `Owner: ${ownerElement.value}`;
-        petButtonElement.textContent = `Contact with owner`;
-        
+
+        //Create list item
+        const liElement = el('li');
+
+        const pElement = el('p');
+        pElement.innerHTML = `<strong>${pet.name}</strong> is a <strong>${pet.age}</strong> year old <strong>${pet.kind}</strong>`;
+        const ownerSpanElement = el('span', `Owner: ${pet.currentOwner}`);
+        const contactOwnerButton = el('button', 'Contact with owner');
+
         liElement.appendChild(pElement);
-        liElement.appendChild(spanElement);
-        liElement.appendChild(petButtonElement);
- 
-        // Add list item to #adoption
+        liElement.appendChild(ownerSpanElement);
+        liElement.appendChild(contactOwnerButton);
+
+        //Add liElement to #adoption
         adoptionUlElement.appendChild(liElement);
-        
-        // clear all input fields
-        nameElement.value = '';
-        ageElement.value = '';
-        kindElement.value = '';
-        ownerElement.value = '';
- 
-        // Attach event handler
-        petButtonElement.addEventListener('click', petButtonClick);
-    });
- 
-    function petButtonClick(e) {
-        let parent = e.currentTarget.parentElement;
- 
+
+        //Clear all input fields
+        inputs[0].value = '';
+        inputs[1].value = '';
+        inputs[2].value = '';
+        inputs[3].value = '';
+
+        //Attach event handler
+        contactOwnerButton.addEventListener('click', contactOwnerButtonClick);
+    }
+
+    function contactOwnerButtonClick(e) {
+        let liElement = e.currentTarget.parentElement;
+      
         e.currentTarget.remove();
- 
-        let divElement = document.createElement('div');
-        let inputElement = document.createElement('input');
-        let takeItButtonElement = document.createElement('button');
- 
+
+        let divElement = el('div');
+
+        let inputElement = el('input');
         inputElement.setAttribute('placeholder', 'Enter your names');
-        takeItButtonElement.textContent = 'Yes! I take it!';
- 
+
+        let takeItButtonElement = el('button', 'Yes! I take it!');
+
         divElement.appendChild(inputElement);
         divElement.appendChild(takeItButtonElement);
- 
-        parent.appendChild(divElement);
- 
-        takeItButtonElement.addEventListener('click', onTakeItButtonClick);
+
+        liElement.appendChild(divElement);
+
+        
+        takeItButtonElement.addEventListener('click', takeItButtonClick);
     }
- 
-    function onTakeItButtonClick(e) {
-        let parentButtonElement = e.currentTarget.parentElement
+
+    function takeItButtonClick(e) {
+        let parentButtonElement = e.currentTarget.parentElement;
         let liElement = parentButtonElement.parentElement;
- 
+
         let newOwnerInputElement = liElement.querySelector('input');
         let ownerNameSpanElement = liElement.querySelector('span');
- 
+
         let newOwnerName = newOwnerInputElement.value;
- 
+
         if (!newOwnerName) {
             return;
         }
- 
+
         ownerNameSpanElement.textContent = `New Owner: ${newOwnerName}`;
- 
+
         adoptedUlElement.appendChild(liElement);
- 
+
         parentButtonElement.remove();
- 
-        let checkedButtonElement = document.createElement('button');
-        checkedButtonElement.textContent = 'Checked';
- 
+
+        let checkedButtonElement = el('button', 'Checked');
+
         liElement.appendChild(checkedButtonElement);
- 
+
         checkedButtonElement.addEventListener('click', e => {
-            // liElement.remove();
             e.currentTarget.parentElement.remove();
         });
-    } 
+    }
+
+    function el(type, content, className) {
+        let result = document.createElement(type);
+
+        if (content) {
+            result.textContent = content;
+        }
+
+        if (className) {
+            result.className = className;
+        }
+
+        return result;
+    }
 }
+
