@@ -1,10 +1,4 @@
 function solve() {
-    //bus has two states - moving and stopped
-    //when its stopped, only the button 'Depart' is enabled
-    //when its moving, only the button 'Arrive' is enabled while the info shows the info of the upcoming stop
-    //info box show 'Not connected'and 'Arrive button' is disabled
-    //the id of first stop is ''depot''
-
     let currentState = 'stopped';
     let stopID = 'depot';
     let nextStopName = '';
