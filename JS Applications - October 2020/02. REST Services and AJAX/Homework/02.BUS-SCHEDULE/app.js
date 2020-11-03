@@ -13,6 +13,7 @@ function solve() {
     let departBtn = document.getElementById('depart');
     let arriveBtn = document.getElementById('arrive');
 
+    
     function toggleButtons() {
         departBtn.disabled = !departBtn.disabled;
         arriveBtn.disabled = !arriveBtn.disabled;
@@ -27,7 +28,7 @@ function solve() {
     function arrive() {
         currentState = 'stopped';
         toggleButtons();
-        infoBox.textContent = `Arriviing at ${nextStopName}`;
+        infoBox.textContent = `Arriving at ${nextStopName}`;
     }
 
     function sendRequest() {
