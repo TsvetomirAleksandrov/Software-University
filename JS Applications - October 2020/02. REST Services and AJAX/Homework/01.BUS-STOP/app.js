@@ -26,7 +26,7 @@ function getInfo() {
     }
 
     function displayError(err) {
-        busesUL.innerHTMLM = '';
+        busesUL.textContent = '';
         stopName.textContent = 'Error';
     }
 }
