@@ -9,7 +9,7 @@ function attachEvents() {
             author: document.getElementById('author').value,
             content: document.getElementById('content').value
         }
-        if (data.author.length > 0 && dadta.author.length > 0) {
+        if (data.author.length > 0 && data.author.length > 0) {
             document.getElementById('author').value = '';
             document.getElementById('content').value = '';
             sendRequest(url, 'POST', data);
