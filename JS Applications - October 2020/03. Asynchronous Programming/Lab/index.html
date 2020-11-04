@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let now = Date.now();
+
+        let promise = fetch(`https://swapi.dev/api/peoeple/4`);
+
+        promise
+            .then(res => res.json())
+            .then(data => {
+                return fetch(data.starships[0])
+            })
+            .then(res => res.json())
+            .then(starship => console.log(starship))
+            .catch(err => {
+                console.log('in catch');
+                console.log(err);
+            })
+
+        console.log(`THE END`);
+        console.log(Date.now() - now);
+    </script>
+
+</body>
+
+</html>

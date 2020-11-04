@@ -2,8 +2,12 @@ function attachEvents() {
     let btnLoad = document.getElementById('btnLoad');
     let btnCreate = document.getElementById('btnCreate');
     let output = document.getElementById('phonebook');
-
     btnLoad.addEventListener('click', function () {
+        output.innerHTML = '';
+        sendRequest('https://phonebook-nakov.firebaseio.com/phonebook.json', 'GET');
+    });
+
+    btnCreate.addEventListener('click', function () {
         let data = {
             person: document.getElementById('person').value,
             phone: document.getElementById('phone').value
@@ -14,6 +18,7 @@ function attachEvents() {
             output.textContent = 'Created';
             sendRequest('https://phonebook-nakov.firebaseio.com/phonebook.json', 'POST', data);
         }
+        
     });
 
     function sendRequest(url, method, data) {
@@ -29,7 +34,6 @@ function attachEvents() {
                 }
                 return response.json();
             })
-
             .then((data) => dataHandler(data, method))
             .catch((err) => output.textContent = err);
     }
@@ -38,7 +42,7 @@ function attachEvents() {
         if (method === 'GET') {
             for (const record in data) {
                 let li = document.createElement('li');
-                li.textContent = `${data[record].person}: ${data[record].phone}`;
+                li.innerHTML = `${data[record].person}: ${data[record].phone}`;
                 li.appendChild(createDeleteBtn(record));
                 output.appendChild(li);
             }
@@ -53,7 +57,6 @@ function attachEvents() {
             let url = `https://phonebook-nakov.firebaseio.com/phonebook/${key}.json`;
             sendRequest(url, 'DELETE');
         })
-
         return button;
     }
 }
