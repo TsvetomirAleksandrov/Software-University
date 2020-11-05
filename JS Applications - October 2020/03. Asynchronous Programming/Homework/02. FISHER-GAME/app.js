@@ -1,97 +1,103 @@
 function attachEvents() {
-    const addButton = document.querySelector('button.add');
-    const loadButton = document.querySelector('button.load');
-    const updateButton = document.querySelector('button.update');
-    const deleteButton = document.querySelector('button.delete');
+    let catchesSection = document.getElementById('catches');
+    catchesSection.innerHTML = '';
+    let asideSection = document.getElementsByTagName('aside')[0];
 
-    addButton.addEventListener('click', () => {
-        let angler = document.querySelector('fieldset > input.angler');
-        let weight = document.querySelector('fieldset > input.weight');
-        let species = document.querySelector('fieldset > input.species');
-        let location = document.querySelector('fieldset > input.location');
-        let bait = document.querySelector('fieldset > input.bait');
-        let captureTime = document.querySelector('fieldset > input.captureTime');
+    catchesSection.addEventListener('click', updateDelete);
+    asideSection.addEventListener('click', loadAdd);
 
-        let obj = JSON.stringify({
-            angler: angler.value,
-            weight: weight.value,
-            species: species.value,
-            location: location.value,
-            bait: bait.value,
-            captureTime: captureTime.value
-        });
+    function updateDelete(e) {
+        let catchId = e.target.parentNode.getAttribute('data-id');
+        let buttons = {
+            'Update': () => sendRequest(
+                `https://fisher-game.firebaseio.com/catches/${catchId}.json`, 'PUT',
+                JSON.stringify(getBody(e.target.parentNode))),
 
-        fetch(baseURL, {
-            method: 'POST',
-            body: obj,
-        })
-            .then((response) => response.json())
-            .then((data) => console.log(data));
-    });
-
-    loadButton.addEventListener('click', () => {
-        fetch(baseURL)
-            .then(response => response.json())
-            .then(data => {
-                Object.keys(data).forEach(appendCatch);
-            });
-    })
-
-    function appendCatch(key) {
-        let { angler, weight, species, location, bait, captureTime } = data[key];
-        let catchDiv = createElement('div', 'catch', '', '');
-
-        let anglerLabel = createElement('label', '', 'Angler');
-        let anglerInput = createElement('input', 'angler', angler, 'text');
-
-        let weightLabel = createElement('label', '', 'Weight');
-        let weightInput = createElement('input', 'weight', weight, 'number');
-
-        let speciesLabel = createElement('label', '', 'Species');
-        let speciesInput = createElement('input', 'species', species, 'text');
-
-        let locationLabel = createElement('label', '', 'Location');
-        let locationInput = createElement('input', 'location', location, 'text');
-
-        let baitLabel = createElement('label', '', 'Bait');
-        let baitInput = createElement('input', 'bait', bait, 'text');
-
-        let captureTimeLabel = createElement('label', '', 'CaptureTime');
-        let captureTimeInput = createElement('input', 'captureTime', captureTime, 'number');
-
-        catchDiv.appendChild(anglerLabel);
-        catchDiv.appendChild(anglerInput);
-
-        catchDiv.appendChild(weightLabel);
-        catchDiv.appendChild(weightInput);
-
-        catchDiv.appendChild(speciesLabel);
-        catchDiv.appendChild(speciesInput);
-
-        catchDiv.appendChild(locationLabel);
-        catchDiv.appendChild(locationInput);
-
-        catchDiv.appendChild(baitLabel);
-        catchDiv.appendChild(baitInput);
-
-        catchDiv.appendChild(captureTimeLabel);
-        catchDiv.appendChild(captureTimeInput);
+            'Delete': () => sendRequest(`https://fisher-game.firebaseio.com/catches/${catchId}.json`, 'DELETE')
+        };
+        if (e.target.textContent === 'Update')
+            buttons['Update']();
+        else if (e.target.textContent === 'Delete') {
+            buttons['Delete']();
+            e.target.parentNode.remove();
+        }
+    }
+    async function loadAdd(e) {
+        let buttons = {
+            'Add': () => sendRequest('https://fisher-game.firebaseio.com/catches.json', 'POST',
+                JSON.stringify(getBody(e.target.parentNode))
+            ),
+            'Load': () => sendRequest(`https://fisher-game.firebaseio.com/catches.json`, 'GET')
+        };
+        if (e.target.textContent === 'Add') {
+            buttons['Add']();
+        } else if (e.target.textContent === 'Load') {
+            catchesSection.innerHTML = '';
+            let data = await buttons['Load']();
+            for (const key in data) {
+                data[key].catchId = key;
+                console.log(data[key]);
+                generateCatchHTML(data[key]);
+            }
+        }
     }
 
-    function createElement(ele, classes, content, type) {
-        let element = document.createElement(ele);
-
-        if (ele === 'input') {
-            ele.type = type;
-            ele.value = content;
-        } else {
-            element.innerHTML = content;
+    async function sendRequest(url, method, body) {
+        let objRequest = {
+            method,
+            body
         }
-        element.className = classes;
+        if (body === undefined) {
+            delete objRequest.body;
+        }
+        try {
+            let response = await fetch(url, objRequest);
+            if (response.status !== 200) {
+                throw (response);
+            }
+            if (method !== 'PUT')
+                return response.json();
+        } catch (error) {
+        }
+    }
 
-        return element;
+    function getBody(node) {
+        return {
+            angler: node.getElementsByClassName('angler')[0].value,
+            weight: node.getElementsByClassName('weight')[0].value,
+            species: node.getElementsByClassName('species')[0].value,
+            location: node.getElementsByClassName('location')[0].value,
+            bait: node.getElementsByClassName('bait')[0].value,
+            captureTime: node.getElementsByClassName('captureTime')[0].value
+        }
+    }
+
+    function generateCatchHTML({ catchId, angler, weight, species, location, bait, captureTime }) {
+        let newCatch =
+            `<div class="catch" data-id="${catchId}">` +
+            `<label>Angler</label>` +
+            `<input type="text" class="angler" value="${angler}" />` +
+            `<hr>` +
+            `<label>Weight</label>` +
+            `<input type="number" class="weight" value="${weight}">` +
+            `<hr>` +
+            `<label>Species</label>` +
+            `<input type="text" class="species" value="${species}">` +
+            `<hr>` +
+            `<label>Location</label>` +
+            `<input type="text" class="location" value="${location}">` +
+            `<hr>` +
+            `<label>Bait</label>` +
+            `<input type="text" class="bait" value="${bait}">` +
+            `<hr>` +
+            `<label>Capture Time</label>` +
+            `<input type="number" class="captureTime" value="${captureTime}">` +
+            `<hr>` +
+            `<button class="update">Update</button>` +
+            `<button class="delete">Delete</button>` +
+            `</div>`;
+        catchesSection.innerHTML += newCatch;
     }
 }
 
 attachEvents();
-
