@@ -16,7 +16,6 @@ function attachEvents() {
         'degrees': '&#176',           // °
     };
 
-
     weatherButton.addEventListener('click', () => {
         fetch(locationsURL)
             .then(response => response.json())
@@ -34,7 +33,6 @@ function attachEvents() {
                     .catch((e) => console.log(e));
             });
     });
-
 
     function createElement(ele, classes, content) {
         let element = document.createElement(ele);
