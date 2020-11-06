@@ -11,10 +11,11 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<h2 id='sub-header'>Please log in!</h2>
+    <h2 id='sub-header'>Please log in!</h2>
 
     <div id='login-form'>
         <label for="username">Username: </label>
@@ -24,29 +25,65 @@
         <button id='login-button'>Login</button>
     </div>
 
-    <script src='config.js'></script>
+    <div id='add-movie'>
+        <label for="title">Title: </label>
+        <input type="text" id='title' />
+        <label for="actor">Actor: </label>
+        <input type="text" id='actor' />
+        <label for="image-url">Image Url: </label>
+        <input type="text" id='image-url' />
+        <button id='add-movie-button'>Add</button>
+    </div>
+
+    <ul class='movie-list' id='movies'></ul>
+
+    <h2>Movie Details</h2>
+
+    <ul id='movie-details'>Please Select a Movie</ul>
+
+    <script src='auth.js'></script>
     <script>
-        const auth = firebase.auth();
+        const baseUrl = `https://my-movies-d01ac.firebaseio.com`;
+        let moviesElement = document.getElementById('movies');
+        let movieDetailsElement = document.getElementById('movie-details');
+        let addMovieElement = document.getElementById('add-movie-button');
 
-        let buttonElement = document.getElementById('login-button');
-        buttonElement.addEventListener('click', onUserLogin)
+        fetch(`${baseUrl}/movies/.json`)
+            .then(res => res.json())
+            .then(data => {
+                let movieTitles = Object
+                    .keys(data)
+                    .map(key => `<li class='movie-item' data-key=${key} >${data[key].title}</li>`)
+                    .join('');
 
-        function onUserLogin(e) {
-            let userNameElement = document.getElementById('username');
-            let passwordElement = document.getElementById('password');
-            let subheaderElement = document.getElementById('sub-header');
-            let loginFormElement = document.getElementById('login-form');
+                moviesElement.innerHTML = movieTitles;
+            });
 
-            auth.signInWithEmailAndPassword(userNameElement.value, passwordElement.value)
-                .then(result => {
-                    console.log('Successfully logged in!');
-                    subheaderElement.innerText = `Hello, ${result.user.email}`;
-                    loginFormElement.style.display = 'none';
+        moviesElement.addEventListener('click', e => {
+            let movieId = e.target.dataset.key;
+
+            fetch(`${baseUrl}/movies/${movieId}.json`)
+                .then(res => res.json())
+                .then(movie => {
+                    movieDetailsElement.innerHTML = Object.keys(movie).map(x => `<li>${x} - ${movie[x]}</li>`).join('');
+                });
+        });
+
+        addMovieElement.addEventListener('click', () => {
+            let titleElement = document.getElementById('title');
+            let actorElement = document.getElementById('actor');
+            let imageUrlElement = document.getElementById('image-url');
+
+            fetch(`${baseUrl}/movies/.json`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: titleElement.value,
+                    actor: actorElement.value,
+                    imageUrl: imageUrlElement.value
                 })
-                .catch(err => {
-                    console.log('Error:', err);
-                })
-        }
+            })
+            .then(res => res.json())
+        })
 
     </script>
 </body>
