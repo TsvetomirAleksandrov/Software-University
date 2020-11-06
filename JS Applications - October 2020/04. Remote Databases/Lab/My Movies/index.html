@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <h2 id='sub-header'>Please log in!</h2>
+    <h2 id='sub-header'>Please log in:</h2>
 
     <div id='login-form'>
         <label for="username">Username: </label>
@@ -24,6 +24,8 @@
         <input type="password" id='password' />
         <button id='login-button'>Login</button>
     </div>
+
+    <h2 id='sub-header'>Please Add a Movie:</h2>
 
     <div id='add-movie'>
         <label for="title">Title: </label>
@@ -37,7 +39,7 @@
 
     <ul class='movie-list' id='movies'></ul>
 
-    <h2>Movie Details</h2>
+    <h2>Movie Details:</h2>
 
     <ul id='movie-details'>Please Select a Movie</ul>
 
@@ -65,7 +67,15 @@
             fetch(`${baseUrl}/movies/${movieId}.json`)
                 .then(res => res.json())
                 .then(movie => {
-                    movieDetailsElement.innerHTML = Object.keys(movie).map(x => `<li>${x} - ${movie[x]}</li>`).join('');
+                    let movieDetailsHTML = Object
+                        .keys(movie)
+                        .map(x => `<li>${x} - ${movie[x]}</li>`)
+                        .join('');
+
+                    movieDetailsHTML += '<br />';
+                    movieDetailsHTML += `<img src=${movie.imageUrl} alt=${movie.title}>`;
+
+                    movieDetailsElement.innerHTML = movieDetailsHTML;
                 });
         });
 
@@ -74,15 +84,25 @@
             let actorElement = document.getElementById('actor');
             let imageUrlElement = document.getElementById('image-url');
 
+            let newMovie = {
+                title: titleElement.value,
+                actor: actorElement.value,
+                imageUrl: imageUrlElement.value
+            }
+
             fetch(`${baseUrl}/movies/.json`, {
                 method: 'POST',
-                body: JSON.stringify({
-                    title: titleElement.value,
-                    actor: actorElement.value,
-                    imageUrl: imageUrlElement.value
-                })
+                body: JSON.stringify(newMovie)
             })
-            .then(res => res.json())
+                .then(res => res.json())
+                .then(res => {
+                    let newMovieElement = document.createElement('li');
+                    newMovieElement.innerHTML = `${newMovie.title}`;
+                    newMovieElement.dataset['key'] = res.name;
+                    newMovieElement.classList.add('movie-item')
+                    moviesElement.appendChild(newMovieElement);
+                });
+
         })
 
     </script>
