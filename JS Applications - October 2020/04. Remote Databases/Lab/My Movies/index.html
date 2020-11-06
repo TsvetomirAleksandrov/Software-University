@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movies</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+</head>
+
+<body>
+<h2 id='sub-header'>Please log in!</h2>
+
+    <div id='login-form'>
+        <label for="username">Username: </label>
+        <input type="text" id='username' />
+        <label for="password">Password: </label>
+        <input type="password" id='password' />
+        <button id='login-button'>Login</button>
+    </div>
+
+    <script src='config.js'></script>
+    <script>
+        const auth = firebase.auth();
+
+        let buttonElement = document.getElementById('login-button');
+        buttonElement.addEventListener('click', onUserLogin)
+
+        function onUserLogin(e) {
+            let userNameElement = document.getElementById('username');
+            let passwordElement = document.getElementById('password');
+            let subheaderElement = document.getElementById('sub-header');
+            let loginFormElement = document.getElementById('login-form');
+
+            auth.signInWithEmailAndPassword(userNameElement.value, passwordElement.value)
+                .then(result => {
+                    console.log('Successfully logged in!');
+                    subheaderElement.innerText = `Hello, ${result.user.email}`;
+                    loginFormElement.style.display = 'none';
+                })
+                .catch(err => {
+                    console.log('Error:', err);
+                })
+        }
+
+    </script>
+</body>
+
+</html>
