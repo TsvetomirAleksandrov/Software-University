@@ -94,7 +94,7 @@ function renderStudents(studentsData) {
         .forEach(studentId => {
             const { id, firstName, lastName, facultyNumber, grade } = studentsData[studentId];
 
-            let tableRow = createDOMElement('tr', '', {}, {},
+            const tableRow = createDOMElement('tr', '', {}, {},
                 createDOMElement('td', id, {}, {}),
                 createDOMElement('td', firstName, {}, {}),
                 createDOMElement('td', lastName, {}, {}),

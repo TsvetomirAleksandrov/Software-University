@@ -71,13 +71,3 @@ form button{
     border: none;
     padding: 0.5%;
 }
-
-button {
-    cursor: pointer;
-}
-
-#error-notification {
-    display: none;
-    border: 1px solid red;
-    color: black;
-}
