@@ -7,6 +7,12 @@ button {
     cursor: pointer;
 }
 
+#error-notification {
+    display: none;
+    border: 1px solid red;
+    color: black;
+}
+
 table{
     border:1px solid #234465;
     padding: 1%;
