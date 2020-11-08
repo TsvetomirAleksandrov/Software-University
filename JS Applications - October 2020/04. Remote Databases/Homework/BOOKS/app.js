@@ -1,22 +1,79 @@
 const htmlSelectors = {
     'loadBooks': () => document.getElementById('loadBooks'),
-    'createButton': () => document.querySelector('create-form > button'),
+    'createButton': () => document.querySelector('#create-form > button'),
     'createTitleInput': () => document.getElementById('create-title'),
     'createAuthorInput': () => document.getElementById('create-author'),
     'createIsbnInput': () => document.getElementById('create-isbn'),
     'booksContainer': () => document.querySelector('table > tbody'),
-    'errorContainer': () => document.getElementById('error-notification')
+    'errorContainer': () => document.getElementById('error-notification'),
+    'editButton': () => document.querySelector('#edit-form > button'),
+    'editTitleInput': () => document.getElementById('edit-title'),
+    'editAuthorInput': () => document.getElementById('edit-author'),
+    'editIsbnInput': () => document.getElementById('edit-isbn'),
 }
 
 htmlSelectors['loadBooks']()
     .addEventListener('click', fetchAllBooks);
+htmlSelectors['createButton']()
+    .addEventListener('click', createBook);
 
+
+function createBook(e) {
+    e.preventDefault();
+
+    const titleInput = htmlSelectors['createTitleInput']();
+    const authorInput = htmlSelectors['createAuthorInput']();
+    const isbnInput = htmlSelectors['createIsbnInput']();
+
+    if (titleInput.value !== '' && authorInput.value !== '' && isbnInput.value !== '') {
+        const initObj = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: titleInput.value,
+                author: authorInput.value,
+                isbn: isbnInput.value
+            })
+        };
+
+        fetch(`https://books-app-8cdaa.firebaseio.com/Books/.json`, initObj)
+            .then(fetchAllBooks)
+            .catch(handleError);
+
+        titleInput.value = '';
+        authorInput.value = '';
+        isbnInput.value = '';
+    } else {
+        const error = { message: '' };
+
+        if (titleInput.value === '') {
+            error.message += `Title input must not be empty!`;
+        }
+
+        if (authorInput.value === '') {
+            error.message += `Author input must not be empty!`;
+        }
+
+        if (isbnInput.value === '') {
+            error.message += `ISBN input must not be empty!`;
+        }
+
+        handleError(error);
+    }
+}
+
+function loadBookById() {
+    const id = this.getAttribute('data-key');
+    console.log('id');
+}
 
 function fetchAllBooks() {
-    fetch(`https://books-app-8cdaa.firebaseio.com/Book/.json`)
+    fetch(`https://books-app-8cdaa.firebaseio.com/Books/.json`)
         .then(res => res.json())
         .then(renderBooks)
-        .catch(handleError)
+        .catch(handleError);
 }
 
 function renderBooks(booksData) {
@@ -36,7 +93,7 @@ function renderBooks(booksData) {
                 createDOMElement('td', author, {}, {}),
                 createDOMElement('td', isbn, {}, {}),
                 createDOMElement('td', '', {}, {},
-                    createDOMElement('button', 'Edit', {}, {}),
+                    createDOMElement('button', 'Edit', { 'data-key': bookId }, { click: loadBookById }),
                     createDOMElement('button', 'Delete', {}, {})));
 
             booksContainer.appendChild(tableRow);

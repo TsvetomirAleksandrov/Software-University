@@ -13,6 +13,10 @@ button {
     color: black;
 }
 
+#edit-form {
+    display: none;
+}
+
 table{
     border:1px solid #234465;
     padding: 1%;
