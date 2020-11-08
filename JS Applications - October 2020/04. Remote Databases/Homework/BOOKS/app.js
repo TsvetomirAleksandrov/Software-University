@@ -6,6 +6,7 @@ const htmlSelectors = {
     'createIsbnInput': () => document.getElementById('create-isbn'),
     'booksContainer': () => document.querySelector('table > tbody'),
     'errorContainer': () => document.getElementById('error-notification'),
+    'editForm': () => document.getElementById('edit-form'),
     'editButton': () => document.querySelector('#edit-form > button'),
     'editTitleInput': () => document.getElementById('edit-title'),
     'editAuthorInput': () => document.getElementById('edit-author'),
@@ -16,6 +17,8 @@ htmlSelectors['loadBooks']()
     .addEventListener('click', fetchAllBooks);
 htmlSelectors['createButton']()
     .addEventListener('click', createBook);
+htmlSelectors['editButton']()
+    .addEventListener('click', editBook);
 
 
 function createBook(e) {
@@ -64,9 +67,65 @@ function createBook(e) {
     }
 }
 
+function editBook(e) {
+    e.preventDefault();
+
+    const titleInput = htmlSelectors['editTitleInput']();
+    const authorInput = htmlSelectors['editAuthorInput']();
+    const isbnInput = htmlSelectors['editIsbnInput']();
+
+    if (titleInput.value !== '' && authorInput.value !== '' && isbnInput.value !== '') {
+        const id = this.getAttribute('data-key');
+        const initObj = {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: titleInput.value,
+                author: authorInput.value,
+                isbn: isbnInput.value
+            })
+        }
+
+        htmlSelectors['editForm']().style.display = 'none';
+        fetch(`https://books-app-8cdaa.firebaseio.com/Books/${id}/.json`, initObj)
+            .then(fetchAllBooks)
+            .catch(handleError);
+    }
+
+    else {
+        const error = { message: '' };
+
+        if (titleInput.value === '') {
+            error.message += `Title input must not be empty!`;
+        }
+
+        if (authorInput.value === '') {
+            error.message += `Author input must not be empty!`;
+        }
+
+        if (isbnInput.value === '') {
+            error.message += `ISBN input must not be empty!`;
+        }
+
+        handleError(error);
+    }
+}
+
 function loadBookById() {
     const id = this.getAttribute('data-key');
-    console.log('id');
+
+    fetch(`https://books-app-8cdaa.firebaseio.com/Books/${id}.json`)
+        .then(res => res.json())
+        .then(({ title, author, isbn }) => {
+            htmlSelectors['editTitleInput']().value = title;
+            htmlSelectors['editAuthorInput']().value = author;
+            htmlSelectors['editIsbnInput']().value = isbn;
+            htmlSelectors['editForm']().style.display = 'block';
+            htmlSelectors['editButton']().setAttribute('data-key', id);
+        })
+        .catch(handleError);
 }
 
 function fetchAllBooks() {
