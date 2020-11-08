@@ -20,6 +20,18 @@ htmlSelectors['createButton']()
 htmlSelectors['editButton']()
     .addEventListener('click', editBook);
 
+    
+function deleteBook(e) {
+    const id = this.getAttribute('data-key');
+
+    const initObj = {
+        method: 'DELETE'
+    };
+
+    fetch(`https://books-app-8cdaa.firebaseio.com/Books/${id}/.json`, initObj)
+    .then(fetchAllBooks)
+    .catch(handleError);
+} 
 
 function createBook(e) {
     e.preventDefault();
@@ -153,7 +165,7 @@ function renderBooks(booksData) {
                 createDOMElement('td', isbn, {}, {}),
                 createDOMElement('td', '', {}, {},
                     createDOMElement('button', 'Edit', { 'data-key': bookId }, { click: loadBookById }),
-                    createDOMElement('button', 'Delete', {}, {})));
+                    createDOMElement('button', 'Delete', { 'data-key': bookId }, {click: deleteBook })));
 
             booksContainer.appendChild(tableRow);
         })
