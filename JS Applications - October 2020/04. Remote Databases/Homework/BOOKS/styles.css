@@ -3,6 +3,10 @@
     font-size: 20px;
 }
 
+button {
+    cursor: pointer;
+}
+
 table{
     border:1px solid #234465;
     padding: 1%;
