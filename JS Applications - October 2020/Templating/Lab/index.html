@@ -11,7 +11,7 @@
 <body>
   <h1>My contacts</h1>
   <div id="contacts">
-    
+
   </div>
 
   <script type='text/x-handlebars-template' id='contact-template'>
@@ -33,17 +33,32 @@
   <script src="./contacts.js"></script>
 
   <script>
-const contactsElement = document.getElementById('contacts');
+    const contactsElement = document.getElementById('contacts');
 
-const contactView = document.getElementById('contact-template').innerHTML;
+    const contactView = document.getElementById('contact-template').innerHTML;
 
-const contactTemplate = Handlebars.compile(contactView);
+    const contactTemplate = Handlebars.compile(contactView);
 
-let contactsHtml = contacts.map(contact => contactTemplate(contact)).join('');
+    let contactsHtml = contacts.map(contact => contactTemplate(contact)).join('');
 
-contactsElement.innerHTML = contactsHtml;
+    contactsElement.innerHTML = contactsHtml;
 
+
+    contactsElement.addEventListener('click', e => {
+      if (!Array.from(e.target.classList).includes('detailsBtn')) {
+        return;
+      }
+
+      let detailsElement = e.target.parentElement.querySelector('.details');
+
+      if (detailsElement.style.display == 'block') {
+        detailsElement.style.display = 'none';
+      } else {
+        detailsElement.style.display = 'block';
+      }
+    })
   </script>
+
 </body>
 
 </html>
