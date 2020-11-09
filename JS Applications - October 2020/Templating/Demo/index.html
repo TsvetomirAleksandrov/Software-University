@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+</head>
+ 
+<body>
+    <div class="site-wrapper">
+        <h1>Articles</h1>
+ 
+        <div id="articles">
+        </div>
+    </div>
+ 
+    <script id="article-template" type="text/x-handlebars-template">
+        <article class="article-item">
+            <header>
+                <h3>{{title}}</h3>
+            </header>
+ 
+            <section>
+                <p>{{body}}</p>
+            </section>
+ 
+            {{#if author}}
+                <footer>
+                    <p>Author: {{author}}</p>
+                </footer>
+            {{/if}}
+        </article>
+    </script>
+ 
+    <script type="module">
+        import articles from './articles.js';
+ 
+        const { compile } = Handlebars; 
+ 
+        const articleView = document.getElementById('article-template').innerHTML;
+ 
+        const articleTemplate = compile(articleView);
+ 
+        const articlesListElement = document.getElementById('articles');
+ 
+        let articlesHtml = articles.map(article => articleTemplate(article)).join('');
+ 
+        articlesListElement.innerHTML = articlesHtml;
+    </script>
+</body>
+ 
+</html>
