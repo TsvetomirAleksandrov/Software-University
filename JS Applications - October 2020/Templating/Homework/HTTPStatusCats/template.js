@@ -2,7 +2,7 @@
     let outputSection = document.getElementById('allCats');
 
     async function renderCatTemplate() {
-        let html = await (await fetch(`./cat-template.hbs`)).text();
+        let html = await (await fetch('./cat-template.hbs')).text();
         let template = Handlebars.compile(html);
         outputSection.innerHTML = template({ cats });
     }
@@ -20,7 +20,6 @@
             }
         });
     }
-
     catStatusBtn();
     renderCatTemplate();
 })();
