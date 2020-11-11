@@ -1,4 +1,4 @@
-const monkeys = [
+var monkeys = [
   {
     id: 1,
     name: "Chim Chim",
