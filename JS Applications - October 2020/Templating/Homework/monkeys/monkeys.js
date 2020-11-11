@@ -1,4 +1,4 @@
-var monkeys = [
+export default [
   {
     id: 1,
     name: "Chim Chim",
