@@ -71,3 +71,12 @@ form button{
     border: none;
     padding: 0.5%;
 }
+
+button#loadStudents{
+    margin: 0 auto;
+    display:block;
+    padding:1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+}
