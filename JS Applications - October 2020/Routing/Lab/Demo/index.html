@@ -10,6 +10,8 @@
 <body>
     <h1>Hello World</h1>
 
+    <div id="root"></div>
+
     <a href="#about">about</a>
     <a href="#contact">contact</a>
     <a href="#home">home</a>
@@ -27,9 +29,9 @@
             '#changed': `<h2>Dynamic header...</h2>`,
         };
 
+        rootElement.innerHTML = router[location.hash] || `<h2>Not Found</h2>`;
 
         window.addEventListener('hashchange', e => {
-            console.log(location.hash);
             rootElement.innerHTML = router[location.hash] || `<h2>Not Found</h2>`;
         });
 
