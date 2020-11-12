@@ -26,7 +26,7 @@
             '#about': `<h2>About us something...</h2>`,
             '#contact': `<h2>Our contacts...</h2>`,
             '#home': `<h2>Homepage...</h2>`,
-            '#changed': `<h2>Dynamic header...</h2>`,
+            '#changed': renderChanged(),
         };
 
         rootElement.innerHTML = router[location.hash] || `<h2>Not Found</h2>`;
@@ -38,6 +38,10 @@
         document.getElementById('change-hash').addEventListener('click', () => {
             location.hash = 'changed';
         });
+
+        function renderChanged() {
+            return `<h2>Dynamic header</h2>`;
+        }
     </script>
 </body>
 
