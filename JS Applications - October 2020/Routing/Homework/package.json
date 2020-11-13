@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap": "4.5.3",
+    "handlebars": "4.7.6",
+    "jquery": "3.5.1",
+    "lite-server": "^2.6.1",
+    "sammy": "0.7.6"
+  }
+}
