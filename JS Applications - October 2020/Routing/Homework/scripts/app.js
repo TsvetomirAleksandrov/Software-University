@@ -3,6 +3,9 @@ import about from '../controllers/about.js';
 import register from '../controllers/register.js';
 import login from '../controllers/login.js';
 import catalog from '../controllers/catalog.js';
+import details from '../controllers/details.js';
+import create from '../controllers/create.js';
+import edit from '../controllers/edit.js';
 
 $(() => {
     const app = Sammy('#main', function () {
@@ -24,6 +27,12 @@ $(() => {
         this.get('#/login', login);
 
         this.get('#/catalog', catalog);
+
+        this.get('#/catalog/:id', details);
+
+        this.get('#/create', create);
+
+        this.get('#/edit/:id', edit);
     });
 
     app.run();
