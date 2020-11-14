@@ -4,7 +4,7 @@ import register, { registerPost } from '../controllers/register.js';
 import login, { loginPost } from '../controllers/login.js';
 import catalog from '../controllers/catalog.js';
 import details from '../controllers/details.js';
-import create from '../controllers/create.js';
+import create, { createPost } from '../controllers/create.js';
 import edit from '../controllers/edit.js';
 
 $(() => {
@@ -37,6 +37,8 @@ $(() => {
         this.post('#/register', (ctx) => { registerPost.call(ctx); });
 
         this.post('#/login', (ctx) => { loginPost.call(ctx); });
+
+        this.post('#/create', (ctx) => { createPost.call(ctx); });
     });
 
     app.run();
