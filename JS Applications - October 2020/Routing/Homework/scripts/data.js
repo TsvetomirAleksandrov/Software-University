@@ -14,13 +14,22 @@ export async function register(username, password) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            email: username,
+            username,
             password
         })
     })).json();
    
 }
 
-function login(username, password) {
-    
+export async function login(username, password) {
+    return (await fetch(host(endpoints.LOGIN), {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            login: username,
+            password
+        })
+    })).json();
 }
