@@ -7,3 +7,13 @@ export default async function () {
     };
     this.partial('../templates/login/loginPage.hbs');
 }
+
+export function loginPost() {
+
+    console.log(this.params);
+
+    this.app.userData.loggedIn = true;
+    this.app.userData.username = this.params.username;
+
+    this.redirect('#/home');
+}

@@ -1,7 +1,7 @@
 import home from '../controllers/home.js';
 import about from '../controllers/about.js';
-import register from '../controllers/register.js';
-import login from '../controllers/login.js';
+import register, { registerPost } from '../controllers/register.js';
+import login, { loginPost } from '../controllers/login.js';
 import catalog from '../controllers/catalog.js';
 import details from '../controllers/details.js';
 import create from '../controllers/create.js';
@@ -33,6 +33,10 @@ $(() => {
         this.get('#/create', create);
 
         this.get('#/edit/:id', edit);
+
+        this.post('#/register', (ctx) => { registerPost.call(ctx); });
+
+        this.post('#/login', (ctx) => { loginPost.call(ctx); });
     });
 
     app.run();
