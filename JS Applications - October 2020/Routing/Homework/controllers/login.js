@@ -1,4 +1,4 @@
-import { login } from '../scripts/data.js'
+import { login, logout as logoutGet } from '../scripts/data.js'
 
 export default async function () {
 
@@ -14,7 +14,7 @@ export async function loginPost() {
 
     try {
         const result = await login(this.params.username, this.params.password);
-        
+
         if (result.hasOwnProperty('errorData')) {
             const error = new Error();
             Object.assign(error, result);
@@ -23,11 +23,28 @@ export async function loginPost() {
 
         this.app.userData.loggedIn = true;
         this.app.userData.username = result.username;
+        this.app.userData.userId = result.objectId;
         localStorage.setItem('userToken', result['user-token']);
         localStorage.setItem('username', result.username);
+        localStorage.setItem('username', result.objectId);
 
         this.redirect('#/home');
     } catch (err) {
         alert(err.message);
     }
+}
+
+export async function logout() {
+    await logoutGet();
+
+    this.app.userData.loggedIn = false;
+    this.app.userData.hasTeam = false;
+    this.app.userData.username = undefined;
+    this.app.userData.userId = undefined;
+    this.app.userData.teamId = undefined;
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('username');
+    localStorage.removeItem('username');
+
+    this.redirect('#/home');
 }

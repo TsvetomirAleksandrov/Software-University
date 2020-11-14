@@ -28,9 +28,4 @@ export async function registerPost() {
     } catch (err) {
         alert(err.message);
     }
-
-
-
-
-
 }

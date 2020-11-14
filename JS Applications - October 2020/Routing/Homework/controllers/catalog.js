@@ -1,3 +1,5 @@
+import { getTeams } from '../scripts/data.js';
+
 export default async function () {
 
     this.partials = {
@@ -6,24 +8,8 @@ export default async function () {
         team: await this.load('../templates/catalog/team.hbs')
     };
 
-    const data = Object.assign({}, this.app.userData);
-    data.teams = [
-        {
-            _id: '121221',
-            name: 'Apple',
-            comment: 'the best team'
-        },
-        {
-            _id: '213213',
-            name: 'Cherry',
-            comment: 'the best team'
-        },
-        {
-            _id: '454326',
-            name: 'Banana',
-            comment: 'the best team'
-        }
-    ];
+    const teams = await getTeams();
+    const data = Object.assign({ teams }, this.app.userData);
 
     this.partial('../templates/catalog/teamCatalog.hbs', data);
 }
