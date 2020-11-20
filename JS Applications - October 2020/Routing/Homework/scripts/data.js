@@ -105,5 +105,7 @@ export async function getTeamById(id) {
 }
 
 export async function getTeams() {
-    return (await fetch(host(endpoints.TEAMS))).json();
+    return (await fetch(host(endpoints.TEAMS))).json()
 }
+
+
