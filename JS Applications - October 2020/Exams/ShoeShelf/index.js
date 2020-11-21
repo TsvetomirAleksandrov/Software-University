@@ -47,10 +47,10 @@ const app = Sammy('#root', function () {
 
         UserModel.signInWithEmailAndPassword(email, password)
             .then((userData) => {
-                console.log(userData);
+                saveUserData(userData)
                 this.redirect('/home');
             })
-            .catch(errorHandler)
+            .catch(errorHandler);
     });
 
     //Create Offer
@@ -77,7 +77,7 @@ function extendContext(context) {
 
     const user = getUserData();
     context.isLoggedIn = Boolean(user);
-    context.email = user ? user.email : '';
+    context.userEmail = user ? user.email : '';
 
     return context.loadPartials({
         'header': './partials/header.hbs',
@@ -91,11 +91,10 @@ function errorHandler(error) {
 
 function saveUserData(data) {
     const { user: { email, uid } } = data;
-    localStorage.setItem('user', JSON.stringify({email, uid}));
+    localStorage.setItem('user', JSON.stringify({ email, uid }));
 }
 
-function getUserData(data) {
+function getUserData() {
     const user = localStorage.getItem('user');
-
     return user ? JSON.parse(user) : null;
 }
