@@ -45,7 +45,7 @@ const app = Sammy('#root', function () {
     this.post('/login', function (context) {
         const { email, password } = context.params;
 
-        UserModel.signInWithEmailAndPassword (email, password)
+        UserModel.signInWithEmailAndPassword(email, password)
             .then((userData) => {
                 console.log(userData);
                 this.redirect('/home');
@@ -82,4 +82,9 @@ function extendContext(context) {
 
 function errorHandler(error) {
     console.log(error);
+}
+
+function saveUserData(data) {
+    const { user: { email, uid } } = data;
+    localStorage.setItem('user', JSON.stringify({email, uid}));
 }
