@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.1",
+    "query": "^0.2.0",
+    "sammy": "^0.7.6"
+  }
+}
