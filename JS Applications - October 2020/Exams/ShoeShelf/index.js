@@ -12,7 +12,6 @@ const app = Sammy('#root', function () {
             })
     });
 
-
     //Register
     this.get('/register', function (context) {
         extendContext(context)
@@ -32,7 +31,7 @@ const app = Sammy('#root', function () {
             .then((userData) => {
                 this.redirect('/home');
             })
-            .catch((error) => console.log(error))
+            .catch(errorHandler);
     });
 
     //Login
@@ -44,7 +43,14 @@ const app = Sammy('#root', function () {
     });
 
     this.post('/login', function (context) {
+        const { email, password } = context.params;
 
+        UserModel.signInWithEmailAndPassword (email, password)
+            .then((userData) => {
+                console.log(userData);
+                this.redirect('/home');
+            })
+            .catch(errorHandler)
     });
 
     //Create Offer
@@ -72,4 +78,8 @@ function extendContext(context) {
         'header': './partials/header.hbs',
         'footer': './partials/footer.hbs',
     })
+}
+
+function errorHandler(error) {
+    console.log(error);
 }
