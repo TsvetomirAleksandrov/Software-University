@@ -11,6 +11,26 @@
 
 <body>
     <main id="root"></main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAW26KGnKIcC9fuy1tiNsF5cUExaKrKBw8",
+            authDomain: "shoeshelf-dc578.firebaseapp.com",
+            databaseURL: "https://shoeshelf-dc578.firebaseio.com",
+            projectId: "shoeshelf-dc578",
+            storageBucket: "shoeshelf-dc578.appspot.com",
+            messagingSenderId: "159495353683",
+            appId: "1:159495353683:web:7c31af31c99124d3ed5da6"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="./node_modules/sammy/lib/sammy.js"></script>
