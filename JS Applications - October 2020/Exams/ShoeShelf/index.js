@@ -74,6 +74,11 @@ const app = Sammy('#root', function () {
 })();
 
 function extendContext(context) {
+
+    const user = getUserData();
+    context.isLoggedIn = Boolean(user);
+    context.email = user ? user.email : '';
+
     return context.loadPartials({
         'header': './partials/header.hbs',
         'footer': './partials/footer.hbs',
@@ -87,4 +92,10 @@ function errorHandler(error) {
 function saveUserData(data) {
     const { user: { email, uid } } = data;
     localStorage.setItem('user', JSON.stringify({email, uid}));
+}
+
+function getUserData(data) {
+    const user = localStorage.getItem('user');
+
+    return user ? JSON.parse(user) : null;
 }
