@@ -53,6 +53,16 @@ const app = Sammy('#root', function () {
             .catch(errorHandler);
     });
 
+    //Logout
+    this.get('/logout', function (context) {
+        UserModel.signOut()
+            .then(() => {
+                clearUserData();
+                this.redirect('/home');
+            })
+            .catch(errorHandler);
+    });
+
     //Create Offer
     this.get('/create-offer', function (context) {
         this.partial('./templates/createOffer.hbs');
@@ -97,4 +107,8 @@ function saveUserData(data) {
 function getUserData() {
     const user = localStorage.getItem('user');
     return user ? JSON.parse(user) : null;
+}
+
+function clearUserData() {
+    this.localStorage.removeItem('user');
 }
