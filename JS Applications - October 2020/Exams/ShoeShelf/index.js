@@ -1,14 +1,14 @@
 const UserModel = firebase.auth();
+const DB = firebase.firestore();
 
 const app = Sammy('#root', function () {
     this.use('Handlebars', 'hbs');
 
     //Home
     this.get('/home', function (context) {
-
         extendContext(context)
             .then(function () {
-                this.partial('./templates/homeGuest.hbs');
+                this.partial('./templates/home.hbs');
             })
     });
 
@@ -29,7 +29,7 @@ const app = Sammy('#root', function () {
 
         UserModel.createUserWithEmailAndPassword(email, password)
             .then((userData) => {
-                this.redirect('/home');
+                this.redirect('/login');
             })
             .catch(errorHandler);
     });
@@ -65,17 +65,43 @@ const app = Sammy('#root', function () {
 
     //Create Offer
     this.get('/create-offer', function (context) {
-        this.partial('./templates/createOffer.hbs');
+        extendContext(context)
+            .then(function () {
+                this.partial('./templates/createOffer.hbs');
+            })
+    });
+
+    this.post('/create-offer', function (context) {
+        const { productName, imageUrl, price, description, brand } = context.params;
+
+        DB.collection('offers').add({
+            productName,
+            price,
+            imageUrl,
+            description,
+            brand,
+            salesMan: getUserData().uid
+        })
+            .then((createdProduct) => {
+                this.redirect('home');
+            })
+            .catch(errorHandler);
     });
 
     //Edit Offer
-    this.get('/edit-offer', function (context) {
-        this.partial('./templates/editOffer.hbs');
+    this.get('/edit-offer/:id', function (context) {
+        extendContext(context)
+            .then(function () {
+                this.partial('./templates/editOffer.hbs');
+            })
     });
 
     //Details
-    this.get('/details', function (context) {
-        this.partial('./templates/details.hbs');
+    this.get('/details/:id', function (context) {
+        extendContext(context)
+            .then(function () {
+                this.partial('./templates/details.hbs');
+            })
     });
 });
 
