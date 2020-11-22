@@ -318,6 +318,7 @@ form div button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
+    width: 100%;
 }
 
 .shoe {

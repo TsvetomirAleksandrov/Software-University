@@ -10,7 +10,7 @@ const app = Sammy('#root', function () {
         DB.collection('offers')
             .get()
             .then((response) => {
-                context.offers = [];
+                context.offers = response.docs.map((offer) => { return { id: offer.id, ...offer.data() } });
                 response.forEach((offer) => {
                     context.offers.push({ id: offer.id, ...offer.data() });
                 });
@@ -116,7 +116,6 @@ const app = Sammy('#root', function () {
             .then((response) => {
                 const actualOfferData = response.data();
                 const imTheSalesman = actualOfferData.salesMan === getUserData().uid;
-
 
                 context.offer = { ...response.data(), imTheSalesman };
                 extendContext(context)
