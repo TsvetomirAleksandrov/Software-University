@@ -20,8 +20,6 @@ const app = Sammy('#root', function () {
                     })
             })
             .catch(errorHandler);
-
-
     });
 
     //Register
@@ -109,10 +107,22 @@ const app = Sammy('#root', function () {
     });
 
     //Details
-    this.get('/details/:id', function (context) {
-        extendContext(context)
-            .then(function () {
-                this.partial('./templates/details.hbs');
+    this.get('/details/:offerId', function (context) {
+        const { offerId } = context.params;
+
+        DB.collection('offers')
+            .doc(offerId)
+            .get()
+            .then((response) => {
+                const actualOfferData = response.data();
+                const imTheSalesman = actualOfferData.salesMan === getUserData().uid;
+
+
+                context.offer = { ...response.data(), imTheSalesman };
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/details.hbs');
+                    })
             })
     });
 });
@@ -122,7 +132,6 @@ const app = Sammy('#root', function () {
 })();
 
 function extendContext(context) {
-
     const user = getUserData();
     context.isLoggedIn = Boolean(user);
     context.userEmail = user ? user.email : '';

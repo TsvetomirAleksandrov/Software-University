@@ -6,7 +6,7 @@
         <div class="shoe">
             <img src="{{ this.imageUrl }}">
             <h3>{{ this.productName }}</h3>
-            <a>Buy it for ${{ this.price }}</a>
+            <a href="#/details/{{ id }}">Buy it for ${{ this.price }}</a>
         </div>
         {{else}}
         <h1>No offers to display... :(</h1>
