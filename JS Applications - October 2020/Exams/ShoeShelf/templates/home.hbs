@@ -4,7 +4,7 @@
     <div class="shoes">
         {{#each offers}}
         <div class="shoe">
-            <img src="{{ imageUrl }}">
+            <img src="{{ this.imageUrl }}">
             <h3>{{ this.productName }}</h3>
             <a>Buy it for ${{ this.price }}</a>
         </div>
