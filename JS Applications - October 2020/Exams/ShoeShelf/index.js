@@ -11,9 +11,6 @@ const app = Sammy('#root', function () {
             .get()
             .then((response) => {
                 context.offers = response.docs.map((offer) => { return { id: offer.id, ...offer.data() } });
-                response.forEach((offer) => {
-                    context.offers.push({ id: offer.id, ...offer.data() });
-                });
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/home.hbs');
@@ -117,13 +114,25 @@ const app = Sammy('#root', function () {
                 const actualOfferData = response.data();
                 const imTheSalesman = actualOfferData.salesMan === getUserData().uid;
 
-                context.offer = { ...response.data(), imTheSalesman };
+                context.offer = { ...response.data(), imTheSalesman, id: offerId };
+                console.log(context.offer)
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/details.hbs');
                     })
             })
     });
+
+    this.get('/delete/:offerId', function (context) {
+        const { offerId } = context.params;
+
+        DB.collection('offers')
+            .doc(offerId)
+            .delete()
+            .then(() =>
+                this.redirect('/home'));
+    })
+        .catch(errorHandler);
 });
 
 (() => {

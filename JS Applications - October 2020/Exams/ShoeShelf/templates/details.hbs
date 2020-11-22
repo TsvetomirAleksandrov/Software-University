@@ -12,8 +12,8 @@
     </div>
     <div class="actions">
         {{#if offer.imTheSalesman}}
-        <a>Edit</a>
-        <a>Delete</a>
+        <a href="#/edit/{{ offer.id }}">Edit</a>
+        <a href="#/delete/{{ offer.id }}"> Delete</a>
         {{else}}
         <a>Buy</a>
         {{/if}}
