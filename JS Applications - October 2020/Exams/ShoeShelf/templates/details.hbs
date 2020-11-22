@@ -15,10 +15,10 @@
         <a href="#/edit/{{ offer.id }}">Edit</a>
         <a href="#/delete/{{ offer.id }}"> Delete</a>
         {{else}}
-        {{#if imInTheClientsList}}
+        {{#if offer.imInTheClientsList}}
         <span>You bought it</span>
         {{else}}
-        <a>Buy</a>
+        <a href="/buy/{{ offer.id }}">Buy</a>
         {{/if}}
         {{/if}}
     </div>

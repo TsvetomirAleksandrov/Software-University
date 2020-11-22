@@ -87,7 +87,8 @@ const app = Sammy('#root', function () {
             imageUrl,
             description,
             brand,
-            salesMan: getUserData().uid
+            salesMan: getUserData().uid,
+            clients: []
         })
             .then((createdProduct) => {
                 this.redirect('home');
@@ -111,10 +112,15 @@ const app = Sammy('#root', function () {
             .doc(offerId)
             .get()
             .then((response) => {
-                const actualOfferData = response.data();
-                const imTheSalesman = actualOfferData.salesMan === getUserData().uid;
 
-                context.offer = { ...response.data(), imTheSalesman, id: offerId };
+                const { uid } = getUserData();
+                const actualOfferData = response.data();
+                const imTheSalesman = actualOfferData.salesMan === uid;
+
+                const userIndex = actualOfferData.clients.indexOf(uid);
+                const imInTheClientsList = userIndex > -1;
+
+                context.offer = { ...response.data(), imTheSalesman, id: offerId, imInTheClientsList };
                 console.log(context.offer)
                 extendContext(context)
                     .then(function () {
@@ -169,6 +175,27 @@ const app = Sammy('#root', function () {
                     })
             })
             .then((response) => {
+                this.redirect(`#/details/${offerId}`);
+            })
+            .catch(errorHandler);
+    });
+
+    this.get('/buy/:offerId', function (context) {
+        const { offerId } = context.params;
+        const { uid } = getUserData();
+
+        DB.collection('offers')
+            .doc(offerId)
+            .get()
+            .then((response) => {
+                const offerData = { ...response.data() };
+                offerData.clients.push(uid)
+
+                return DB.collection('offers')
+                    .doc(offerId)
+                    .set(offerData)
+            })
+            .then(() => {
                 this.redirect(`#/details/${offerId}`);
             })
             .catch(errorHandler);
