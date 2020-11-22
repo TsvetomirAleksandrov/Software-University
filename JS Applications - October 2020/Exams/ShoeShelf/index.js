@@ -129,10 +129,47 @@ const app = Sammy('#root', function () {
         DB.collection('offers')
             .doc(offerId)
             .delete()
-            .then(() =>
-                this.redirect('/home'));
-    })
-        .catch(errorHandler);
+            .then(() => {
+                this.redirect('/home');
+            })
+            .catch(errorHandler);
+    });
+
+    this.get('/edit/:offerId', function (context) {
+        const { offerId } = context.params;
+
+        DB.collection('offers')
+            .doc(offerId)
+            .get()
+            .then((response) => {
+                context.offer = { id: offerId, ...response.data() };
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/editOffer.hbs');
+                    })
+            })
+    });
+
+    this.post('/edit/:offerId', function (context) {
+        const { offerId, productName, price, brand, imageUrl, description } = context.params;
+
+        const newValues = {
+            productName,
+            price,
+            brand,
+            imageUrl,
+            description
+        };
+
+        DB.collection('offers')
+            .doc(offerId)
+            .set(newValues)
+            .then((response) => {
+                this.redirect(`#/details/${offerId}`);
+            })
+            .catch(errorHandler);
+    });
+
 });
 
 (() => {
