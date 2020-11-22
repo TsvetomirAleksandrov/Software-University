@@ -15,9 +15,12 @@
         <a href="#/edit/{{ offer.id }}">Edit</a>
         <a href="#/delete/{{ offer.id }}"> Delete</a>
         {{else}}
+        {{#if imInTheClientsList}}
+        <span>You bought it</span>
+        {{else}}
         <a>Buy</a>
         {{/if}}
-        <span>You bought it</span>
+        {{/if}}
     </div>
 </div>
 {{>footer}}

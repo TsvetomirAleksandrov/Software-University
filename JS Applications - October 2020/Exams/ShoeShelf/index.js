@@ -153,17 +153,21 @@ const app = Sammy('#root', function () {
     this.post('/edit/:offerId', function (context) {
         const { offerId, productName, price, brand, imageUrl, description } = context.params;
 
-        const newValues = {
-            productName,
-            price,
-            brand,
-            imageUrl,
-            description
-        };
-
         DB.collection('offers')
             .doc(offerId)
-            .set(newValues)
+            .get()
+            .then((response) => {
+                return DB.collection('offers')
+                    .doc(offerId)
+                    .set({
+                        ...response.data(),
+                        productName,
+                        price,
+                        brand,
+                        imageUrl,
+                        description
+                    })
+            })
             .then((response) => {
                 this.redirect(`#/details/${offerId}`);
             })
