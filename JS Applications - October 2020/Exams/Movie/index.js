@@ -5,12 +5,11 @@ const app = Sammy('#container', function () {
     this.use('Handlebars', 'hbs');
 
 
-
     this.get('/home', function (context) {
         extendContext(context)
-        .then(function () {
-            this.partial('./templates/home.hbs')
-        })
+            .then(function () {
+                this.partial('./templates/home.hbs')
+            })
     })
 
     this.get('/register', function (context) {
@@ -64,8 +63,33 @@ const app = Sammy('#container', function () {
             .catch(errorHandler);
     });
 
+    //Add Movie
+    this.get('/add-movie', function (context) {
+        extendContext(context)
+            .then(function () {
+                this.partial('./templates/addMovie.hbs');
+            })
+    });
+
+    this.post('/add-movie', function (context) {
+        const { title, imageUrl, description } = context.params;
+        
+        DB.collection('movies').add({
+            title,
+            imageUrl,
+            description,
+        })
+            .then((movie) => {
+                console.log(movie);
+                this.redirect('/home');
+            })
+            .catch(errorHandler);
+    });
+
+    
 
 });
+
 
 (() => {
     app.run('/home');
@@ -79,6 +103,7 @@ function extendContext(context) {
     return context.loadPartials({
         'header': './partials/header.hbs',
         'footer': './partials/footer.hbs',
+        // 'message': './partials/message.hbs',
     })
 }
 
