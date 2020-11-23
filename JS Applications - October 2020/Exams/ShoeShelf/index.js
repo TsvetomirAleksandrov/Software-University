@@ -91,7 +91,7 @@ const app = Sammy('#root', function () {
             clients: []
         })
             .then((createdProduct) => {
-                this.redirect('home');
+                this.redirect('/home');
             })
             .catch(errorHandler);
     });
