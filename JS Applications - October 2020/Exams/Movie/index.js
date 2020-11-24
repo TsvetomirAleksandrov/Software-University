@@ -11,7 +11,6 @@ const app = Sammy('#container', function () {
             .get()
             .then((response) => {
                 context.movies = response.docs.map((movie) => { return { id: movie.id, ...movie.data() } });
-                context.hasMovies = true;
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/home.hbs')
@@ -126,6 +125,7 @@ const app = Sammy('#container', function () {
     })
 
     //Edit
+
     this.get('/edit/:movieId', function (context) {
         const { movieId } = context.params;
 
@@ -149,7 +149,7 @@ const app = Sammy('#container', function () {
             .get()
             .then((response) => {
                 return DB.collection('movies')
-                    .doc('movieId')
+                    .doc(movieId)
                     .set({
                         ...response.data(),
                         title,
