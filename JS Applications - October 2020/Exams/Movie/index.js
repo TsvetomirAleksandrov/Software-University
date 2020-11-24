@@ -81,11 +81,19 @@ const app = Sammy('#container', function () {
 
     this.post('/add-movie', function (context) {
         const { title, imageUrl, description } = context.params;
+        const { email } = getUserData();
+
+        if (title == '' || imageUrl == '' || description == '') {
+            errorHandler('Invalid inputs!');
+            return;
+        }
 
         DB.collection('movies').add({
             title,
             imageUrl,
-            description
+            description,
+            creator: email,
+            likes: []
         })
             .then((data) => {
                 console.log(data);
@@ -94,6 +102,29 @@ const app = Sammy('#container', function () {
             .catch(errorHandler);
     });
 
+    //Details
+
+    this.get('/details/:movieId', function (context) {
+        const { movieId } = context.params;
+
+        DB.collection('movies')
+            .doc(movieId)
+            .get()
+            .then((response) => {
+                const { uid } = getUserData();
+                const actualMovieData = response.data();
+                const imTheCreator = actualMovieData.creator === uid;
+
+                const userIndex = actualMovieData.likes.indexOf(uid);
+                const iLiked = userIndex > -1;
+
+                context.movie = { ...response.data(), imTheCreator, id: movieId, iLiked };
+                extendContext(context)
+                .then(function () {
+                    this.partial('./templates/details.hbs');
+                })
+            })
+    })
 
 
 
@@ -124,7 +155,7 @@ function extendContext(context) {
 }
 
 function errorHandler(error) {
-    console.log(error);
+    alert(error);
 }
 
 function saveUserData(data) {

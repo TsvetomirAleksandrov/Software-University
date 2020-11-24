@@ -24,14 +24,12 @@
             {{#if movies}}
             {{#each movies}}
             <div class="card mb-4">
-                <img class="card-img-top" src="{{ this.imageUrl }}"
-                    alt="Card image cap" width="400">
+                <img class="card-img-top" src="{{ this.imageUrl }}" alt="Card image cap" width="400">
                 <div class="card-body">
                     <h4 class="card-title">{{ this.title }}</h4>
                 </div>
                 <div class="card-footer">
-                    <a href="#/details/krPgQD6SWf39bM4x00co"><button type="button"
-                            class="btn btn-info">Details</button></a>
+                    <a href="#/details/{{ id }}"><button type="button" class="btn btn-info">Details</button></a>
                 </div>
             </div>
             {{/each}}
