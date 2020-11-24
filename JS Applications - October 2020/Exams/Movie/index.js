@@ -122,7 +122,7 @@ const app = Sammy('#container', function () {
                         this.partial('./templates/details.hbs');
                     })
             })
-    })
+    });
 
     //Edit
 
@@ -163,6 +163,18 @@ const app = Sammy('#container', function () {
             .catch(errorHandler);
     });
 
+    //Delete
+    this.get('/delete/:movieId', function (context) {
+        const { movieId } = context.params;
+
+        DB.collection('movies')
+        .doc(movieId)
+        .delete()
+        .then(() => {
+            this.redirect('/home');
+        })
+        .catch(errorHandler);
+    });
 
 
 
