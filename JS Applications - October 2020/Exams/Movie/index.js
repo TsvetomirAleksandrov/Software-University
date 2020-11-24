@@ -5,6 +5,7 @@ const app = Sammy('#container', function () {
     this.use('Handlebars', 'hbs');
 
 
+    
     this.get('/home', function (context) {
 
         DB.collection('movies')
