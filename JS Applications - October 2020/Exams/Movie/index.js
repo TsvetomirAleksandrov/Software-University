@@ -6,10 +6,17 @@ const app = Sammy('#container', function () {
 
 
     this.get('/home', function (context) {
-        extendContext(context)
-            .then(function () {
-                this.partial('./templates/home.hbs')
+
+        DB.collection('movies')
+            .get()
+            .then((response) => {
+                context.movies = response.docs.map((movie) => { return { id: movie.id, ...movie.data() } });
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/home.hbs')
+                    })
             })
+            .catch(errorHandler);
     })
 
     this.get('/register', function (context) {
@@ -73,20 +80,28 @@ const app = Sammy('#container', function () {
 
     this.post('/add-movie', function (context) {
         const { title, imageUrl, description } = context.params;
-        
+
         DB.collection('movies').add({
             title,
             imageUrl,
-            description,
+            description
         })
-            .then((movie) => {
-                console.log(movie);
+            .then((data) => {
+                console.log(data);
                 this.redirect('/home');
             })
             .catch(errorHandler);
     });
 
-    
+
+
+
+
+
+
+
+
+
 
 });
 
