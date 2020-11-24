@@ -11,6 +11,7 @@ const app = Sammy('#container', function () {
             .get()
             .then((response) => {
                 context.movies = response.docs.map((movie) => { return { id: movie.id, ...movie.data() } });
+                context.hasMovies = true;
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/home.hbs')
