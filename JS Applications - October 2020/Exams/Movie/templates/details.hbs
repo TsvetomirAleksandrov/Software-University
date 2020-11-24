@@ -13,9 +13,10 @@
             <a class="btn btn-danger" href="#/delete/{{ movie.id }}">Delete</a>
             <a class="btn btn-warning" href="#/edit/{{ movie.id }}">Edit</a>
             {{else}}
-            <a class="btn btn-primary" href="#/like/{{ movie.id }}">Like</a>
             {{#if movie.iLiked}}
-            <span class="enrolled-span">Liked 1</span>
+            <span class="enrolled-span">Liked {{ movie.likesCount }}</span>
+            {{else}}
+            <a class="btn btn-primary" href="#/like/{{ movie.id }}">Like</a>
             {{/if}}
             {{/if}}
         </div>

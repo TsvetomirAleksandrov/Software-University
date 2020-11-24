@@ -116,7 +116,9 @@ const app = Sammy('#container', function () {
                 const userIndex = actualMovieData.likes.indexOf(uid);
                 const iLiked = userIndex > -1;
 
-                context.movie = { ...response.data(), imTheCreator, id: movieId, iLiked };
+                let likesCount = actualMovieData.likes.length;
+                
+                context.movie = { ...response.data(), imTheCreator, id: movieId, iLiked, likesCount };
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/details.hbs');
@@ -168,18 +170,36 @@ const app = Sammy('#container', function () {
         const { movieId } = context.params;
 
         DB.collection('movies')
-        .doc(movieId)
-        .delete()
-        .then(() => {
-            this.redirect('/home');
-        })
-        .catch(errorHandler);
+            .doc(movieId)
+            .delete()
+            .then(() => {
+                this.redirect('/home');
+            })
+            .catch(errorHandler);
     });
 
+    //Like
+    this.get('/like/:movieId', function (context) {
+        const { movieId } = context.params;
+        const { uid } = getUserData();
 
+        DB.collection('movies')
+            .doc(movieId)
+            .get()
+            .then((response) => {
+                const movieData = { ...response.data() };
+                movieData.likes.push(uid);
 
-
-
+                return DB.collection('movies')
+                    .doc(movieId)
+                    .set(movieData)
+            })
+            .then(() => {
+                console.log(likesCount);
+                this.redirect(`#/details/${movieId}`);
+            })
+            .catch(errorHandler);
+    });
 });
 
 
@@ -216,3 +236,4 @@ function getUserData() {
 function clearUserData() {
     this.localStorage.removeItem('user');
 }
+
