@@ -81,7 +81,6 @@ const app = Sammy('#container', function () {
 
     this.post('/add-movie', function (context) {
         const { title, imageUrl, description } = context.params;
-        const { email } = getUserData();
 
         if (title == '' || imageUrl == '' || description == '') {
             errorHandler('Invalid inputs!');
@@ -92,11 +91,10 @@ const app = Sammy('#container', function () {
             title,
             imageUrl,
             description,
-            creator: email,
+            creator: getUserData().uid,
             likes: []
         })
             .then((data) => {
-                console.log(data);
                 this.redirect('/home');
             })
             .catch(errorHandler);
@@ -111,6 +109,7 @@ const app = Sammy('#container', function () {
             .doc(movieId)
             .get()
             .then((response) => {
+
                 const { uid } = getUserData();
                 const actualMovieData = response.data();
                 const imTheCreator = actualMovieData.creator === uid;
@@ -120,15 +119,49 @@ const app = Sammy('#container', function () {
 
                 context.movie = { ...response.data(), imTheCreator, id: movieId, iLiked };
                 extendContext(context)
-                .then(function () {
-                    this.partial('./templates/details.hbs');
-                })
+                    .then(function () {
+                        this.partial('./templates/details.hbs');
+                    })
             })
     })
 
+    //Edit
+    this.get('/edit/:movieId', function (context) {
+        const { movieId } = context.params;
 
+        DB.collection('movies')
+            .doc(movieId)
+            .get()
+            .then((response) => {
+                context.movie = { id: movieId, ...response.data() };
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/editMovie.hbs');
+                    })
+            })
+    });
 
+    this.post('/edit/:movieId', function (context) {
+        const { movieId, title, description, imageUrl } = context.params;
 
+        DB.collection('movies')
+            .doc(movieId)
+            .get()
+            .then((response) => {
+                return DB.collection('movies')
+                    .doc('movieId')
+                    .set({
+                        ...response.data(),
+                        title,
+                        imageUrl,
+                        description
+                    })
+            })
+            .then((response) => {
+                this.redirect(`#/details/${movieId}`);
+            })
+            .catch(errorHandler);
+    });
 
 
 
