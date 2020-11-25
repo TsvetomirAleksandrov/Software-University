@@ -125,9 +125,46 @@ const app = Sammy('#root', function () {
             })
     });
 
-    //Edit
+    //Edit Event
+    this.get('/edit/:eventId', function (context) {
+        const { eventId } = context.params;
 
-    //Delete
+        DB.collection('events')
+            .doc(eventId)
+            .get()
+            .then((response) => {
+                context.e = { id: eventId, ...response.data() };
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/editEvent.hbs');
+                    })
+            })
+    });
+
+    this.post('/edit/:eventId', function (context) {
+        const { eventId, name, description, dateTime, imageUrl } = context.params;
+
+        DB.collection('events')
+            .doc(eventId)
+            .get()
+            .then((response) => {
+                return DB.collection('events')
+                .doc(eventId)
+                .set({
+                    ...response.data(),
+                    name,
+                    dateTime,
+                    description,
+                    imageUrl
+                })
+            })
+            .then((response) => {
+                this.redirect(`#/details/${eventId}`);
+            })
+            .catch(errorHandler);
+    });
+
+    //Close Event
 
     //Join Event
 
