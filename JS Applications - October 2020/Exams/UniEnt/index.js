@@ -6,10 +6,17 @@ const app = Sammy('#root', function () {
 
 
     this.get('/home', function (context) {
-        extendContext(context)
-            .then(function () {
-                this.partial('./templates/home.hbs');
+
+        DB.collection('events')
+            .get()
+            .then((response) => {
+                context.events = response.docs.map((e) => { return { id: e.id, ...e.data() } });
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/home.hbs');
+                    })
             })
+            .catch(errorHandler);
     });
 
     //Sign-Up
@@ -95,6 +102,28 @@ const app = Sammy('#root', function () {
     });
 
     //Details
+    this.get('/details/:eventId', function (context) {
+        const { eventId } = context.params;
+
+        DB.collection('events')
+            .doc(eventId)
+            .get()
+            .then((response) => {
+
+                const { uid } = getUserData();
+                const actualEventData = response.data();
+                const imTheCreator = actualEventData.creator === uid;
+
+                const userIndex = actualEventData.visitors.indexOf(uid);
+                const iVisited = userIndex > -1;
+
+                context.e = { ...response.data(), imTheCreator, id: eventId, iVisited };
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/details.hbs');
+                    })
+            })
+    });
 
     //Edit
 
