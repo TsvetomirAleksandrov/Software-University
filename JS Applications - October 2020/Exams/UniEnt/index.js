@@ -69,7 +69,30 @@ const app = Sammy('#root', function () {
             .then(function () {
                 this.partial('./templates/createEvent.hbs');
             })
-    })
+    });
+
+    this.post('/organize-event', function (context) {
+        const { name, dateTime, description, imageUrl } = context.params;
+
+        if (name == '' || imageUrl == '' || description == '' || dateTime == '') {
+            errorHandler('Invalid inputs!');
+            return;
+        }
+
+        DB.collection('events').add({
+            name,
+            dateTime,
+            description,
+            imageUrl,
+            creator: getUserData().uid,
+            visitors: []
+        })
+            .then((data) => {
+                console.log(data);
+                this.redirect('/home');
+            })
+            .catch(errorHandler);
+    });
 
     //Details
 
