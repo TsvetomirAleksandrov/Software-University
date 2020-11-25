@@ -62,8 +62,14 @@ const app = Sammy('#root', function () {
             })
             .catch(errorHandler);
     });
-    
+
     //Create Event
+    this.get('/organize-event', function (context) {
+        extendContext(context)
+            .then(function () {
+                this.partial('./templates/createEvent.hbs');
+            })
+    })
 
     //Details
 
