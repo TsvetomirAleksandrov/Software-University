@@ -2,19 +2,21 @@
 <div class="row event-details">
     <div class="col-md-12 text-center overflow-hidden">
 
-        <img class="details-img"
-            src="{{e.imageUrl}}" />
+        <img class="details-img" src="{{e.imageUrl}}" />
         <div class="my-3 p-3">
             <h2 class="display-5">{{e.name}}</h2>
             <p class="infoType">Description:</p>
             <p class="event-description">{{e.description}}</p>
             <p class="infoType">Date: <small>{{e.dateTime}}</small></p>
-            <p class="infoType">Peope interested in: <small>9</small></p>
-            <p class="infoType">Organizer: <small>PAKO</small></p>
+            <p class="infoType">Peope interested in: <small>{{e.interestCount}}</small></p>
+            <p class="infoType">Organizer: <small>{{e.eventCreator}}</small></p>
         </div>
+        {{#if e.isCreator}}
         <a href="#/edit/{{e.id}}" class="btn btn-primary btn-lg">Edit the event</a>
         <a href="#/close/{{e.id}}" class="btn btn-danger btn-lg">Close the event</a>
+        {{else}}
         <a href="#/join/{{e.id}}" class="btn btn-info btn-lg">Join the event</a>
+        {{/if}}
     </div>
 </div>
 {{>footer}}

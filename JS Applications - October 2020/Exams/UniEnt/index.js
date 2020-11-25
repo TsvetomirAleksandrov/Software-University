@@ -91,7 +91,7 @@ const app = Sammy('#root', function () {
             dateTime,
             description,
             imageUrl,
-            creator: getUserData().uid,
+            creator: getUserData().email,
             visitors: []
         })
             .then((data) => {
@@ -110,14 +110,21 @@ const app = Sammy('#root', function () {
             .get()
             .then((response) => {
 
-                const { uid } = getUserData();
+                const { uid, email } = getUserData();
                 const actualEventData = response.data();
-                const imTheCreator = actualEventData.creator === uid;
+
+                const isCreator = actualEventData.creator === email;
+                const eventCreator = actualEventData.creator;
 
                 const userIndex = actualEventData.visitors.indexOf(uid);
                 const iVisited = userIndex > -1;
+                const interestCount = actualEventData.visitors.length;
 
-                context.e = { ...response.data(), imTheCreator, id: eventId, iVisited };
+               
+
+                console.log(eventCreator);
+
+                context.e = { ...response.data(), isCreator, id: eventId, iVisited, interestCount, eventCreator };
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/details.hbs');
@@ -180,22 +187,26 @@ const app = Sammy('#root', function () {
     //Join Event
     this.get('/join/:eventId', function (context) {
         const { eventId } = context.params;
+        const { uid } = getUserData();
 
         DB.collection('events')
             .doc(eventId)
             .get()
             .then((response) => {
                 const eventData = { ...response.data() };
-                eventData.vi
+                eventData.visitors.push(uid);
+
+                return DB.collection('events')
+                    .doc(eventId)
+                    .set(eventData)
             })
+            .then((response) => {
+                this.redirect(`#/details/${eventId}`);
+            })
+            .catch(errorHandler);
     });
 
     //User Profile
-
-
-
-
-
 
 
 
