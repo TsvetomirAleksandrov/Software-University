@@ -120,7 +120,7 @@ const app = Sammy('#root', function () {
                 const iVisited = userIndex > -1;
                 const interestCount = actualEventData.visitors.length;
 
-               
+
                 console.log(eventCreator);
 
                 context.e = { ...response.data(), isCreator, id: eventId, iVisited, interestCount, eventCreator };
@@ -206,7 +206,22 @@ const app = Sammy('#root', function () {
     });
 
     //User Profile
+    this.get('/userProfile', function (context) {
+        const { email } = getUserData();
 
+        
+        DB.collection('events')
+            .get()
+            .then((response) => {
+                const myEvents = response.docs.find((e) => e.creator === email);
+                extendContext(context)
+                    .then(function () {
+                        console.log(myEvents);
+                        this.partial('./templates/userProfile.hbs');
+                    })
+            })
+            .catch(errorHandler);
+    })
 
 
 });
@@ -243,3 +258,21 @@ function saveUserData(data) {
 function clearUserData() {
     this.localStorage.removeItem('user');
 }
+
+// function errorHandler(msg) {
+//     let errorBox = document.getElementById('errorBox');
+
+//     errorBox.textContent = msg;
+//     errorBox.parentElement.style.display = 'block';
+
+//     setTimeout(() => errorBox.parentElement.style.display = 'none', 1000);
+// }
+
+// function successHandler(msg) {
+//     let validBox = document.getElementById('successBox');
+
+//     validBox.textContent = msg;
+//     validBox.parentElement.style.display = 'block';
+
+//     setTimeout(() => validBox.parentElement.style.display = 'none', 1000);
+// }

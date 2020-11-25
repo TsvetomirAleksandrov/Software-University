@@ -13,7 +13,7 @@
         </a>
         {{#if isLoggedIn}}
         <a class="py-2 d-none d-md-inline-block" href="/organize-event">Organize Event</a>
-        <a class="py-2 d-none d-md-inline-block" href="/userProfile">{{userEmail}}</a>
+        <a class="py-2 d-none d-md-inline-block" href="/userProfile" name="userId">{{userEmail}}</a>
         <a class="py-2 d-none d-md-inline-block" href="/logout">Logout</a>
         {{else}}
         <a class="py-2 d-none d-md-inline-block" href="/login">Login</a>
