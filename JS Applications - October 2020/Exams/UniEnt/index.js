@@ -121,7 +121,6 @@ const app = Sammy('#root', function () {
                 const interestCount = actualEventData.visitors.length;
 
                
-
                 console.log(eventCreator);
 
                 context.e = { ...response.data(), isCreator, id: eventId, iVisited, interestCount, eventCreator };
