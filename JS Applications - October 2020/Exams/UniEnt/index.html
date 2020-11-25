@@ -13,19 +13,40 @@
 <body>
 
 
-  <div id="notifications">
-      <div id="successBox" class="alert alert-success" role="alert">{Success Message...}</div>
-      <div id="loadingBox" class="alert alert-info" role="alert">Loading...</div>
-      <div id="errorBox" class="alert alert-danger" role="alert">{Error Message...}</div>
-  </div>
+  <!-- <div id="notifications">
+    <div id="successBox" class="alert alert-success" role="alert">{Success Message...}</div>
+    <div id="loadingBox" class="alert alert-info" role="alert">Loading...</div>
+    <div id="errorBox" class="alert alert-danger" role="alert">{Error Message...}</div>
+  </div> -->
 
+  <div id="root"></div>
 
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
 
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBdeWrcuJd0F7DxnYMmK4WWENWNTyauGAw",
+      authDomain: "unient-2e080.firebaseapp.com",
+      databaseURL: "https://unient-2e080.firebaseio.com",
+      projectId: "unient-2e080",
+      storageBucket: "unient-2e080.appspot.com",
+      messagingSenderId: "959917814416",
+      appId: "1:959917814416:web:927579944deb8edac05e15"
+    };
 
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+  <!-- Libraries -->
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="./node_modules/sammy/lib/sammy.js"></script>
+  <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+  <script src="index.js"></script>
 </body>
-
-<!-- Libraries -->
-<script src="./node_modules/jquery/dist/jquery.js"></script>
-<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 </html>

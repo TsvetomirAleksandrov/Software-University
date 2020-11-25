@@ -1,4 +1,5 @@
-<form action="#" method="post">
+{{>navigation}}
+<form action="/register" method="post">
 
     <div class="text-center mb-4">
         <h1 class="h3 mb-3 font-weight-normal">Sign-Up</h1>
@@ -6,7 +7,7 @@
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required=""
+        <input type="text" id="inputUsername" name="email" class="form-control" placeholder="Username" required=""
             autofocus="">
         <label for="inputUsername">Username</label>
     </div>
@@ -27,10 +28,11 @@
 
     <div class="text-center mb-4">
         <p class="alreadyUser"> Already have account? Then just
-            <a href="#">Sign-In</a>!
+            <a href="/login">Sign-In</a>!
         </p>
     </div>
 
     <p class="mt-5 mb-3 text-muted text-center">© UniEnt - 2019.</p>
 
 </form>
+{{>footer}}
