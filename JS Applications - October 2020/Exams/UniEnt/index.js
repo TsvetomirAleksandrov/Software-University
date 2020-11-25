@@ -149,14 +149,14 @@ const app = Sammy('#root', function () {
             .get()
             .then((response) => {
                 return DB.collection('events')
-                .doc(eventId)
-                .set({
-                    ...response.data(),
-                    name,
-                    dateTime,
-                    description,
-                    imageUrl
-                })
+                    .doc(eventId)
+                    .set({
+                        ...response.data(),
+                        name,
+                        dateTime,
+                        description,
+                        imageUrl
+                    })
             })
             .then((response) => {
                 this.redirect(`#/details/${eventId}`);
@@ -165,8 +165,30 @@ const app = Sammy('#root', function () {
     });
 
     //Close Event
+    this.get('/close/:eventId', function (context) {
+        const { eventId } = context.params;
+
+        DB.collection('events')
+            .doc(eventId)
+            .delete()
+            .then(() => {
+                this.redirect('/home');
+            })
+            .catch(errorHandler);
+    });
 
     //Join Event
+    this.get('/join/:eventId', function (context) {
+        const { eventId } = context.params;
+
+        DB.collection('events')
+            .doc(eventId)
+            .get()
+            .then((response) => {
+                const eventData = { ...response.data() };
+                eventData.vi
+            })
+    });
 
     //User Profile
 
