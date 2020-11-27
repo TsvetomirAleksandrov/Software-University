@@ -12,11 +12,11 @@ const app = Sammy('#rooter', function () {
             .then((response) => {
                 context.recipes = response.docs.map((recipe) => { return { id: recipe.id, ...recipe.data() } });
                 extendContext(context)
-                .then(function () {
-                    this.partial('./templates/home.hbs')
-                })
+                    .then(function () {
+                        this.partial('./templates/home.hbs')
+                    })
             })
-            .catch(errorHandler);
+            .catch((e) => errorHandler(e.message));
     });
 
     //Register
@@ -28,11 +28,25 @@ const app = Sammy('#rooter', function () {
     });
 
     this.post('/register', function (context) {
-        const { email, password, repeatPassword } = context.params;
+        const { firstName, lastName, email, password, repeatPassword } = context.params;
 
-        if (password !== repeatPassword) {
+        try {
+            if (firstName.length < 2 || lastName.length < 2) {
+                throw new Error('First name must be at least 2 characters long');
+            }
+    
+            if (password.length < 6 || repeatPassword.length < 6) {
+                throw new Error('The password should be at least 6 characters long');
+            }
+    
+            if (password !== repeatPassword) {
+                throw new Error('The repeat password should be equal to the password');
+            }
+        } catch (error) {
+            errorHandler(error.message);
             return;
         }
+        
 
         UserModel.createUserWithEmailAndPassword(email, password)
             .then((userData) => {
@@ -113,12 +127,12 @@ const app = Sammy('#rooter', function () {
 
         DB.collection('recipes').add({
             meal,
-            ingredients,
+            ingredients: ingredients.split(', '),
             prepMethod,
             description,
             foodImageURL,
             category,
-            creator: getUserData().email,
+            creator: userEmail,
             likes: []
         })
             .then((data) => {
@@ -173,7 +187,7 @@ function errorHandler(msg) {
     errorBox.textContent = msg;
     errorBox.style.display = 'block';
 
-    setTimeout(() => errorBox.style.display = 'none', 2000);
+    setTimeout(() => errorBox.style.display = 'none', 3000);
 }
 
 function successHandler(msg) {
@@ -182,7 +196,7 @@ function successHandler(msg) {
     successBox.textContent = msg;
     successBox.style.display = 'block';
 
-    setTimeout(() => successBox.style.display = 'none', 2000);
+    setTimeout(() => successBox.style.display = 'none', 3000);
 }
 
 function loadingHandler(msg) {
@@ -191,5 +205,5 @@ function loadingHandler(msg) {
     loadingBox.textContent = msg;
     loadingBox.style.display = 'block';
 
-    setTimeout(() => loadingBox.style.display = 'none', 2000);
+    setTimeout(() => loadingBox.style.display = 'none', 3000);
 }
