@@ -3,7 +3,7 @@
     <div class="col-md-12">
         <div class="recepieInfo">
             <div class="detailsFoodImage">
-                <img src="https://t3.ftcdn.net/jpg/00/25/90/48/240_F_25904887_fhZJ692ukng3vQxzHldvuN981OiYVlJ1.jpg"
+                <img src="{{recipe.foodImageURL}}"
                     alt="">
             </div>
 
@@ -13,9 +13,16 @@
                 <p class="description">{{recipe.description}}</p>
             </div>
             <div class="actions">
-                <a class="btn btn-danger" href="#">Archive</a>
-                <a class="btn btn-info" href="#">Edit</a>
-                <a class="btn btn-success" href="#"> 900 likes</a>
+                {{#if recipe.isCreator}}
+                <a class="btn btn-danger" href="#/delete/{{recipe.id}}">Archive</a>
+                <a class="btn btn-info" href="#/edit/{{recipe.id}}">Edit</a>
+                {{else}}
+                {{#if recipe.iLiked}}
+                <a class="btn btn-success"> {{recipe.likesCount}} likes</a>
+                {{else}}
+                <a class="btn btn-success" href="#/like/{{recipe.id}}"> {{recipe.likesCount}} likes</a>
+                {{/if}}
+                {{/if}}
             </div>
         </div>
 

@@ -98,9 +98,11 @@ const app = Sammy('#rooter', function () {
             .doc(recipeId)
             .get()
             .then((response) => {
-                const { uid } = getUserData();
+                const { uid, email } = getUserData();
                 const actualRecipeData = response.data();
-                const isCreator = actualRecipeData.creator === uid;
+
+                const isCreator = actualRecipeData.creator === email;
+                
                 const userIndex = actualRecipeData.likes.indexOf(uid);
                 const iLiked = userIndex > -1;
                 const likesCount = actualRecipeData.likes.length;
@@ -136,20 +138,88 @@ const app = Sammy('#rooter', function () {
             likes: []
         })
             .then((data) => {
+                successHandler('Recipe shared successfully!');
                 this.redirect('/home');
             })
-            .catch(errorHandler);
+            .catch((e) => errorHandler(e.message));
     });
 
     //Edit recipe
+    this.get('/edit/:recipeId', function (context) {
+        const { recipeId } = context.params;
+
+        DB.collection('recipes')
+            .doc(recipeId)
+            .get()
+            .then((response) => {
+                context.recipe = { id: recipeId, ...response.data() };
+                extendContext(context)
+                    .then(function () {
+                        this.partial('./templates/editRecipe.hbs');
+                    })
+            })
+    });
+
+    this.post('/edit/:recipeId', function (context) {
+        const { recipeId, meal, ingredients, prepMethod, description, foodImageURL, category } = context.params;
+
+        DB.collection('recipes')
+            .doc(recipeId)
+            .get()
+            .then((response) => {
+                return DB.collection('recipes')
+                    .doc(recipeId)
+                    .set({
+                        ...response.data(),
+                        meal,
+                        ingredients: ingredients.split(', '),
+                        prepMethod,
+                        description,
+                        foodImageURL,
+                        category
+                    })
+            })
+            .then((response) => {
+                successHandler('Recipe was edited successfully!');
+                this.redirect(`#/details/${recipeId}`);
+            })
+            .catch((e) => errorHandler(e.message));
+    });
 
     //Delete recipe
+    this.get('/delete/:recipeId', function (context) {
+        const { recipeId } = context.params;
+
+        DB.collection('recipes')
+            .doc(recipeId)
+            .delete()
+            .then(() => {
+                this.redirect('/home');
+            })
+            .catch((e) => errorHandler(e.message));
+    });
 
     //Like recipe
+    this.get('/like/:recipeId', function (context) {
+        const { recipeId } = context.params;
+        const { uid } = getUserData();
 
+        DB.collection('recipes')
+            .doc(recipeId)
+            .get()
+            .then((response) => {
+                const recipeData = { ...response.data() };
+                recipeData.likes.push(uid);
 
-
-
+                return DB.collection('recipes')
+                    .doc(recipeId)
+                    .set(recipeData)
+            })
+            .then(() => {
+                this.redirect(`#/details/${recipeId}`);
+            })
+            .catch((e) => errorHandler(e.message));
+    })
 });
 
 (() => {
