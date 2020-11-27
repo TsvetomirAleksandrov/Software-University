@@ -34,11 +34,11 @@ const app = Sammy('#rooter', function () {
             if (firstName.length < 2 || lastName.length < 2) {
                 throw new Error('First name must be at least 2 characters long');
             }
-    
+
             if (password.length < 6 || repeatPassword.length < 6) {
                 throw new Error('The password should be at least 6 characters long');
             }
-    
+
             if (password !== repeatPassword) {
                 throw new Error('The repeat password should be equal to the password');
             }
@@ -46,7 +46,6 @@ const app = Sammy('#rooter', function () {
             errorHandler(error.message);
             return;
         }
-        
 
         UserModel.createUserWithEmailAndPassword(email, password)
             .then((userData) => {
@@ -102,9 +101,9 @@ const app = Sammy('#rooter', function () {
                 const { uid } = getUserData();
                 const actualRecipeData = response.data();
                 const isCreator = actualRecipeData.creator === uid;
-                const userIndex = actualMovieData.likes.indexOf(uid);
+                const userIndex = actualRecipeData.likes.indexOf(uid);
                 const iLiked = userIndex > -1;
-                const likesCount = actualMovieData.likes.length;
+                const likesCount = actualRecipeData.likes.length;
 
                 context.recipe = { ...response.data(), isCreator, id: recipeId, iLiked, likesCount };
                 extendContext(context)
@@ -132,7 +131,8 @@ const app = Sammy('#rooter', function () {
             description,
             foodImageURL,
             category,
-            creator: userEmail,
+            categoryImageURL: categoryImage(category),
+            creator: getUserData().email,
             likes: []
         })
             .then((data) => {
@@ -206,4 +206,30 @@ function loadingHandler(msg) {
     loadingBox.style.display = 'block';
 
     setTimeout(() => loadingBox.style.display = 'none', 3000);
+}
+
+function categoryImage(category) {
+    let categoryImageURL = '';
+
+    if (category === 'Vegetables and legumes/beans') {
+        categoryImageURL = 'https://cdn.pixabay.com/photo/2017/10/09/19/29/eat-2834549__340.jpg';
+    }
+
+    if (category === 'Fruits') {
+        categoryImageURL = 'https://cdn.pixabay.com/photo/2017/06/02/18/24/fruit-2367029__340.jpg';
+    }
+
+    if (category === 'Milk, cheese, eggs and alternatives') {
+        categoryImageURL = 'https://image.shutterstock.com/image-photo/assorted-dairy-products-milk-yogurt-260nw-530162824.jpg';
+    }
+
+    if (category === 'Grain Food') {
+        categoryImageURL = 'https://www.newskarnataka.com/storage/photos/shares/FCI_M_2852020.jpg';
+    }
+
+    if (category === 'Lean meats and poultry, fish and alternatives') {
+        categoryImageURL = 'https://t3.ftcdn.net/jpg/01/18/84/52/240_F_118845283_n9uWnb81tg8cG7Rf9y3McWT1DT1ZKTDx.jpg';
+    }
+
+    return categoryImageURL;
 }

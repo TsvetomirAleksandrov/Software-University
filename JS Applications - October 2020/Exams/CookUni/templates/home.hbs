@@ -1,6 +1,7 @@
 {{>header}}
 {{#if isLoggedIn}}
-
+{{#if recipes}}
+{{#each recipes}}
 <div id="sharedRecipes">
     <div class="container">
         <div class="row">
@@ -8,180 +9,45 @@
                 <div class="our-team-main">
 
                     <div class="team-front">
-                        <img src="https://cdn.pixabay.com/photo/2017/10/09/19/29/eat-2834549__340.jpg" />
-                        <h3>Meal Name</h3>
-                        <p>Vegetables and legumes/beans CATEGORY</p>
+                        <img src="{{this.categoryImageURL}}" />
+                        <h3>{{this.meal}}</h3>
+                        <p>{{this.category}}</p>
                     </div>
 
                     <div class="team-back">
                         <div class="back-side-info">
                             <h4>Ingredients</h4>
                             <ul>
-                                <li>First ingredients</li>
-                                <li>Second ingredients</li>
-                                <li>Third ingredients</li>
-                                <li>...</li>
+                                {{#each ingredients}}
+                                <li>{{this}}</li>
+                                {{/each}}
                             </ul>
-                            <a href="#">View the recepie</a>
+                            <a href="#/details/{{id}}">View the recepie</a>
                         </div>
 
-                        <img class="foodImage"
-                            src="https://t3.ftcdn.net/jpg/00/25/90/48/240_F_25904887_fhZJ692ukng3vQxzHldvuN981OiYVlJ1.jpg" />
+                        <img class="foodImage" src="{{foodImageURL}}" />
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="row">
-
-            <!--Grain-Food-Template-->
-            <div class="col-lg-12">
-                <div class="our-team-main">
-
-                    <div class="team-front">
-                        <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2015/04/CornSyrup.jpg" />
-                        <h3>Meal Name</h3>
-                        <p>Grain Food CATEGORY</p>
-                    </div>
-
-                    <div class="team-back">
-                        <div class="back-side-info">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>First ingredients</li>
-                                <li>Second ingredients</li>
-                                <li>Third ingredients</li>
-                                <li>...</li>
-                            </ul>
-                            <a href="/#">View the recepie</a>
-                        </div>
-
-                        <img class="foodImage"
-                            src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__340.jpg" width: 150;
-                            height: auto; />
-                    </div>
-
-                </div>
-            </div>
-            <!--Food-Template-->
-        </div>
+    {{/each}}
+    {{else}}
+    <div id='foodNotFound'>
+        <img src="https://t4.ftcdn.net/jpg/00/62/17/31/240_F_62173114_ozantkVtkPgzL0fxssAkTqKX1FHPr0UW.jpg" />
+        <h3>Food not found...</h3>
     </div>
+    {{/if}}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="our-team-main">
+    {{else}}
+    <main role="main" class="inner cover mt-5">
+        <h1 class="cover-heading">Coooooking University</h1>
+        <p class="lead">They say that food passes through the stomach, we say that food passes through CookUni...
+        </p>
+    </main>
 
-                    <div class="team-front">
-                        <img src="https://cdn.pixabay.com/photo/2017/06/02/18/24/fruit-2367029__340.jpg" />
-                        <h3>Meal Name</h3>
-                        <p>Fruits CATEGORY</p>
-                    </div>
+    <h1 class="text-center">Our Recipes</h1>
+    {{/if}}
 
-                    <div class="team-back">
-                        <div class="back-side-info">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>First ingredients</li>
-                                <li>Second ingredients</li>
-                                <li>Third ingredients</li>
-                                <li>...</li>
-                            </ul>
-                            <a href="/#">View the recepie</a>
-                        </div>
-
-                        <img class="foodImage"
-                            src="https://t3.ftcdn.net/jpg/00/87/05/06/240_F_87050645_NGkJwdXlikO6DWOppUu93fQwLYeBdDEq.jpg" />
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="our-team-main">
-
-                    <div class="team-front">
-                        <img
-                            src="https://image.shutterstock.com/image-photo/assorted-dairy-products-milk-yogurt-260nw-530162824.jpg" />
-                        <h3>Meal Name</h3>
-                        <p>Milk, chees, eggs and alternatives CATEGORY</p>
-                    </div>
-
-                    <div class="team-back">
-                        <div class="back-side-info">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>First ingredients</li>
-                                <li>Second ingredients</li>
-                                <li>Third ingredients</li>
-                                <li>...</li>
-                            </ul>
-                            <a href="/#">View the recepie</a>
-                        </div>
-
-                        <img class="foodImage"
-                            src="https://cdn.pixabay.com/photo/2018/01/06/16/24/fried-3065319__340.jpg" />
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="our-team-main">
-
-                    <div class="team-front">
-                        <img
-                            src="https://t3.ftcdn.net/jpg/01/18/84/52/240_F_118845283_n9uWnb81tg8cG7Rf9y3McWT1DT1ZKTDx.jpg" />
-                        <h3>Meal Name</h3>
-                        <p>Lean meats and poultry, fish... CATEGORY</p>
-                    </div>
-
-                    <div class="team-back">
-                        <div class="back-side-info">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>First ingredients</li>
-                                <li>Second ingredients</li>
-                                <li>Third ingredients</li>
-                                <li>...</li>
-                            </ul>
-                            <a href="/#">View the recepie</a>
-                        </div>
-
-                        <img class="foodImage"
-                            src="https://image.shutterstock.com/image-photo/roasted-dorado-fish-brussels-sprouts-260nw-435521527.jpg" />
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{else}}
-<main role="main" class="inner cover mt-5">
-    <h1 class="cover-heading">Coooooking University</h1>
-    <p class="lead">They say that food passes through the stomach, we say that food passes through CookUni...
-    </p>
-</main>
-
-<h1 class="text-center">Our Recipes</h1>
-{{/if}}
-
-
-{{!-- <div id='foodNotFound'>
-    <img src="https://t4.ftcdn.net/jpg/00/62/17/31/240_F_62173114_ozantkVtkPgzL0fxssAkTqKX1FHPr0UW.jpg" />
-    <h3>Food not found...</h3>
-</div> --}}
-
-{{>footer}}
+    {{>footer}}

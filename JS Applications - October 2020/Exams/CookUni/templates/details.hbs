@@ -8,9 +8,9 @@
             </div>
 
             <div class="infoPack">
-                <h3 class="my-3">Meal Name</h3>
-                <p class="prep-method">Method of preparation...</p>
-                <p class="description">Description ...</p>
+                <h3 class="my-3">{{recipe.meal}}</h3>
+                <p class="prep-method">{{recipe.prepMethod}}</p>
+                <p class="description">{{recipe.description}}</p>
             </div>
             <div class="actions">
                 <a class="btn btn-danger" href="#">Archive</a>
@@ -22,10 +22,9 @@
         <div class="detailsIngredients">
             <h3 class="my-3 ingredient">Ingredients</h3>
             <ul>
-                <li>First ingredient</li>
-                <li>Second ingredient</li>
-                <li>Third ingredient</li>
-                <li>...</li>
+                {{#each recipe.ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
             </ul>
         </div>
     </div>
