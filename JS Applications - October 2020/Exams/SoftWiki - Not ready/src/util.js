@@ -40,3 +40,24 @@ export async function addPartials(ctx) {
     };
 }
 
+const categoryMap = {
+    'JavaScript': 'js',
+    'C#': 'c#',
+    'Java': 'java',
+    'Python': 'python'
+};
+
+export function mapCategories(data) {
+    const result = {
+        js: [],
+        csharp: [],
+        java: [],
+        python: []
+    };
+
+    for (let article of data) {
+        result[categoryMap[article.category]].push(article);
+    }
+
+    return result;
+}

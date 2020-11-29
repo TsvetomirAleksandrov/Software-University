@@ -1,4 +1,4 @@
-import { getUserData, getUserId, objectToArray, setUserData } from "./util.js";
+import { getUserData, getUserId, objectToArray, setUserData, } from "./util.js";
 
 const apiKey = 'AIzaSyAXFWJ-Zi_LwVONks-DJMBcKZnk6VMwu18';
 const databaseUrl = 'https://softwiki-88216.firebaseio.com/';
@@ -36,6 +36,11 @@ async function request(url, method, body) {
     let response = await fetch(url, options);
 
     let data = await response.json();
+
+if (data.hasOwnProperty('error')) {
+    const message = data.error.message;
+    throw new Error(message);
+}
 
     return data;
 }
@@ -81,7 +86,7 @@ export async function register(email, password) {
 }
 
 export async function getAll() {
-    const records = await get(host(endpoints.ARTICLES));
+    const records = get(host(endpoints.ARTICLES));
     return objectToArray(records);
 }
 
