@@ -3,7 +3,8 @@ const databaseUrl = 'https://softwiki-88216.firebaseio.com';
 
 const endpoints = {
     LOGIN: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
-    REGISTER: 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
+    REGISTER: 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=',
+    ARTICLES: 'articles'
 };
 
 function host(url) {
@@ -68,10 +69,17 @@ export async function login(email, password) {
 export async function register(email, password) {
     let res = await post(endpoints.REGISTER + apiKey, {
         email,
-        password
+        password,
+        returnSecureToken: true
     });
 
     sessionStorage.setItem('auth', JSON.stringify(res));
 
     return res;
+}
+
+export async function createArticle(article) {
+    const data = Object.assign({ _ownerId: '' }, article);
+
+    return post(host(endpoints.ARTICLES), data);
 }
