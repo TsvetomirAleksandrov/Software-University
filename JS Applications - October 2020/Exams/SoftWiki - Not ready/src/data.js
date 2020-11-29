@@ -1,3 +1,5 @@
+import { getUserData, setUserData } from "./util.js";
+
 const apiKey = 'AIzaSyAXFWJ-Zi_LwVONks-DJMBcKZnk6VMwu18';
 const databaseUrl = 'https://softwiki-88216.firebaseio.com';
 
@@ -9,9 +11,9 @@ const endpoints = {
 
 function host(url) {
     let result = databaseUrl + url + '.json';
-    const auth = sessionStorage.getItem('auth');
+    const auth = getUserData();
     if (auth !== null) {
-        result += `?auth=${JSON.parse(auth).idToken}`;
+        result += `?auth=${auth.idToken}`;
     }
     return result;
 }
@@ -61,7 +63,7 @@ export async function login(email, password) {
 
     let data = await response.josn();
 
-    sessionStorage.setItem('auth', JSON.stringify(res));
+    setUserData(data);
 
     return data;
 }
@@ -73,7 +75,7 @@ export async function register(email, password) {
         returnSecureToken: true
     });
 
-    sessionStorage.setItem('auth', JSON.stringify(res));
+    setUserData(res);
 
     return res;
 }
