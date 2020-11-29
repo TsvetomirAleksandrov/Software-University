@@ -21,8 +21,22 @@ export function getUserId() {
 }
 
 export function objectToArray(data) {
-    return Object.entries(data).map(([k, v]) => Object.assign({ _id: k }, v));
+    if (data === null) {
+        return [];
+    } else {
+        return Object.entries(data).map(([k, v]) => Object.assign({ _id: k }, v));
+    }
 }
 
-window.objectToArray = objectToArray;
+export async function addPartials(ctx) {
+    const partials = await Promise.all([
+        ctx.load('/templates/common/header.hbs'),
+        ctx.load('/templates/common/footer.hbs')
+    ]);
+
+    ctx.partials = {
+        header: partials[0],
+        footer: partials[1]
+    };
+}
 

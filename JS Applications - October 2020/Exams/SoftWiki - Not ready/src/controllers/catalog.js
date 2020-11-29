@@ -1,6 +1,13 @@
-
+import { addPartials } from '../util.js';
+import { getAll } from '../data.js';
 
 
 export async function homePage() {
-    console.log('It works!');
+    await addPartials(this);
+
+    const data = await getAll();
+
+    
+
+    this.partial('/templates/catalog/homePage.hbs');
 }
