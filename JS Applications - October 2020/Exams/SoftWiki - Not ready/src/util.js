@@ -19,3 +19,10 @@ export function getUserId() {
         return null;
     }
 }
+
+export function objectToArray(data) {
+    return Object.entries(data).map(([k, v]) => Object.assign({ _id: k }, v));
+}
+
+window.objectToArray = objectToArray;
+

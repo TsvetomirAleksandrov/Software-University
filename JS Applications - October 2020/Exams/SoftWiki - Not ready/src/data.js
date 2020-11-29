@@ -1,4 +1,4 @@
-import { getUserData, getUserId, setUserData } from "./util.js";
+import { getUserData, getUserId, objectToArray, setUserData } from "./util.js";
 
 const apiKey = 'AIzaSyAXFWJ-Zi_LwVONks-DJMBcKZnk6VMwu18';
 const databaseUrl = 'https://softwiki-88216.firebaseio.com/';
@@ -6,7 +6,8 @@ const databaseUrl = 'https://softwiki-88216.firebaseio.com/';
 const endpoints = {
     LOGIN: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
     REGISTER: 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=',
-    ARTICLES: 'articles'
+    ARTICLES: 'articles',
+    ARTICLE_BY_ID: 'articles/',
 };
 
 function host(url) {
@@ -82,10 +83,25 @@ export async function register(email, password) {
 }
 
 export async function getAll() {
-    return get(host(endpoints.ARTICLES));
+    const records = await get(host(endpoints.ARTICLES));
+    return objectToArray(records);
+}
+
+export async function getById(id) {
+    const record = await get(host(endpoints.ARTICLE_BY_ID + id));
+    record._id = id;
+    return record;
 }
 
 export async function createArticle(article) {
     const data = Object.assign({ _ownerId: getUserId() }, article);
     return post(host(endpoints.ARTICLES), data);
+}
+
+export async function editArticle(id, article) {
+    return patch(host(endpoints.ARTICLE_BY_ID + id), article);
+}
+
+export async function deleteById(id) {
+    return del(host(endpoints.ARTICLE_BY_ID + id));
 }
