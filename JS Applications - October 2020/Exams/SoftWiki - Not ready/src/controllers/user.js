@@ -20,6 +20,7 @@ export async function postRegister(ctx) {
             throw new Error('Passwords don\'t match!');
         } else {
             const result = await register(email, password);
+            ctx.app.userData = result;
             ctx.redirect('/home');
         }
     } catch (err) {
@@ -34,6 +35,7 @@ export async function postLogin(ctx) {
             throw new Error('All fields are required!');
         } else {
             const result = await login(email, password);
+            ctx.app.userData = result;
             ctx.redirect('/home');
         }
     } catch (err) {

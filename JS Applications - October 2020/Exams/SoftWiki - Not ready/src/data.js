@@ -21,7 +21,7 @@ function host(url) {
 
 async function request(url, method, body) {
     let options = {
-        method,
+        method
     };
 
     if (body) {
@@ -37,10 +37,10 @@ async function request(url, method, body) {
 
     let data = await response.json();
 
-if (data.hasOwnProperty('error')) {
-    const message = data.error.message;
-    throw new Error(message);
-}
+    if (data && data.hasOwnProperty('error')) {
+        const message = data.error.message;
+        throw new Error(message);
+    }
 
     return data;
 }
@@ -86,7 +86,7 @@ export async function register(email, password) {
 }
 
 export async function getAll() {
-    const records = get(host(endpoints.ARTICLES));
+    const records = await get(host(endpoints.ARTICLES));
     return objectToArray(records);
 }
 
