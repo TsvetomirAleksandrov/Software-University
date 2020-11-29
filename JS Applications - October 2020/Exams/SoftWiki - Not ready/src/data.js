@@ -1,7 +1,7 @@
-import { getUserData, setUserData } from "./util.js";
+import { getUserData, getUserId, setUserData } from "./util.js";
 
 const apiKey = 'AIzaSyAXFWJ-Zi_LwVONks-DJMBcKZnk6VMwu18';
-const databaseUrl = 'https://softwiki-88216.firebaseio.com';
+const databaseUrl = 'https://softwiki-88216.firebaseio.com/';
 
 const endpoints = {
     LOGIN: 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
@@ -58,10 +58,11 @@ async function patch(url, body) {
 export async function login(email, password) {
     let response = await post(endpoints.LOGIN + apiKey, {
         email,
-        password
+        password,
+        returnSecureToken: true
     });
 
-    let data = await response.josn();
+    let data = await response.json();
 
     setUserData(data);
 
@@ -80,8 +81,11 @@ export async function register(email, password) {
     return res;
 }
 
-export async function createArticle(article) {
-    const data = Object.assign({ _ownerId: '' }, article);
+export async function getAll() {
+    return get(host(endpoints.ARTICLES));
+}
 
+export async function createArticle(article) {
+    const data = Object.assign({ _ownerId: getUserId() }, article);
     return post(host(endpoints.ARTICLES), data);
 }

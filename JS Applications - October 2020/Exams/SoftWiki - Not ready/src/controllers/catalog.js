@@ -2,5 +2,5 @@
 
 
 export async function homePage() {
-    alert('It works!');
+    console.log('It works!');
 }
