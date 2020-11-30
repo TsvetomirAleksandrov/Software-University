@@ -26,9 +26,13 @@
         <h1>{{title}}</h1>
         <h2><span>{{category}}</span></h2>
         <p>{{content}}</p>
+        {{#if isCreator}}
         <a href="#/delete/{{id}}" id="delete-button">Delete</a>
-        <a href="#/details/{{id}}" id="details-button">Details</a>
         <a href="#/edit/{{id}}" id="edit-button">Edit</a>
+        <a href="#/details/{{id}}" id="details-button">Details</a>
+        {{else}}
+        <a href="#/details/{{id}}" id="details-button">Details</a>
+        {{/if}}
       </article>
       {{/each}}
     </div>
