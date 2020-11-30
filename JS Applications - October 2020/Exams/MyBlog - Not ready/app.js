@@ -83,7 +83,7 @@ const app = Sammy('#root', function () {
     this.get('/details/:postId', function (context) {
         const { postId } = context.params;
 
-        DB.collection('recipes')
+        DB.collection('posts')
             .doc(postId)
             .get()
             .then((response) => {
@@ -92,11 +92,11 @@ const app = Sammy('#root', function () {
 
                 const isCreator = actualPostData.creator === email;
 
-                const userIndex = actualPostData.likes.indexOf(uid);
-                const iLiked = userIndex > -1;
-                const likesCount = actualPostData.likes.length;
+                //const userIndex = actualPostData.likes.indexOf(uid);
+                //const iLiked = userIndex > -1;
+                //const likesCount = actualPostData.likes.length;
 
-                context.post = { ...response.data(), isCreator, id: recipeId, iLiked, likesCount };
+                context.post = { ...response.data(), isCreator, id: postId };
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/details.hbs')
@@ -166,7 +166,7 @@ const app = Sammy('#root', function () {
             .catch(errorHandler);
     });
 
-    //Delete recipe
+    //Delete Post
     this.get('/delete/:postId', function (context) {
         const { postId } = context.params;
 
