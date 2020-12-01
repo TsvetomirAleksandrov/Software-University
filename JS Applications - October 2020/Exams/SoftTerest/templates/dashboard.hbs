@@ -1,0 +1,16 @@
+{{>navigation}}
+<div id="dashboard-holder">
+    {{#if ideas}}
+    {{#each ideas}}
+    <div class="card overflow-hidden current-card details" style="width: 20rem; height: 18rem;">
+        <div class="card-body">
+            <p class="card-text">{{title}}</p>
+        </div>
+        <img class="card-image" src="{{imageURL}}" alt="Card image cap">
+        <a class="btn" href="#/details/{{id}}">Details</a>
+    </div>
+    {{/each}}
+    {{else}}
+    <h1>No ideas yet! Be the first one :)</h1>
+    {{/if}}
+    {{>footer}}
