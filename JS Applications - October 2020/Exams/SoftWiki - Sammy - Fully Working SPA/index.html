@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body id="root">
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC8eCjBTodzW2AiMEIj9io-0cpDW74aX4k",
+            authDomain: "softwiki-84edb.firebaseapp.com",
+            databaseURL: "https://softwiki-84edb.firebaseio.com",
+            projectId: "softwiki-84edb",
+            storageBucket: "softwiki-84edb.appspot.com",
+            messagingSenderId: "607321844651",
+            appId: "1:607321844651:web:487ef5261a1d5cd74dc0ee"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+    <!-- Modules -->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="/node_modules/sammy/lib/sammy.js"></script>
+    <script src="/node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="./app.js" type="module"></script>
+</body>
+
+
+
+</html>
