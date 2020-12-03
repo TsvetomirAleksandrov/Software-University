@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="styles/notifications.css" type="text/css">
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container"></div>
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyB-RvrJsdd31dCo5XvfEceyban0HU46YnU",
+      authDomain: "cinema-9c446.firebaseapp.com",
+      projectId: "cinema-9c446",
+      storageBucket: "cinema-9c446.appspot.com",
+      messagingSenderId: "1049337921995",
+      appId: "1:1049337921995:web:3bdd97924cd354a2f0f64e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="/node_modules/sammy/lib/sammy.js"></script>
+  <script src="/node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+  <script src="./app.js" type="module"></script>
+</body>
+
+</html>

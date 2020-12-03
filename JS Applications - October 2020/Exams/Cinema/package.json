@@ -1,0 +1,14 @@
+{
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "handlebars": "^4.7.6",
+        "jquery": "^3.4.0",
+        "lite-server": "^2.6.1",
+        "sammy": "^0.7.6"
+    }
+}

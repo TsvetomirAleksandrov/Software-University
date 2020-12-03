@@ -1,0 +1,16 @@
+<nav>
+    <ul>
+        {{#if isLoggedIn}}
+        <li><a href="/home">Home</a></li>
+        <li><a href="/all-movies">Cinema</a></li>
+        <li><a href="/add-movie">Add Movie</a></li>
+        <li><a href="/my-movies">My Movies</a></li>
+        <li class="right"><a href="/logout">Logout</a></li>
+        <li class="right">Welcome, {{userEmail}}!</li>
+        {{else}}
+        <li><a href="/home">Home</a></li>
+        <li class="right"><a href="/register">Register</a></li>
+        <li class="right"><a href="/login">Login</a></li>
+        {{/if}}
+    </ul>
+</nav>

@@ -1,0 +1,22 @@
+{{>navigation}}
+<div id="myMovies">
+    <h1>My Movies</h1>
+    <form action="/my-movies" method="GET"></form>
+    <div class="movies">
+        {{#each myMovie}}
+        <div class="movie">
+            <h2>Title: {{title}}</h2>
+            <img
+                src="{{imageUrl}}">
+            <p>Available Tickets: {{tickets}}</p>
+            <div class="btn-group">
+                <button><a href="#/edit/{{id}}">Edit</a></button>
+                <button><a href="#/delete/{{id}}">Delete</a></button>
+                <button><a href="#/buy-ticket/{{id}}">Buy Ticket</a></button>
+                <button><a href="#/details/{{id}}">Details</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{>footer}}
