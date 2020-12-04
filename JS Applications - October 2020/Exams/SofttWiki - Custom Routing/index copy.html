@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body id="root">
+   
+
+   
+    <!-- No articles message -->
+    <h3 class="no-articles">No articles yet</h3>
+
+    
+
+    <!-- Create -->
+    <div class="container">
+        <form action="#" method="">
+            <fieldset>
+                <legend>Create article</legend>
+                <p class="field title">
+                    <input type="text" id="title" name="title" placeholder="Arrays">
+                    <label for="title">Title:</label>
+                </p>
+
+                <p class="field category">
+                    <input type="text" id="category" name="category" placeholder="JavaScript">
+                    <label for="category">Category:</label>
+                </p>
+                <p class="field content">
+                    <textarea name="content" id="content"></textarea>
+                    <label for="content">Content:</label>
+                </p>
+
+                <p class="field submit">
+                    <button class="btn submit" type="submit">Create</button>
+                </p>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Edit -->
+    <div class="container">
+
+        <form action="#" method="">
+            <fieldset>
+                <legend>Edit article</legend>
+                <p class="field title">
+                    <input type="text" name="title" id="title" placeholder="Arrays">
+                    <label for="title">Title:</label>
+                </p>
+
+                <p class="field category">
+                    <input type="text" name="category" id="category" placeholder="JavaScript">
+                    <label for="category">Category:</label>
+                </p>
+                <p class="field content">
+                    <textarea name="content" id="content"></textarea>
+                    <label for="content">Content:</label>
+                </p>
+
+                <p class="field submit">
+                    <button class="btn submit" type="submit">Edit</button>
+                </p>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Details -->
+    <div class="container details">
+        <div class="details-content">
+            <h2>Title</h2>
+            <strong>Category</strong>
+            <p>Content</p>
+            <div class="buttons">
+                <a href="#" class="btn delete">Delete</a>
+                <a href="#" class="btn edit">Edit</a>
+                <a href="#" class="btn edit">Back</a>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+
+<!-- Modules -->
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/handlebars/dist/handlebars.js"></script>
+<script src="/node_modules/sammy/lib/sammy.js"></script>
+<script src="/node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+<!-- <script src="scripts/firebase.js"></script> -->
+
+<script src="./app.js" type="module"></script>
+
+</html>
