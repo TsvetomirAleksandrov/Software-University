@@ -6,7 +6,7 @@ import footer from './footer.js';
 export default (children, props) => html`
 ${header(props)}
 
-${children}
+${children(props)}
 
 ${footer(props)}
     `;

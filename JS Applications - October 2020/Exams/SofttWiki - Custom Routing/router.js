@@ -15,8 +15,27 @@ const routes = [
     {
         path: '/',
         template: (props) => {
-            return props.isAuthenticated ? home(props) : login(props);
+            let template = home;
+            let url = '/';
+
+            if (!props.isAuthenticated) {
+                template = login;
+                url = '/login';
+            }
+
+            history.pushState({}, '', url);
+            return template(props);
         }
+    },
+    {
+        path: '/logout',
+        template: (props) => {
+            authService.logout();
+
+            history.pushState({}, '', '/');
+
+            return login;
+        },
     },
     {
         path: '/login',
@@ -41,7 +60,7 @@ const router = (path) => {
     let context = route.context;
 
     let userData = authService.getData();
-    render(layout(route.template(context), { navigationHandler, ...userData }), document.getElementById('app'));
+    render(layout(route.template, { navigationHandler, ...userData, ...context }), document.getElementById('app'));
 };
 
 function navigationHandler(e) {
