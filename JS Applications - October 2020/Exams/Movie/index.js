@@ -5,13 +5,19 @@ const app = Sammy('#container', function () {
     this.use('Handlebars', 'hbs');
 
 
-    
+
     this.get('/home', function (context) {
+        const search = context.params;
 
         DB.collection('movies')
             .get()
             .then((response) => {
-                context.movies = response.docs.map((movie) => { return { id: movie.id, ...movie.data() } });
+                context.movies = response.docs.map((movie) => {
+                    return {
+                        id: movie.id,
+                        ...movie.data()
+                    }
+                });
                 extendContext(context)
                     .then(function () {
                         this.partial('./templates/home.hbs')
@@ -56,6 +62,7 @@ const app = Sammy('#container', function () {
         UserModel.signInWithEmailAndPassword(email, password)
             .then((userData) => {
                 saveUserData(userData)
+                successHandler('Logged in successfully')
                 this.redirect('/home');
             })
             .catch(errorHandler);
@@ -66,6 +73,7 @@ const app = Sammy('#container', function () {
         UserModel.signOut()
             .then(() => {
                 clearUserData();
+                successHandler('Successfull logout')
                 this.redirect('/home');
             })
             .catch(errorHandler);
@@ -82,8 +90,12 @@ const app = Sammy('#container', function () {
     this.post('/add-movie', function (context) {
         const { title, imageUrl, description } = context.params;
 
-        if (title == '' || imageUrl == '' || description == '') {
-            errorHandler('Invalid inputs!');
+        try {
+            if (title == '' || imageUrl == '' || description == '') {
+                throw new Error('Invalid inputs!');
+            }
+        } catch (error) {
+            errorHandler(error.message);
             return;
         }
 
@@ -91,10 +103,11 @@ const app = Sammy('#container', function () {
             title,
             imageUrl,
             description,
-            creator: getUserData().uid,
+            creator: getUserData().email,
             likes: []
         })
             .then((data) => {
+                successHandler('Created successfully')
                 this.redirect('/home');
             })
             .catch(errorHandler);
@@ -110,15 +123,15 @@ const app = Sammy('#container', function () {
             .get()
             .then((response) => {
 
-                const { uid } = getUserData();
+                const { email } = getUserData();
                 const actualMovieData = response.data();
-                const imTheCreator = actualMovieData.creator === uid;
+                const imTheCreator = actualMovieData.creator === email;
 
-                const userIndex = actualMovieData.likes.indexOf(uid);
-                const iLiked = userIndex > -1;
+                const iLiked = actualMovieData.likes.indexOf(email) !== -1
+                console.log(iLiked);
 
-                let likesCount = actualMovieData.likes.length;
-                
+                const likesCount = actualMovieData.likes.length;
+
                 context.movie = { ...response.data(), imTheCreator, id: movieId, iLiked, likesCount };
                 extendContext(context)
                     .then(function () {
@@ -128,7 +141,6 @@ const app = Sammy('#container', function () {
     });
 
     //Edit
-
     this.get('/edit/:movieId', function (context) {
         const { movieId } = context.params;
 
@@ -161,6 +173,7 @@ const app = Sammy('#container', function () {
                     })
             })
             .then((response) => {
+                successHandler('Eddited successfully')
                 this.redirect(`#/details/${movieId}`);
             })
             .catch(errorHandler);
@@ -174,6 +187,7 @@ const app = Sammy('#container', function () {
             .doc(movieId)
             .delete()
             .then(() => {
+                successHandler('Deleted successfully')
                 this.redirect('/home');
             })
             .catch(errorHandler);
@@ -182,21 +196,23 @@ const app = Sammy('#container', function () {
     //Like
     this.get('/like/:movieId', function (context) {
         const { movieId } = context.params;
-        const { uid } = getUserData();
+        const { email } = getUserData();
 
         DB.collection('movies')
             .doc(movieId)
             .get()
             .then((response) => {
                 const movieData = { ...response.data() };
-                movieData.likes.push(uid);
 
-                return DB.collection('movies')
-                    .doc(movieId)
-                    .set(movieData)
+                if (!movieData.likes.includes(email)) {
+                    movieData.likes.push(email);
+
+                    return DB.collection('movies')
+                        .doc(movieId)
+                        .set(movieData)
+                }
             })
             .then(() => {
-                console.log(likesCount);
                 this.redirect(`#/details/${movieId}`);
             })
             .catch(errorHandler);
@@ -220,10 +236,6 @@ function extendContext(context) {
     })
 }
 
-function errorHandler(error) {
-    alert(error);
-}
-
 function saveUserData(data) {
     const { user: { email, uid } } = data;
     localStorage.setItem('user', JSON.stringify({ email, uid }));
@@ -238,3 +250,20 @@ function clearUserData() {
     this.localStorage.removeItem('user');
 }
 
+function errorHandler(msg) {
+    let errorBox = document.getElementById('errorBox');
+
+    errorBox.textContent = msg;
+    errorBox.parentElement.style.display = 'block';
+
+    setTimeout(() => errorBox.parentElement.style.display = 'none', 1000);
+}
+
+function successHandler(msg) {
+    let validBox = document.getElementById('successBox');
+
+    validBox.textContent = msg;
+    validBox.parentElement.style.display = 'block';
+
+    setTimeout(() => validBox.parentElement.style.display = 'none', 1000);
+}
