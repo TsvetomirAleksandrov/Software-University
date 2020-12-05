@@ -5,25 +5,10 @@ const app = Sammy('#container', function () {
     this.use('Handlebars', 'hbs');
 
 
-
     this.get('/home', function (context) {
-        const search = context.params;
+        const { search } = context.params;
 
-        DB.collection('movies')
-            .get()
-            .then((response) => {
-                context.movies = response.docs.map((movie) => {
-                    return {
-                        id: movie.id,
-                        ...movie.data()
-                    }
-                });
-                extendContext(context)
-                    .then(function () {
-                        this.partial('./templates/home.hbs')
-                    })
-            })
-            .catch(errorHandler);
+        renderMovies(context, search);
     })
 
     this.get('/register', function (context) {
@@ -266,4 +251,43 @@ function successHandler(msg) {
     validBox.parentElement.style.display = 'block';
 
     setTimeout(() => validBox.parentElement.style.display = 'none', 1000);
+}
+
+function renderMovies(context, search) {
+    DB.collection('movies')
+        .get()
+        .then((response) => {
+            context.movies = response.docs.map((movie) => {
+                return {
+                    id: movie.id,
+                    ...movie.data(),
+                }
+            });
+            extendContext(context)
+                .then(function () {
+
+                    this.partial('./templates/home.hbs')
+                })
+        })
+        .catch(errorHandler);
+
+    if (search !== '') {
+        DB.collection('movies')
+            .where("title", "==", search)
+            .get()
+            .then((response) => {
+                context.movies = response.docs.map((movie) => {
+                    return {
+                        id: movie.id,
+                        ...movie.data(),
+                    }
+                });
+                extendContext(context)
+                    .then(function () {
+
+                        this.partial('./templates/home.hbs')
+                    })
+            })
+            .catch(errorHandler);
+    }
 }

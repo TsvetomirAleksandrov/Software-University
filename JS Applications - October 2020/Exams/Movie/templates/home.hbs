@@ -10,10 +10,10 @@
 <h1 class="text-center">Movies</h1>
 <section>
     <a href="/add-movie" class="btn btn-warning ">Add Movie</a>
-    <form class="search float-right">
+    <form class="search float-right" action="/home" method="GET"> 
         <label>Search: </label>
-        <input type="text">
-        <input type="submit" class="btn btn-info" value="Search" name="search">
+        <input type="text" name="search">
+        <input type="submit" class="btn btn-info" value="Search">
     </form>
 </section>
 
