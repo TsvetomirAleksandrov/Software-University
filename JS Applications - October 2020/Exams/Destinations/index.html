@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destinations</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Notifications -->
+    <div>
+        <div class="notification" style="display: none">
+            <p class="loadingBox" id="loadingBox">Message...</p>
+        </div>
+        <div class="notification" style="display: none">
+            <p class="infoBox" id="infoBox">Message...</p>
+        </div>
+        <div class="notification" style="display: none">
+            <p class="errorBox" id="errorBox">Message...</p>
+        </div>
+    </div>
+
+
+    <div id="container"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBaO5o3HxoQLAMAx2o3uSQGmmz-w8h-Jig",
+            authDomain: "destinations-9c5b2.firebaseapp.com",
+            projectId: "destinations-9c5b2",
+            storageBucket: "destinations-9c5b2.appspot.com",
+            messagingSenderId: "905188713767",
+            appId: "1:905188713767:web:4e738e9531aab983963502"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+    <!-- Modules -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+    <!-- Scripts -->
+    <script src="./app.js" type="module"></script>
+</body>
+
+</html>
