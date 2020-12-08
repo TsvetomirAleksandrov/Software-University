@@ -58,7 +58,7 @@ function solve() {
             })
         }
     }
-    
+
 
     function sortList(ul) {
         let sorted = Array.from(ul.getElementsByTagName("li")).sort((a, b) =>
@@ -70,6 +70,7 @@ function solve() {
 
     function genEl(tag, content, attributes) {
         const element = document.createElement(tag);
+        
         if (attributes) {
             Object.assign(element, attributes);
         }
