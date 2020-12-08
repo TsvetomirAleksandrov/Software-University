@@ -1,63 +1,91 @@
 function solve() {
-    let sections = document.querySelectorAll('section');
-    let lectureNameElement = document.querySelector('input[name="lecture-name"]');
-    let dateInputElement = document.querySelector('input[name="lecture-date"]');
-    let moduleInputElement = document.querySelector('select[name="lecture-module"]');
-    let newModule = moduleInputElement.value;
-    let trainingsSectionDiv = sections.item(0).querySelector('div');
+    const inputs = Array.from(document.querySelectorAll('input'));
+    const [lectureNameInput, dateInput] = inputs;
+    const module = document.querySelector('select');
+    const trainings = document.querySelector('.modules');
 
-    let addButton = document.querySelector('.form-control button');
+    document.querySelector('.form-control > button').addEventListener('click', addEvent);
 
-    addButton.addEventListener('click', addTraining);
-
-    function addTraining(e) {
+    function addEvent(e) {
         e.preventDefault();
 
-        let lecture = {
-            trainingName: lectureNameElement.value,
-            trainingDate: dateInputElement.value,
-            trainingModule: moduleInputElement.value
-        }
+        const lectureNamesArr = Array.from(document.querySelectorAll('.module h3'));
+
+        const lecture = lectureNameInput.value;
+        let [date, time] = dateInput.value.split('T');
+        date = date.split('-').join('/');
+
+        const moduleText = module.options[module.selectedIndex].text.toUpperCase();
+
+        let existingLecture = lectureNamesArr.find(x => x.textContent === `${moduleText}-MODULE`);
+
+        let ul;
+
+        if (lecture !== '' && date !== '' && moduleText !== 'Select module...') {
+
+            const deleteBtn = genEl('button', 'Del', { className: 'red' });
+            const h4 = genEl('h4', `${lecture} - ${date} - ${time}`);
+
+            const moduleDiv = genEl('div', [
+                genEl('h3', moduleText + '-MODULE'),
+            ], { className: 'module' });
+
+            const moduleUl = genEl('ul', []);
+            const moduleLi = genEl('li', [
+                h4,
+                deleteBtn
+            ], { className: 'flex' });
 
 
+            if (existingLecture === undefined) {
+                trainings.appendChild(moduleDiv);
+                moduleDiv.appendChild(moduleUl);
+                moduleUl.appendChild(moduleLi);
+                ul = moduleUl;
+            } else {
+                ul = existingLecture.parentElement.querySelector('ul');
+                ul.appendChild(moduleLi)
+                sortList(ul);
+            }
 
-        if (lecture.trainingName.length > 0 && lecture.trainingDate.length > 0 && lecture.trainingModule !== 'Select module') {
-            let moduleTitle = document.createElement('h3');
+            lectureNameInput.value = '', dateInput.value = '';
 
-            moduleTitle.textContent = `${lecture.trainingModule.toUpperCase()}-MODULE`;
-
-            let moduleDiv = document.createElement('div');
-            moduleDiv.setAttribute('class', 'module');
-
-            let moduleUl = document.createElement('ul');
-
-            let moduleLiElement = document.createElement('li')
-
-            moduleLiElement.setAttribute('class', 'flex');
-
-            let moduleH4 = document.createElement('h4')
-            moduleH4.textContent = `${lecture.trainingName} - ${lecture.trainingDate}`;
-
-            let deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Del';
-            deleteButton.setAttribute('class', 'red');
-
-            moduleLiElement.appendChild(moduleH4);
-            moduleLiElement.appendChild(deleteButton);
-
-            deleteButton.addEventListener('click', (e) => {
-                if (moduleUl.childNodes.length === 1) {
-                    e.currentTarget.parentElement.parentElement.parentElement.firstChild.remove();
-                    e.currentTarget.parentElement.remove();
-                } else {
-                    e.currentTarget.parentElement.remove();
+            deleteBtn.addEventListener('click', () => {
+                ul.removeChild(moduleLi);
+                if (ul.textContent == '') {
+                    document.querySelector('.module').remove()
                 }
-            });
-
-            moduleDiv.appendChild(moduleTitle);
-            moduleUl.appendChild(moduleLiElement);
-            moduleDiv.appendChild(moduleUl);
-            trainingsSectionDiv.appendChild(moduleDiv);
+            })
         }
     }
-};
+    
+
+    function sortList(ul) {
+        let sorted = Array.from(ul.getElementsByTagName("li")).sort((a, b) =>
+            a.children[0].innerText.split(' - ')[1].localeCompare(b.children[0].innerText.split(' - ')[1])
+        );
+
+        sorted.forEach((li) => ul.appendChild(li));
+    }
+
+    function genEl(tag, content, attributes) {
+        const element = document.createElement(tag);
+        if (attributes) {
+            Object.assign(element, attributes);
+        }
+        if (Array.isArray(content)) {
+            content.forEach(appendEl)
+        } else {
+            appendEl(content);
+        }
+        function appendEl(node) {
+            if (typeof node == 'string' || typeof node == "number") {
+                node = document.createTextNode(node);
+            }
+            element.appendChild(node);
+        }
+        return element;
+    }
+
+}
+
