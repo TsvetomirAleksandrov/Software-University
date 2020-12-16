@@ -8,5 +8,4 @@ function subtract() {
     if (firstNumber.value !== '' && secondNumber.value !== '') {
         resultDiv.textContent = `${sub}`;
     }
-
 }
