@@ -1,13 +1,14 @@
+const actionsMap = {
+    true: 'unshift',
+    false: 'push'
+}
+
 function solve(arr) {
-    let result = [];
-
-    for (let i = 0; i < array.length; i++) {
-        if (arr[i] < 0) {
-            result.unshift(arr[i])
-        } else {
-            result.push(arr[i]);
-        }
-    }
-
-    return result;
+    return arr
+        .reduce((result, x) => result[
+            actionsMap[x < 0]
+        ](x) &&
+            result,
+            []
+        );
 }
