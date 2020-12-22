@@ -1,8 +1,8 @@
 function solve() {
     let currentState = 'stopped';
     let stopId = 'depot';
-    let nextStopName = '';
     let nextStopId = '';
+    let nextStopName = '';
     let infoBox = document.getElementById('info').children[0];
     let departBtn = document.getElementById('depart');
     let arriveBtn = document.getElementById('arrive');
@@ -13,23 +13,24 @@ function solve() {
     }
 
     function depart() {
-        currentState = 'moving'
+        currentState = 'moving';
         toggleButtons();
         sendRequest();
     }
 
     function arrive() {
-        currentState = 'stopped'
+        currentState = 'stopped';
         toggleButtons();
         infoBox.textContent = `Arriving at ${nextStopName}`;
     }
 
     function sendRequest() {
         let url = `https://judgetests.firebaseio.com/schedule/${stopId}.json`;
+
         fetch(url)
             .then((response) => {
                 if (response.status !== 200) {
-                    throw new Error('Request error');
+                    throw new Error('Bad Request');
                 }
 
                 return response.json();
@@ -37,8 +38,8 @@ function solve() {
             .then((data) => dataHandler(data))
             .catch(() => {
                 infoBox.textContent = 'Error';
-                departBtn.disabled = true;
                 arriveBtn.disabled = true;
+                departBtn.disabled = true;
             });
     }
 
@@ -49,6 +50,7 @@ function solve() {
         if (currentState === 'moving') {
             infoBox.textContent = `Next stop ${nextStopName}`;
         }
+
         stopId = nextStopId;
     }
 
