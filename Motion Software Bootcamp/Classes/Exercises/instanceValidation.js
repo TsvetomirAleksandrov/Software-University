@@ -57,7 +57,7 @@ class CheckingAccount {
 
         if (newLastName.length < 3 || newLastName.length > 20) {
             throw new TypeError("Last name must be between 3 and 20 characters long");
-        }else if (!lastNameRegex.test(newLastName)) {
+        } else if (!lastNameRegex.test(newLastName)) {
             throw new TypeError("Last name must contain only Latin characters");
         }
 
