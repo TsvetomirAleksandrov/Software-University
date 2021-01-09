@@ -1,63 +1,50 @@
 function solve() {
-    const inputs = Array.from(document.querySelectorAll('input'));
-    const [lectureNameInput, dateInput] = inputs;
-    const module = document.querySelector('select');
-    const trainings = document.querySelector('.modules');
+    let lectureName = document.getElementsByTagName('input')[0];
+    let dateTime = document.getElementsByTagName('input')[1];
+    let module = document.getElementsByTagName('select')[0];
+    let trainingsDiv = document.getElementsByClassName('modules')[0];
 
-    document.querySelector('.form-control > button').addEventListener('click', addEvent);
-
-    function addEvent(e) {
+    document.getElementsByTagName('button')[0].addEventListener('click', function (e) {
         e.preventDefault();
 
-        const lectureNamesArr = Array.from(document.querySelectorAll('.module h3'));
-
-        const lecture = lectureNameInput.value;
-        let [date, time] = dateInput.value.split('T');
-        date = date.split('-').join('/');
-
-        const moduleText = module.options[module.selectedIndex].text.toUpperCase();
-
-        let existingLecture = lectureNamesArr.find(x => x.textContent === `${moduleText}-MODULE`);
-
+        let lecturesArray = Array.from(document.querySelectorAll('.module h3'));
+        let existingLecture = lecturesArray.find(l => l.textContent === `${module.value.toUpperCase()}-MODULE`);
         let ul;
 
-        if (lecture !== '' && date !== '' && moduleText !== 'Select module...') {
+        let date = dateTime.value.split('T')[0].split('-').join('/');
+        let time = dateTime.value.split('T')[1];
 
-            const deleteBtn = genEl('button', 'Del', { className: 'red' });
-            const h4 = genEl('h4', `${lecture} - ${date} - ${time}`);
+        if (lectureName.value !== '' && dateTime.value !== '' && module.value !== 'Select module') {
+            let title = createEl('h3', `${module.value.toUpperCase()}-MODULE`);
+            let moduleDiv = createEl('div', title, { className: 'module' });
 
-            const moduleDiv = genEl('div', [
-                genEl('h3', moduleText + '-MODULE'),
-            ], { className: 'module' });
+            let moduleUl = createEl('ul', []);
+            let h4 = createEl('h4', `${lectureName.value} - ${date} - ${time}`)
+            let deleteBtn = createEl('button', 'Del', { className: 'red' });
 
-            const moduleUl = genEl('ul', []);
-            const moduleLi = genEl('li', [
-                h4,
-                deleteBtn
-            ], { className: 'flex' });
-
+            let moduleLi = createEl('li', [h4, deleteBtn], { className: 'flex' });
 
             if (existingLecture === undefined) {
-                trainings.appendChild(moduleDiv);
-                moduleDiv.appendChild(moduleUl);
                 moduleUl.appendChild(moduleLi);
+                moduleDiv.appendChild(moduleUl);
+                trainingsDiv.appendChild(moduleDiv);
                 ul = moduleUl;
             } else {
-                ul = existingLecture.parentElement.querySelector('ul');
-                ul.appendChild(moduleLi)
+                ul = document.querySelector('ul');
+                ul.appendChild(moduleLi);
                 sortList(ul);
             }
 
-            lectureNameInput.value = '', dateInput.value = '';
+            lectureName.value = '', dateTime.value = '';
 
-            deleteBtn.addEventListener('click', () => {
+            deleteBtn.addEventListener('click', function (e) {
                 ul.removeChild(moduleLi);
                 if (ul.textContent == '') {
-                    document.querySelector('.module').remove()
+                    document.querySelector('.module').remove();
                 }
             })
         }
-    }
+    })
 
 
     function sortList(ul) {
@@ -68,25 +55,27 @@ function solve() {
         sorted.forEach((li) => ul.appendChild(li));
     }
 
-    function genEl(tag, content, attributes) {
-        const element = document.createElement(tag);
-        
-        if (attributes) {
-            Object.assign(element, attributes);
+    function createEl(type, content, attributes) {
+        const result = document.createElement(type);
+
+        if (attributes !== undefined) {
+            Object.assign(result, attributes);
         }
+
         if (Array.isArray(content)) {
-            content.forEach(appendEl)
+            content.forEach(append);
         } else {
-            appendEl(content);
+            append(content);
         }
-        function appendEl(node) {
-            if (typeof node == 'string' || typeof node == "number") {
+
+        function append(node) {
+            if (typeof node === 'string') {
                 node = document.createTextNode(node);
             }
-            element.appendChild(node);
+
+            result.appendChild(node);
         }
-        return element;
+
+        return result;
     }
-
-}
-
+};
