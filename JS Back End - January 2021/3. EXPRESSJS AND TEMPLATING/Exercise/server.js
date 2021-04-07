@@ -1,4 +1,6 @@
 const express = require('express');
+const checkCatIdMiddleware = require('./middlewares/middleware');
+
 const app = express();
 const port = 5000;
 
