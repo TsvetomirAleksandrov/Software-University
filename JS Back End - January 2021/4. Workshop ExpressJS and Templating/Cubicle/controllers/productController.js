@@ -14,11 +14,6 @@ router.get('/create', (req, res) => {
 });
 
 router.post('/create', validateProduct, (req, res) => {
-    //TODO: Validate inputs
-    // if (req.body.name.length === ) {
-
-    // }
-
     productService.create(req.body)
         .then(() => res.redirect('/products'))
         .catch(() => res.statuus(500).end());
