@@ -4,6 +4,10 @@ const fs = require('fs');
 
 let productsData = require('../config/database.json');
 
+function getOne(id) {
+    return productsData.find(x => x.id == id);
+}
+
 function getAll() {
     return productsData;
 }
@@ -28,6 +32,7 @@ function create(data) {
 }
 
 module.exports = {
+    getOne,
     getAll,
     create
 }

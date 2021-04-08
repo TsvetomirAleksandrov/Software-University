@@ -5,7 +5,6 @@ const router = Router();
 
 router.get('/', (req, res) => {
     let products = productService.getAll();
-
     res.render('home', { title: 'Browse', products: products });
 });
 
@@ -20,12 +19,12 @@ router.post('/create', (req, res) => {
     // }
 
     productService.create(req.body);
-
     res.redirect('/products');
 });
 
 router.get('/details/:productId', (req, res) => {
-    res.render('details', { title: 'Product Details' });
+    let product = productService.getOne(req.params.productId);
+    res.render('details', { title: 'Product Details', product });
 });
 
 module.exports = router;
