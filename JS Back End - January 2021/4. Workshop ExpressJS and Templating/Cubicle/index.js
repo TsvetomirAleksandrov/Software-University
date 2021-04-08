@@ -7,6 +7,7 @@ const app = express();
 // const expressConfig = require('./config/express');
 // expressConfig(app);
 require('./config/express')(app);
+require('./config/mongoose')(app);
 
 app.use(routes);
 
