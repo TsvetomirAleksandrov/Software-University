@@ -1,4 +1,6 @@
 const { Router } = require('express');
+const productService = require('../services/productService');
+
 const router = Router();
 
 router.get('/', (req, res) => {
@@ -10,6 +12,13 @@ router.get('/create', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
+    //TODO: Validate inputs
+    // if (req.body.name.length === ) {
+
+    // }
+
+    productService.create(req.body);
+
     res.redirect('/products');
 });
 
