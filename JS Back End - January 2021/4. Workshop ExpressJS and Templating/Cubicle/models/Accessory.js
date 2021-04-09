@@ -4,7 +4,7 @@ const accessorySchema = new mongoose.Schema({
     id: mongoose.Types.ObjectId,
     name: String,
     imageUrl: String,
-    Description: String
+    description: String
 });
 
-module.exports = mongoosee.model('Accessory', accessorySchema);
+module.exports = mongoose.model('Accessory', accessorySchema);
