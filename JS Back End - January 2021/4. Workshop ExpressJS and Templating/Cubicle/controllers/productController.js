@@ -16,7 +16,7 @@ router.get('/create', (req, res) => {
 router.post('/create', validateProduct, (req, res) => {
     productService.create(req.body)
         .then(() => res.redirect('/products'))
-        .catch(() => res.statuus(500).end());
+        .catch(() => res.status(500).end());
 });
 
 router.get('/details/:productId', (req, res) => {
