@@ -8,4 +8,8 @@ module.exports = (app) => {
 
     db.on('error', (err) => console.error(err));
     db.once('open', () => console.log('Db Connected'));
+
+    mongoose.set('useNewUrlParser', true);
+    mongoose.set('useFindAndModify', true);
+    mongoose.set('useCreateIndex', true);
 }
