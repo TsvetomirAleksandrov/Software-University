@@ -9,7 +9,7 @@ module.exports = function (app) {
 
     app.set('view engine', 'hbs');
 
-    app.use('/static', express.static('public'));
+    app.use('/static', express.static('static'));
 
     app.use(express.urlencoded({ extended: true }));
 };
