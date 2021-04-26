@@ -18,6 +18,7 @@ app.use(errorHandler);
 // TODO: Add error handler - OK
 // TODO: Sample view and layout - OK
 // TODO: Add user model
+// TODO: Hash Password
 // TODO: User register
 // TODO: User login
 // TODO: User logout

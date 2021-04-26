@@ -12,4 +12,6 @@ module.exports = function (app) {
     app.use('/static', express.static('static'));
 
     app.use(express.urlencoded({ extended: true }));
+
+    app.use(cookieParser());
 };
