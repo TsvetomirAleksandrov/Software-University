@@ -14,9 +14,9 @@ app.use(errorHandler);
 
 // TODO: Express config - OK
 // TODO: Add routes and controllers - OK
-// TODO: Add services
-// TODO: Add error handler
-// TODO: Sample view and layout 
+// TODO: Add services - OK
+// TODO: Add error handler - OK
+// TODO: Sample view and layout - OK
 // TODO: Add user model
 // TODO: User register
 // TODO: User login
