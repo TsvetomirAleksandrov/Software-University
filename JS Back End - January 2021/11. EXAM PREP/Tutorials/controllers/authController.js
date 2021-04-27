@@ -52,6 +52,7 @@ router.post('/register',
 
         authService.register(username, password)
             .then(createdUser => {
+                console.log('createdUser');
                 console.log(createdUser);
                 res.redirect('/auth/login');
             })
