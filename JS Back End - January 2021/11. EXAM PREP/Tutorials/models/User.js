@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const { SECRET, SALTROUNDS } = require('../config/config')
+const { SECRET, SALT_ROUNDS } = require('../config/config')
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        minlength: 5,
     }
 });
 
