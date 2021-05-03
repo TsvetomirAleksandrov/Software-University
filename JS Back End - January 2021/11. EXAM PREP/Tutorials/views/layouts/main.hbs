@@ -3,18 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/site.css">
-    <title>Document</title>
+    <title>JS Back-End - Exam - November 2020</title>
+    <link href="../static/css/site.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    {{#if error}}
-    <div style='background-color: red;'>{{error.message}}</div>
-    {{/if}}
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" href="#">Tutorials</a>
 
-    {{{body}}}
-</body>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome, {{username}}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <section class="notifications">
+            <p class="notification-message">Message...</p>
+        </section>
+
+        <body>
+            {{#if error}}
+            <div style='background-color: red;'>{{error.message}}</div>
+            {{/if}}
+
+            {{{body}}}
+        </body>
+
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">© 2020
+                <a href="https://softuni.bg/trainings/3048/js-back-end-september-2020">JS Back-End</a>
+            </div>
+        </footer>
+
 
 </html>
