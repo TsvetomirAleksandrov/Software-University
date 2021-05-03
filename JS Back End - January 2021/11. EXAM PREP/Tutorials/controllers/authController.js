@@ -29,35 +29,22 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.post('/register',
-    body('password-repeat')
-        .trim()
-        .custom((value, { req }) => {
-            if (value != req.body.password) {
-                return Promise.reject('Password missmatch!')
-            }
-        }),
-    (req, res, next) => {
-        let errors = validationResult(req).array();
+router.post('/register', (req, res, next) => {
+    const { username, password, repeatPassword } = req.body;
 
-        //TODO: rework
-        if (errors.length > 0) {
-            let error = errors[0];
-            error.message = error.msg;
+    if (password != repeatPassword) {
+        res.render('register', { error: { message: 'Password should match!' } })
+        return;
+    }
 
-            return next(error);
-        }
-
-        const { username, password } = req.body;
-
-        authService.register(username, password)
-            .then(createdUser => {
-                console.log('createdUser');
-                console.log(createdUser);
-                res.redirect('/auth/login');
-            })
-            .catch(next)
-    });
+    authService.register(username, password)
+        .then(createdUser => {
+            console.log('createdUser');
+            console.log(createdUser);
+            res.redirect('/auth/login');
+        })
+        .catch(next)
+});
 
 router.get('/logout', (req, res) => {
     res.clearCookie('token');
