@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { body, validationResult } = require('express-validator');
-const { COOKIE_NAME } = require('../config/config');
 
 const authService = require('../services/authService');
+const { COOKIE_NAME } = require('../config/config');
+
 
 router.get('/', (req, res) => {
     res.send('Auth controller');
@@ -14,8 +15,10 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res, next) => {
     const { username, password } = req.body;
+
     authService.login(username, password)
         .then(token => {
+            console.log(token);
             res.cookie(COOKIE_NAME, token, { httpOnly: true })
             res.redirect('/');
         })
@@ -33,21 +36,18 @@ router.post('/register', (req, res, next) => {
     const { username, password, repeatPassword } = req.body;
 
     if (password != repeatPassword) {
-        res.render('register', { error: { message: 'Password should match!' } })
-        return;
+        return res.render('register', { error: { message: 'Password should match!' } });
     }
 
     authService.register(username, password)
         .then(createdUser => {
-            console.log('createdUser');
-            console.log(createdUser);
             res.redirect('/auth/login');
         })
         .catch(next)
 });
 
 router.get('/logout', (req, res) => {
-    res.clearCookie('token');
+    res.clearCookie(COOKIE_NAME);
     res.redirect('/');
 });
 
