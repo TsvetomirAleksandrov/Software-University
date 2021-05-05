@@ -1,52 +1,44 @@
 const router = require('express').Router();
-const { body, validationResult } = require('express-validator');
-
 const authService = require('../services/authService');
 const { COOKIE_NAME } = require('../config/config');
+const isAuth = require('../middlewares/isAuth');
+const isGuest = require('../middlewares/isGuest');
 
-
-router.get('/', (req, res) => {
-    res.send('Auth controller');
+router.get('/register', (req, res) => {
+    res.render('register');
 });
 
 router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.post('/login', (req, res, next) => {
-    const { username, password } = req.body;
-
-    authService.login(username, password)
-        .then(token => {
-            console.log(token);
-            res.cookie(COOKIE_NAME, token, { httpOnly: true })
-            res.redirect('/');
-        })
-        .catch(err => {
-            console.log(err);
-            next(err);
-        });
-});
-
-router.get('/register', (req, res) => {
-    res.render('register');
-});
-
-router.post('/register', (req, res, next) => {
+router.post('/register', isGuest, async (req, res) => {
     const { username, password, repeatPassword } = req.body;
 
-    if (password != repeatPassword) {
-        return res.render('register', { error: { message: 'Password should match!' } });
+    try {
+        if (password != repeatPassword) {
+            throw { message: 'Passwords doesn\'t match!' };
+        }
+        await authService.register(username, password);
+        res.redirect('/auth/login');
+    } catch (error) {
+        console.log(error);
+        res.render('register', { title: 'Register', error });
     }
-
-    authService.register(username, password)
-        .then(createdUser => {
-            res.redirect('/auth/login');
-        })
-        .catch(next)
 });
 
-router.get('/logout', (req, res) => {
+router.post('/login', isGuest, (req, res) => {
+    try {
+        let token = await authService.login(req.body);
+        res.cookie(COOKIE_NAME, token, { httpOnly: true });
+        res.redirect('/');
+    } catch (error) {
+        console.log(error);
+        res.render('login', { title: 'Login', error });
+    }
+});
+
+router.get('/logout', isAuth, (req, res) => {
     res.clearCookie(COOKIE_NAME);
     res.redirect('/');
 });
