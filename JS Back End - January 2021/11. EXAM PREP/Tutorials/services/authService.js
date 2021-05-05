@@ -1,26 +1,30 @@
+  
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { SECRET } = require('../config/config');
+const {SECRET} = require('../config/config');
 
-const register = (username, password) => {
+async function registerUser(username, password) {
+    let checkUser = await User.findOne({ username });
+    if (checkUser) throw { message: 'These username isn\'t available. Please choose a new one' };
+    console.log(checkUser)
     let user = new User({ username, password });
-
-    return user.save();
+    console.log(user)
+    return await user.save();
 }
 
-const login = async (username, password) => {
-    const user = await User.findOne({ username });
-    if (!user) throw { message: 'No such user', status: 404 };
+async function loginUser({ username, password }) {
+    let user = await User.findOne({ username });
+    if (!user) throw { message: 'There is no such user' };
 
-    const areEqual = await bcrypt.compare(password, user.password);
-    if (!areEqual) throw { message: 'Invalid password', status: 404 };
+    let hasValidPass = await bcrypt.compare(password, user.password);
+    if (!hasValidPass) throw { message: "Invalid Username or Password" }
 
-    const token = jwt.sign({ _id: user._id, username: user.username }, SECRET);
+    let token = jwt.sign({ _id: user._id, username: user.username }, SECRET);
     return token;
 }
 
 module.exports = {
-    register,
-    login,
+    registerUser,
+    loginUser
 }
