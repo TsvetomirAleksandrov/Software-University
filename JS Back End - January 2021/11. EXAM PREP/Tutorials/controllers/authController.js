@@ -1,40 +1,39 @@
 const router = require('express').Router();
 const authService = require('../services/authService');
-const { COOKIE_NAME } = require('../config/config');
+const {COOKIE_NAME} = require('../config/config');
 const isAuth = require('../middlewares/isAuth');
 const isGuest = require('../middlewares/isGuest');
 
-router.get('/register', (req, res) => {
-    res.render('register');
+router.get('/register', isGuest, (req, res) => {
+    res.render('register', {title: "Register"})
 });
 
-router.get('/login', (req, res) => {
-    res.render('login');
+router.get('/login', isGuest, (req, res) => {
+    res.render('login', {title: "Login"})
 });
 
 router.post('/register', isGuest, async (req, res) => {
-    const { username, password, repeatPassword } = req.body;
-
+    const {username, password, repeatPassword} = req.body;
     try {
-        if (password != repeatPassword) {
-            throw { message: 'Passwords doesn\'t match!' };
+        if (password !== repeatPassword) {
+            throw { message: 'Passwords don\'t match' };
         }
-        await authService.register(username, password);
-        res.redirect('/auth/login');
+        await authService.registerUser(username, password);
+        res.redirect('/auth/login')
     } catch (error) {
-        console.log(error);
-        res.render('register', { title: 'Register', error });
-    }
+        console.log(error)
+        res.render('register', {title: 'Register', error });
+    } 
 });
 
-router.post('/login', isGuest, (req, res) => {
+router.post('/login', isGuest, async (req, res) => {
     try {
-        let token = await authService.login(req.body);
-        res.cookie(COOKIE_NAME, token, { httpOnly: true });
+        let token = await authService.loginUser(req.body);
+        res.cookie(COOKIE_NAME, token, {httpOnly: true});
         res.redirect('/');
     } catch (error) {
-        console.log(error);
-        res.render('login', { title: 'Login', error });
+        console.log(error)
+        res.render('login', {title: 'Login', error });
     }
 });
 
@@ -42,5 +41,6 @@ router.get('/logout', isAuth, (req, res) => {
     res.clearCookie(COOKIE_NAME);
     res.redirect('/');
 });
+
 
 module.exports = router;
