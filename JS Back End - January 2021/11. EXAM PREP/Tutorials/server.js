@@ -1,11 +1,10 @@
-const router = require('express').Router();
-const mainController = require('./controllers/mainController');
-const authController = require('./controllers/authController');
-const courseController = require('./controllers/courseController')
-const isAuth = require('./middlewares/isAuth');
+const express = require('express');
+const app = express();
+const {PORT} = require('./config/config');
+const routes = require('./routes');
 
-router.use('/', mainController);
-router.use('/auth', authController);
-router.use('/course', isAuth, courseController)
+require('./config/express')(app);
+require('./config/mongoose');
 
-module.exports = router;
+app.use(routes);
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
