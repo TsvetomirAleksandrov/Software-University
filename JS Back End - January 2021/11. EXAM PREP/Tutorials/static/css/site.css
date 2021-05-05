@@ -26,7 +26,7 @@
 }
 
 .notifications {
-    background-color: rgb(234, 21, 55);
+    background-color: rgba(240, 46, 46, 0.699);
     margin: 0 auto;
     text-align: center;
     padding: 1%;
@@ -38,12 +38,4 @@
     font-style: italic;
     text-decoration: underline;
     box-shadow: 0 5px 10px #cccccc;
-}
-
-a {
-    color: white!important;
-}
-
-footer a {
-    color: blue!important;
 }
