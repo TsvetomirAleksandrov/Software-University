@@ -6,17 +6,26 @@ class BookList extends Component {
         super(props);
     }
 
+    bookClicked(title) {
+        console.log(`The book ${title} has been added to the basket!`);
+    }
+
     render() {
         return (
             <div className="book-list">
                 <h2>Our book list</h2>
 
                 {this.props.books.map(x => {
-                    return <Book title={x.title} description={x.description} isSelected={true} />
+                    return <Book
+                        title={x.title}
+                        description={x.description}
+                        clickHandler={() => this.bookClicked(x.title)}
+                        author={x.author}
+                    />;
                 })}
             </div>
         );
     }
 }
 
-export default BookList;
+export default BookList; 

@@ -4,9 +4,9 @@ import BookList from './components/BookList';
 import Counter from './components/Counter';
 
 const booksData = [
-  { title: 'Harry Potter', description: 'Wizards and stuff' },
-  { title: 'Programming with JS', description: 'Guide to programming' },
-  { title: 'The Bible', description: 'Most important book' }
+  { id: 1 ,title: 'Harry Potter', description: 'Wizards and stuff', author: 'Author 1' },
+  { id: 2 ,title: 'Programming with JS', description: 'Guide to programming', author: 'Author 2' },
+  { id: 3 ,title: 'The Bible', description: 'Most important book', author: 'Author 2' }
 ]
 
 function App() {
