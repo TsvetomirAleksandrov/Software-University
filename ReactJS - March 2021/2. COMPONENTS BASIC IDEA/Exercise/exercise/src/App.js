@@ -1,12 +1,13 @@
 import './App.css';
 import Heading from './components/Heading';
 import BookList from './components/BookList';
+import Footer from './components/Footer';
 import Counter from './components/Counter';
 
 const booksData = [
-  { id: 1 ,title: 'Harry Potter', description: 'Wizards and stuff', author: 'Author 1' },
-  { id: 2 ,title: 'Programming with JS', description: 'Guide to programming', author: 'Author 2' },
-  { id: 3 ,title: 'The Bible', description: 'Most important book', author: 'Author 2' }
+  { id: 1, title: 'Harry Potter', description: 'Wizards and stuff', author: 'Author 1' },
+  { id: 2, title: 'Programming with JS', description: 'Guide to programming', author: 'Author 2' },
+  { id: 3, title: 'The Bible', description: 'Most important book', author: 'Author 2' }
 ]
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       <Counter />
 
       <BookList books={booksData} />
+
+      <Footer />
     </div>
   );
 }
