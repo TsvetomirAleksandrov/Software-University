@@ -1,29 +1,81 @@
-import Header from './components/Header/Header';
+import { Component } from 'react';
+import { Route, Link, NavLink, Redirect, Switch } from 'react-router-dom';
+
+import * as postService from './services/postService';
+
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Main from './components/Main';
+import About from './components/About';
+import ContactUs from './components/ContactUs';
 import style from './App.module.css';
 
-function App() {
-  return (
-    <div className={style.app}>
-      <h1>Lets begin</h1>
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-      <nav className={style.navigation}>
-        <ul>
-          <li className="listItem"><img src="white-origami-bird.png" alt="white origami"/></li>
-          <li className="listItem"><a href="#">Going to 1</a></li>
-          <li className="listItem"><a href="#">Going to 2</a></li>
-          <li className="listItem"><a href="#">Going to 3</a></li>
-          <li className="listItem"><a href="#">Going to 4</a></li>
-          <li className="listItem"><a href="#">Going to 5</a></li>
-          <li className="listItem"><a href="#">Going to 6</a></li>
-          <li className="listItem"><a href="#">Going to 7</a></li>
-          <li className="listItem"><a href="#">Going to 8</a></li>
-          <li className="listItem"><a href="#">Going to 9</a></li>
-          <li className="listItem"><a href="#">Going to 10</a></li>
-          <li className="listItem"><a href="#">Going to 11</a></li>
-        </ul>
-      </nav>
-    </div>
-  );
+        this.state = {
+            posts: [],
+            selectedPost: null,
+        }
+
+        this.onMenuItemClick = this.onMenuItemClick.bind(this);
+    }
+
+    componentDidMount() {
+        postService.getAll()
+            .then(posts => {
+                this.setState({ posts })
+            });
+    }
+
+    onMenuItemClick(id) {
+        this.setState({ selectedPost: id });
+    }
+
+    getPosts() {
+        if (!this.state.selectedPost) {
+            return this.state.posts;
+        } else {
+            return [this.state.posts.find(x => x.id == this.state.selectedPost)];
+        }
+    }
+
+    render() {
+        return (
+            <div className={style.app}>
+                <Header />
+
+                <div className={style.container}>
+                    <Menu onMenuItemClick={this.onMenuItemClick} />
+                    <Switch>
+                        <Route path="/" exact>
+                            <Main posts={this.getPosts()} />
+                        </Route>
+                        <Route path="/about/:name" component={About} />
+                        <Route path="/contact-us" component={ContactUs} />
+                        <Route render={() => <h1 >Error Page</h1>} />
+                    </Switch>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
+
+// function App() {
+//     return (
+//         <div className={style.app}>
+//             <Header />
+
+//             <div className={style.container}>
+//                 <Menu />
+
+//                 <Main />
+//             </div>
+//         </div>
+//     );
+// }
+
+
