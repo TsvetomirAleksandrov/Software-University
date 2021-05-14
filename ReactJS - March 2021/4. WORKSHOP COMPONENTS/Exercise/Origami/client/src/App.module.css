@@ -3,28 +3,9 @@
   margin: 0 auto;
 }
 
-.navigation {
-  width: 100%;
-  height: 14vh;
-  background-color: #234465;
-  color: white;
-  position: fixed;
-  top: 0;
-  border-bottom: 2px solid #ffa000;
-  border-top: 2px solid #ffa000;
-}
-
-nav .listItem a {
-  color: white;
-  text-decoration: none;
-}
-
-nav .listItem, footer .listItem {
-  display: inline-block;
-  height: auto;
-  margin-right: 2%;
-  cursor: pointer;
+.container {
+  margin-top: 8.5%;
   padding: 0.5%;
-  margin: 0.1%;
-  vertical-align: top;
+  /* border: 1px solid purple; */
+  margin-bottom: 0.1%;
 }
