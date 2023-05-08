@@ -27,12 +27,15 @@ contract AuctionPlatform {
         string itemDescription,
         uint256 startingPrice
     );
+    
     event BidPlaced(uint256 indexed id, address indexed bidder, uint256 amount);
+    
     event AuctionFinalized(
         uint256 indexed id,
         address indexed winner,
         uint256 amount
     );
+    
     event FundsWithdrawn(address indexed user, uint256 amount);
 
     function createAuction(
@@ -46,8 +49,11 @@ contract AuctionPlatform {
             start > block.timestamp,
             "Start time must be greater than current time!"
         );
+        
         require(duration > 0, "Duration must be greater than 0!");
+        
         auctionCount++;
+        
         auctions[auctionCount] = Auction(
             start,
             duration,
@@ -58,6 +64,7 @@ contract AuctionPlatform {
             itemDescription,
             startingPrice
         );
+        
         emit NewAuction(
             auctionCount,
             start,
@@ -98,17 +105,20 @@ contract AuctionPlatform {
 
         if (auction.highestBidder != address(0)) {
             uint256 amountToTransfer = auction.highestBid;
+            
             if (amountToTransfer > 0) {
                 payable(address(auction.highestBidder)).transfer(
                     amountToTransfer
                 );
             }
+            
             emit AuctionFinalized(
                 auctionId,
                 auction.highestBidder,
                 amountToTransfer
             );
         }
+        
         auction.finalized = true;
     }
 
