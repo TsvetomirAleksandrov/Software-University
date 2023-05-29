@@ -8,6 +8,8 @@ export default function Home() {
   const [currentAccount, setCurrentAccount] = useState(null);
   const [provider, setProvider] = useState(null);
   const [blockNumber, setBlockNumber] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleConnection = () => {
     if (!window.ethereum) {
@@ -41,6 +43,24 @@ export default function Home() {
       })
   }
 
+  const sendTransaction = () => {
+    const signer = provider.getSigner();
+    setLoading(true);
+    signer.sendTransaction({
+      to: "0x7c2E6C4411367b63B92f8F4E16B44cA12Fd0e2e3",
+      value: ethers.utils.parseEther("1.0")
+    })
+      .then((tx) => {
+        console.log(tx);
+        return tx.wait()
+      })
+      .then(receipt => setError("Successful send transaction"))
+      .catch(e => setError(e.message))
+      .finally(() => {
+        setLoading(false);
+      })
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -51,6 +71,7 @@ export default function Home() {
       <main>
         <MyButton label="Connect" onClick={() => handleConnection()} />
         <MyButton label="Get Block Number" onClick={() => getBlockNumber()} />
+        <MyButton label="Send Transaction" onClick={() => sendTransaction()} />
         {currentAccount && <h1>{currentAccount}</h1>}
         {blockNumber && <h1>{blockNumber}</h1>}
       </main>
